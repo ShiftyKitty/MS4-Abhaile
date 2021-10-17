@@ -1,7 +1,7 @@
 # Project Name - Abhaile
 
 
-07/08/2021 <br>
+17/10/2021 <br>
 The purpose of Project Abhaile is to create a wellness/wellbeing app that allows users to subscribe to different aspects (or all aspects) of the app based on their wellbeing needs. 
 The initial stage of Project Abhaile will focus on breathwork, the benefits of breathwork and allow users to utilize different breathwork in their day to day lives in an app environment that is equal parts calming and engaging. 
 The 4 different parts of Project Abhaile will be the following:
@@ -9,12 +9,14 @@ The 4 different parts of Project Abhaile will be the following:
 -	Water
 -	Earth
 -	Air
+
 These 4 elements will essentially house the different breathworks. The user can subscribe to each individual element or subscribe to all 4 at an overall cheaper rate. 
 The elements are associated with the following benefits:
 -	Fire = Energy/Adrenaline/Burst/Red
 -	Water = Intelligence/Focus/Creativity/Blue
 -	Earth = Physical/Physical health benefits/Yellow+Brown
 -	Air = Meditiation/Spirituaility/Balance/Mental Wellbeing/Destress/Teal-Green
+
 By subscribing to an element gives the user full access to all the different exercises associated with that element.
 In addition, there will be an online store selling merch dedicated to each element. This online store will be open to all users however, there will be discount perks and delivery perks that allow subscribed users to take advantage of. If a user is subscribed to all elements, they receive 15% off all products on site and free delivery. If user is subscribed to 1 element they receive 10% off products associated with that element. 
 Eventually I would like to add more exercises that will improve wellbeing across the different elements that go outside the scope of breathwork. This may happen after this project. 
@@ -31,33 +33,6 @@ Eventually I would like to add more exercises that will improve wellbeing across
 - [Credits](#credits) <br>
 
 
-## Message to Examiner
-
-Hello.
-
-This app takes 2 different users. Business User and Consumer User. I would suggest going and making a profile for both and test the site but if you are under time issues, feel free to login in using the following. 
-
-Business Name: MR CLEANING SERVICE <br>
-Password: Test1
-
-Consumer Email Address: cathalpmcgahan@gmail.com <br>
-Password: Test1
-
-The CRUD functionality is completed by the following:
-
-- Create: Create an Offer as a Business User
-- Read: Offer then gets posted to Home/Offers page, where it can be read.
-- Update: Find your offer either through Home page or My Offers in navbar. Select offer and Edit offer.
-- Delete: To delete select Offer Finished. 
-
-In addition, as a Consumer user you can leave reviews under offers. Not full CRUD but neat feature nonetheless and utilizes seperate Review Collection in DB.
-
-Complete Sitemap for Project Frugaol can be found below. It might help your navigation through the app. 
-
-All the Best <br>
-Cathal
-
-![sitemap](readme_docs/sitemap-frugaol.png)
 
 ## UX
 
@@ -212,7 +187,7 @@ In addition to this, the following database mockups were done through [LucidChar
 Database Mockups
 ![DB](readme_docs/MS4-Project_Abhaile-RelationalDBSchema.jpeg)
 
-
+<!-- 
 ### The Surface plane:
 
 - Font: 
@@ -363,4 +338,4 @@ SECRET_KEY | < your_secret_key >
 - The name FruGaol comes from the word "Frugal" meaning thrifty or costing little and the Irish word "Gaol" which translates to relationships. Together it comes to Thrifty Relationships which was the inspiration behind this app and its purpose of connecting Businesses and Consumers through special deals and offers. 
 
 - Many features were left out due to time constraints and lack of skill/knowledge however I will be building upon what is here in this project over time. 
-
+ -->
