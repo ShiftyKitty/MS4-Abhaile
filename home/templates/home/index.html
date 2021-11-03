@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+ {% extends "base.html" %}
 {% load static %}
 
 {% block page_header %}
@@ -10,9 +10,43 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
+    <div class="container-fluid h-100">
         <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
+            <div class="col col-sm-3 img-side">
+                <img src="media/pexels-photo-561463.jpeg" alt="golden sea">
+                <!-- img left -->
+            </div>
+            <div class="col col-sm-6 img-middle">
+                <img src="media/pexels-photo-302804.jpeg" alt="woods">
+                <!-- img up -->
+
+                <img src="media/italy-mountains-dawn-daybreak-147411.jpeg" alt="cabin in mountains">
+                <!-- img down  -->
+            </div>
+            <div class="col col-sm-3 img-side">
+                <img src="media/pexels-photo-1703314.jpeg" alt="campfire">
+                <!-- img right -->
+            </div>
+            <div class="col col-sm-6 text-centre">
+                home is where the heart is 
+            </div>
+        </div>
+        <!-- <div class="row h-33">
+            <div>
+                fire, water, air, earth
+            </div>
+        </div>
+        <div class="row h-33">
+            <div>
+                What is abhaile,
+                What is fire,
+                What is water,
+                What is air,
+                What is earth,
+            </div>
+        </div> -->
+            
+            <!-- <div class="col-7 col-md-6 my-auto">
                 <h1 class="display-4 logo-font text-black">
                     The new collections are here
                 </h1>
@@ -21,7 +55,7 @@
                         <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
                     </h4>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 {% endblock %}
