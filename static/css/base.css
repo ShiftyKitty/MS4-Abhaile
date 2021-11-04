@@ -66,6 +66,22 @@ body {
     width: 100%;
 }
 
+.fire {
+    background-color: rgb(207, 53, 46);
+}
+
+.water {
+    background-color: rgb(14,135,204);
+}
+
+.air {
+    background-color: rgb(14, 227, 184);
+}
+
+.earth {
+    background-color: rgb(255,225,1);
+}
+
 /* .hide-nav-lg-screen {
     z-index: -1000;
 } */
