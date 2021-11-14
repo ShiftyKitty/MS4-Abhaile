@@ -1,0 +1,794 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "name": "Fire Jumper",
+            "description": "Fire Red Unisex Jumper",
+            "sku": "pp1491944521",
+            "has_sizes": true,
+            "price": 30,
+            "element": 1,
+            "category": 1,
+            "rating": 4.8,
+            "image_1": "media/redjumper1.jpg",
+            "image_2": "media/redjumper2.jpg",
+            "image_3": "media/redjumper3.jpg",
+            "image_4": "media/redjumper4.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "name": "Fire Hoodie",
+            "description": "Fire Red Unisex Hoodie",
+            "sku": "pp3167792114",
+            "has_sizes": true,
+            "price": 35,
+            "element": 1,
+            "category": 1,
+            "rating": 4.7,
+            "image_1": "media/redhoodie.jpg",
+            "image_2": "media/redhoodie2.jpg",
+            "image_3": "media/redhoodie3.webp",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "name": "Fire T-Shirt",
+            "description": "Fire Red Unisex T-Shirt",
+            "sku": "pp6797118219",
+            "has_sizes": true,
+            "price": 10,
+            "element": 1,
+            "category": 1,
+            "rating": 4.9,
+            "image_1": "media/redT1.jpg",
+            "image_2": "media/redT2.jpg",
+            "image_3": "media/redT3.jpg",
+            "image_4": "media/redT4.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "name": "Fire Pants",
+            "description": "Fire Red Unisex Pants ",
+            "sku": "pp3411677249",
+            "has_sizes": true,
+            "price": 49.99,
+            "element": 1,
+            "category": 1,
+            "rating": 4.6,
+            "image_1": "media/redpants1.jpg",
+            "image_2": "media/redpants2.jpg",
+            "image_3": "media/redpants3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "name": "Fire Socks",
+            "description": "Fire Red Socks",
+            "sku": "pp1888299151",
+            "has_sizes": true,
+            "price": 4.99,
+            "element": 1,
+            "category": 1,
+            "rating": 4.7,
+            "image_1": "media/redsocks1.jpg",
+            "image_2": "media/redsocks2.jpg",
+            "image_3": "",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "name": "Fire Scarf",
+            "description": "Fire Red Scarf",
+            "sku": "pp8862266496",
+            "has_sizes": false,
+            "price": 20,
+            "element": 1,
+            "category": 2,
+            "rating": 4.6,
+            "image_1": "media/redscarf1.jpg",
+            "image_2": "media/redscarf2.jpg",
+            "image_3": "media/redscarf3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "name": "Fire Wallet",
+            "description": "Fire Red Wallet",
+            "sku": "pp5297933113",
+            "has_sizes": false,
+            "price": 25,
+            "element": 1,
+            "category": 2,
+            "rating": 4.8,
+            "image_1": "media/redwallet1.jpg",
+            "image_2": "media/redwallet2.jpg",
+            "image_3": "media/redwallet3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "name": "Fire Watch",
+            "description": "Fire Red Watch",
+            "sku": "pp8183831181",
+            "has_sizes": false,
+            "price": 99.99,
+            "element": 1,
+            "category": 2,
+            "rating": 4.7,
+            "image_1": "media/redwatch.jpg",
+            "image_2": "media/redwatch2.jpg",
+            "image_3": "",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "name": "Fire Hat",
+            "description": "Fire Red Hat",
+            "sku": "pp6454947493",
+            "has_sizes": false,
+            "price": 14.99,
+            "element": 1,
+            "category": 2,
+            "rating": 4.8,
+            "image_1": "media/redhat.jpg",
+            "image_2": "media/redhat2.jpg",
+            "image_3": "media/redhat3.webp",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "name": "Fire Cap",
+            "description": "Fire Red Cap",
+            "sku": "pp8155716319",
+            "has_sizes": false,
+            "price": 14.99,
+            "element": 1,
+            "category": 2,
+            "rating": 4.8,
+            "image_1": "media/redcap1.jpg",
+            "image_2": "media/redcap2.jpg",
+            "image_3": "media/redcap3.jpg",
+            "image_4": "media/redcap4.jpg"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "name": "Fire Bracelet",
+            "description": "Fire Red Bracelet",
+            "sku": "pp4545215187",
+            "has_sizes": false,
+            "price": 9.99,
+            "element": 1,
+            "category": 2,
+            "rating": 4.9,
+            "image_1": "media/redbracelet1.jpg",
+            "image_2": "",
+            "image_3": "",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "name": "Water Jumper",
+            "description": "Water Blue Unisex Jumper",
+            "sku": "pp9839973859",
+            "has_sizes": true,
+            "price": 30,
+            "element": 2,
+            "category": 1,
+            "rating": 4.8,
+            "image_1": "media/bluejumper.jpg",
+            "image_2": "media/bluejumper2.jpg",
+            "image_3": "media/bluejumper3.jpg",
+            "image_4": "media/bluejumper4.jpg"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "name": "Water Hoodie",
+            "description": "Water Blue Unisex Hoodie",
+            "sku": "pp8133937595",
+            "has_sizes": true,
+            "price": 35,
+            "element": 2,
+            "category": 1,
+            "rating": 4.7,
+            "image_1": "media/bluehoodie.jpg",
+            "image_2": "media/bluehoodie2.jpg",
+            "image_3": "media/bluehoodie3.webp",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "name": "Water T-Shirt",
+            "description": "Water Blue Unisex T-Shirt",
+            "sku": "pp5865173881",
+            "has_sizes": true,
+            "price": 10,
+            "element": 2,
+            "category": 1,
+            "rating": 4.9,
+            "image_1": "media/blueT1.jpg",
+            "image_2": "media/blueT2.jpg",
+            "image_3": "media/blueT3.webp",
+            "image_4": "media/blueT4.webp"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "name": "Water Pants",
+            "description": "Water Blue Unisex Pants ",
+            "sku": "pp9747264235",
+            "has_sizes": true,
+            "price": 49.99,
+            "element": 2,
+            "category": 1,
+            "rating": 4.6,
+            "image_1": "media/bluepants1.jpg",
+            "image_2": "media/bluepants2.jpg",
+            "image_3": "media/bluepants3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "name": "Water Socks",
+            "description": "Water Blue Socks",
+            "sku": "pp3174938211",
+            "has_sizes": true,
+            "price": 4.99,
+            "element": 2,
+            "category": 1,
+            "rating": 4.7,
+            "image_1": "media/bluesocks1.jpg",
+            "image_2": "media/bluesocks2.jpg",
+            "image_3": "media/bluesocks3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "name": "Water Scarf",
+            "description": "Water Blue Scarf",
+            "sku": "pp4951199783",
+            "has_sizes": false,
+            "price": 20,
+            "element": 2,
+            "category": 2,
+            "rating": 4.6,
+            "image_1": "media/bluescarf1.jpg",
+            "image_2": "media/bluescarf2.jpg",
+            "image_3": "media/bluescarf3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "name": "Water Wallet",
+            "description": "Water Blue Wallet",
+            "sku": "pp1924721948",
+            "has_sizes": false,
+            "price": 25,
+            "element": 2,
+            "category": 2,
+            "rating": 4.8,
+            "image_1": "media/bluewallet1.jpg",
+            "image_2": "media/bluewallet2.jpg",
+            "image_3": "media/bluewallet3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "name": "Water Watch",
+            "description": "Water Blue Watch",
+            "sku": "pp9445338121",
+            "has_sizes": false,
+            "price": 99.99,
+            "element": 2,
+            "category": 2,
+            "rating": 4.7,
+            "image_1": "media/bluewatch1.png",
+            "image_2": "media/bluewatch2.png",
+            "image_3": "media/bluewatch3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "name": "Water Hat",
+            "description": "Water Blue Hat",
+            "sku": "pp4851556826",
+            "has_sizes": false,
+            "price": 14.99,
+            "element": 2,
+            "category": 2,
+            "rating": 4.8,
+            "image_1": "media/bluehat1.jpg",
+            "image_2": "media/bluehat2.jpg",
+            "image_3": "media/bluehat3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.product",
+        "fields": {
+            "name": "Water Cap",
+            "description": "Water Blue Cap",
+            "sku": "pp5727255511",
+            "has_sizes": false,
+            "price": 14.99,
+            "element": 2,
+            "category": 2,
+            "rating": 4.8,
+            "image_1": "media/bluecap1.jpg",
+            "image_2": "media/bluecap2.jpg",
+            "image_3": "media/bluecap3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 22,
+        "model": "products.product",
+        "fields": {
+            "name": "Water Bracelet",
+            "description": "Water Blue Bracelet",
+            "sku": "pp4173131118",
+            "has_sizes": false,
+            "price": 9.99,
+            "element": 2,
+            "category": 2,
+            "rating": 4.9,
+            "image_1": "media/bluebracelet1.jpg",
+            "image_2": "",
+            "image_3": "",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "name": "Air Jumper",
+            "description": "Air Yellow Unisex Jumper",
+            "sku": "pp3351549134",
+            "has_sizes": true,
+            "price": 30,
+            "element": 3,
+            "category": 1,
+            "rating": 4.8,
+            "image_1": "media/yellowjumper.jpg",
+            "image_2": "media/yellowjumper2.jpg",
+            "image_3": "media/yellowjumper3.jpg",
+            "image_4": "media/yellowjumper4.jpg"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "name": "Air Hoodie",
+            "description": "Air Yellow Unisex Hoodie",
+            "sku": "pp6934728475",
+            "has_sizes": true,
+            "price": 35,
+            "element": 3,
+            "category": 1,
+            "rating": 4.7,
+            "image_1": "media/yellowhoodie.jpg",
+            "image_2": "media/yellowhoodie2.jpg",
+            "image_3": "media/yellowhoodie3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 25,
+        "model": "products.product",
+        "fields": {
+            "name": "Air T-Shirt",
+            "description": "Air Yellow Unisex T-Shirt",
+            "sku": "pp8966475241",
+            "has_sizes": true,
+            "price": 10,
+            "element": 3,
+            "category": 1,
+            "rating": 4.9,
+            "image_1": "media/yellowT1.jpg",
+            "image_2": "media/yellowT2.jpg",
+            "image_3": "media/yellowT3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 26,
+        "model": "products.product",
+        "fields": {
+            "name": "Air Pants",
+            "description": "Air Yellow Unisex Pants ",
+            "sku": "pp1155514857",
+            "has_sizes": true,
+            "price": 49.99,
+            "element": 3,
+            "category": 1,
+            "rating": 4.6,
+            "image_1": "media/yellowpants1.jpg",
+            "image_2": "media/yellowpants2.jpg",
+            "image_3": "media/yellowpants3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 27,
+        "model": "products.product",
+        "fields": {
+            "name": "Air Socks",
+            "description": "Air Yellow Socks",
+            "sku": "pp3481815858",
+            "has_sizes": true,
+            "price": 4.99,
+            "element": 3,
+            "category": 1,
+            "rating": 4.7,
+            "image_1": "media/yellowsocks.jpg",
+            "image_2": "media/yellowsocks2.jpg",
+            "image_3": "",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 28,
+        "model": "products.product",
+        "fields": {
+            "name": "Air Scarf",
+            "description": "Air Yellow Scarf",
+            "sku": "pp8985176189",
+            "has_sizes": false,
+            "price": 20,
+            "element": 3,
+            "category": 2,
+            "rating": 4.6,
+            "image_1": "media/yellowscarf.jpg",
+            "image_2": "media/yellowscarf2.webp",
+            "image_3": "media/yellowscarf3.webp",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 29,
+        "model": "products.product",
+        "fields": {
+            "name": "Air Wallet",
+            "description": "Air Yellow Wallet",
+            "sku": "pp2387442964",
+            "has_sizes": false,
+            "price": 25,
+            "element": 3,
+            "category": 2,
+            "rating": 4.8,
+            "image_1": "media/yellowwallet1.jpg",
+            "image_2": "media/yellowwallet2.jpg",
+            "image_3": "media/yellowwallet3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 30,
+        "model": "products.product",
+        "fields": {
+            "name": "Air Watch",
+            "description": "Air Yellow Watch",
+            "sku": "pp2817161235",
+            "has_sizes": false,
+            "price": 99.99,
+            "element": 3,
+            "category": 2,
+            "rating": 4.7,
+            "image_1": "media/yellowwatch1.jpg",
+            "image_2": "media/yellowwatch2.jpg",
+            "image_3": "media/yellowwatch3.jpg",
+            "image_4": "media/yellowwatch4.jpg"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "products.product",
+        "fields": {
+            "name": "Air Hat",
+            "description": "Air Yellow Hat",
+            "sku": "pp8223118522",
+            "has_sizes": false,
+            "price": 14.99,
+            "element": 3,
+            "category": 2,
+            "rating": 4.8,
+            "image_1": "media/yellowhat1.jpg",
+            "image_2": "media/yellowhat2.webp",
+            "image_3": "media/yellowhat3.webp",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 32,
+        "model": "products.product",
+        "fields": {
+            "name": "Air Cap",
+            "description": "Air Yellow Cap",
+            "sku": "pp6145542119",
+            "has_sizes": false,
+            "price": 14.99,
+            "element": 3,
+            "category": 2,
+            "rating": 4.8,
+            "image_1": "media/yellowcap1.webp",
+            "image_2": "media/yellowcap2.jpg",
+            "image_3": "media/yellowcap3.jpg",
+            "image_4": "media/yellowcap4.webp"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "products.product",
+        "fields": {
+            "name": "Air Bracelet",
+            "description": "Air Yellow Bracelet",
+            "sku": "pp6979868522",
+            "has_sizes": false,
+            "price": 9.99,
+            "element": 3,
+            "category": 2,
+            "rating": 4.9,
+            "image_1": "media/yellowbracelet1.jpg",
+            "image_2": "",
+            "image_3": "",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 34,
+        "model": "products.product",
+        "fields": {
+            "name": "Earth Jumper",
+            "description": "Earth Green Unisex Jumper",
+            "sku": "pp1318889382",
+            "has_sizes": true,
+            "price": 30,
+            "element": 4,
+            "category": 1,
+            "rating": 4.8,
+            "image_1": "media/greenjumper1.jpg",
+            "image_2": "media/greenjumper2.jpg",
+            "image_3": "media/greenjumper3.jpg",
+            "image_4": "media/greenjumper4.jpg"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "products.product",
+        "fields": {
+            "name": "Earth Hoodie",
+            "description": "Earth Green Unisex Hoodie",
+            "sku": "pp2181776269",
+            "has_sizes": true,
+            "price": 35,
+            "element": 4,
+            "category": 1,
+            "rating": 4.7,
+            "image_1": "media/greenhoodie1.jpg",
+            "image_2": "media/greenhoodie2.jpg",
+            "image_3": "media/greenhoodie3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 36,
+        "model": "products.product",
+        "fields": {
+            "name": "Earth T-Shirt",
+            "description": "Earth Green Unisex T-Shirt",
+            "sku": "pp8784537288",
+            "has_sizes": true,
+            "price": 10,
+            "element": 4,
+            "category": 1,
+            "rating": 4.9,
+            "image_1": "media/greenT1.jpg",
+            "image_2": "media/greenT2.jpg",
+            "image_3": "",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 37,
+        "model": "products.product",
+        "fields": {
+            "name": "Earth Pants",
+            "description": "Earth Green Unisex Pants ",
+            "sku": "pp1412952756",
+            "has_sizes": true,
+            "price": 49.99,
+            "element": 4,
+            "category": 1,
+            "rating": 4.6,
+            "image_1": "media/greenpants1.jpg",
+            "image_2": "media/greenpants2.webp",
+            "image_3": "media/greenpants3.jpg",
+            "image_4": "media/greenpants4.jpg"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "products.product",
+        "fields": {
+            "name": "Earth Socks",
+            "description": "Earth Green Socks",
+            "sku": "pp2731723897",
+            "has_sizes": true,
+            "price": 4.99,
+            "element": 4,
+            "category": 1,
+            "rating": 4.7,
+            "image_1": "media/greensocks1.jpg",
+            "image_2": "media/greensocks2.jpg",
+            "image_3": "",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 39,
+        "model": "products.product",
+        "fields": {
+            "name": "Earth Scarf",
+            "description": "Earth Green Scarf",
+            "sku": "pp9628167314",
+            "has_sizes": false,
+            "price": 20,
+            "element": 4,
+            "category": 1,
+            "rating": 4.6,
+            "image_1": "media/greenscarf1.jpg",
+            "image_2": "media/greenscarf2.jpg",
+            "image_3": "media/greenscarf3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 40,
+        "model": "products.product",
+        "fields": {
+            "name": "Earth Wallet",
+            "description": "Earth Green Wallet",
+            "sku": "pp6314697851",
+            "has_sizes": false,
+            "price": 25,
+            "element": 4,
+            "category": 1,
+            "rating": 4.8,
+            "image_1": "media/greenwallet1.jpg",
+            "image_2": "media/greenwallet2.jpg",
+            "image_3": "media/greenwallet3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 41,
+        "model": "products.product",
+        "fields": {
+            "name": "Earth Watch",
+            "description": "Earth Green Watch",
+            "sku": "pp8135798465",
+            "has_sizes": false,
+            "price": 99.99,
+            "element": 4,
+            "category": 1,
+            "rating": 4.7,
+            "image_1": "media/greenwatch1.png",
+            "image_2": "media/greenwatch2.png",
+            "image_3": "media/greenwatch3.jpg",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 42,
+        "model": "products.product",
+        "fields": {
+            "name": "Earth Hat",
+            "description": "Earth Green Hat",
+            "sku": "pp3394361274",
+            "has_sizes": false,
+            "price": 14.99,
+            "element": 4,
+            "category": 1,
+            "rating": 4.8,
+            "image_1": "media/greenhat1.jpg",
+            "image_2": "media/greenhat2.jpg",
+            "image_3": "media/greenhat3.jpg",
+            "image_4": "media/greenwatch4.png"
+        }
+    },
+    {
+        "pk": 43,
+        "model": "products.product",
+        "fields": {
+            "name": "Earth Cap",
+            "description": "Earth Green Cap",
+            "sku": "pp2899233886",
+            "has_sizes": false,
+            "price": 14.99,
+            "element": 4,
+            "category": 1,
+            "rating": 4.8,
+            "image_1": "media/greencap1.jpg",
+            "image_2": "media/greencap2.jpg",
+            "image_3": "media/greencap3.webp",
+            "image_4": ""
+        }
+    },
+    {
+        "pk": 44,
+        "model": "products.product",
+        "fields": {
+            "name": "Earth Bracelet",
+            "description": "Earth Green Bracelet",
+            "sku": "pp6756163548",
+            "has_sizes": false,
+            "price": 9.99,
+            "element": 4,
+            "category": 1,
+            "rating": 4.9,
+            "image_1": "media/greenbracelet.jpg",
+            "image_2": "",
+            "image_3": "",
+            "image_4": ""
+        }
+    }
+]
