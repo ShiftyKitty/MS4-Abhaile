@@ -1,7 +1,7 @@
 [
     {
         "pk": 1,
-        "model": "breathwork.element",
+        "model": "elements.element",
         "fields": {
             "name": "fire",
             "friendly_name": "Fire"
@@ -9,7 +9,7 @@
     },
     {
         "pk": 2,
-        "model": "breathwork.element",
+        "model": "elements.element",
         "fields": {
             "name": "water",
             "friendly_name": "Water"
@@ -17,7 +17,7 @@
     },
     {
         "pk": 3,
-        "model": "breathwork.element",
+        "model": "elements.element",
         "fields": {
             "name": "air",
             "friendly_name": "Air"
@@ -25,7 +25,7 @@
     },
     {
         "pk": 4,
-        "model": "breathwork.element",
+        "model": "elements.element",
         "fields": {
             "name": "earth",
             "friendly_name": "Earth"
