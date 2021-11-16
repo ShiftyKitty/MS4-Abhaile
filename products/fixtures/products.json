@@ -11,10 +11,10 @@
             "element": 1,
             "category": 1,
             "rating": 4.8,
-            "image_1": "media/redjumper1.jpg",
-            "image_2": "media/redjumper2.jpg",
-            "image_3": "media/redjumper3.jpg",
-            "image_4": "media/redjumper4.jpg"
+            "image_1": "redjumper1.jpg",
+            "image_2": "redjumper2.jpg",
+            "image_3": "redjumper3.jpg",
+            "image_4": "redjumper4.jpg"
         }
     },
     {
@@ -29,9 +29,9 @@
             "element": 1,
             "category": 1,
             "rating": 4.7,
-            "image_1": "media/redhoodie.jpg",
-            "image_2": "media/redhoodie2.jpg",
-            "image_3": "media/redhoodie3.webp",
+            "image_1": "redhoodie.jpg",
+            "image_2": "redhoodie2.jpg",
+            "image_3": "redhoodie3.webp",
             "image_4": ""
         }
     },
@@ -47,10 +47,10 @@
             "element": 1,
             "category": 1,
             "rating": 4.9,
-            "image_1": "media/redT1.jpg",
-            "image_2": "media/redT2.jpg",
-            "image_3": "media/redT3.jpg",
-            "image_4": "media/redT4.jpg"
+            "image_1": "redT1.jpg",
+            "image_2": "redT2.jpg",
+            "image_3": "redT3.jpg",
+            "image_4": "redT4.jpg"
         }
     },
     {
@@ -65,9 +65,9 @@
             "element": 1,
             "category": 1,
             "rating": 4.6,
-            "image_1": "media/redpants1.jpg",
-            "image_2": "media/redpants2.jpg",
-            "image_3": "media/redpants3.jpg",
+            "image_1": "redpants1.jpg",
+            "image_2": "redpants2.jpg",
+            "image_3": "redpants3.jpg",
             "image_4": ""
         }
     },
@@ -83,8 +83,8 @@
             "element": 1,
             "category": 1,
             "rating": 4.7,
-            "image_1": "media/redsocks1.jpg",
-            "image_2": "media/redsocks2.jpg",
+            "image_1": "redsocks1.jpg",
+            "image_2": "redsocks2.jpg",
             "image_3": "",
             "image_4": ""
         }
@@ -101,9 +101,9 @@
             "element": 1,
             "category": 2,
             "rating": 4.6,
-            "image_1": "media/redscarf1.jpg",
-            "image_2": "media/redscarf2.jpg",
-            "image_3": "media/redscarf3.jpg",
+            "image_1": "redscarf1.jpg",
+            "image_2": "redscarf2.jpg",
+            "image_3": "redscarf3.jpg",
             "image_4": ""
         }
     },
@@ -119,9 +119,9 @@
             "element": 1,
             "category": 2,
             "rating": 4.8,
-            "image_1": "media/redwallet1.jpg",
-            "image_2": "media/redwallet2.jpg",
-            "image_3": "media/redwallet3.jpg",
+            "image_1": "redwallet1.jpg",
+            "image_2": "redwallet2.jpg",
+            "image_3": "redwallet3.jpg",
             "image_4": ""
         }
     },
@@ -137,8 +137,8 @@
             "element": 1,
             "category": 2,
             "rating": 4.7,
-            "image_1": "media/redwatch.jpg",
-            "image_2": "media/redwatch2.jpg",
+            "image_1": "redwatch.jpg",
+            "image_2": "redwatch2.jpg",
             "image_3": "",
             "image_4": ""
         }
@@ -155,9 +155,9 @@
             "element": 1,
             "category": 2,
             "rating": 4.8,
-            "image_1": "media/redhat.jpg",
-            "image_2": "media/redhat2.jpg",
-            "image_3": "media/redhat3.webp",
+            "image_1": "redhat.jpg",
+            "image_2": "redhat2.jpg",
+            "image_3": "redhat3.webp",
             "image_4": ""
         }
     },
@@ -173,10 +173,10 @@
             "element": 1,
             "category": 2,
             "rating": 4.8,
-            "image_1": "media/redcap1.jpg",
-            "image_2": "media/redcap2.jpg",
-            "image_3": "media/redcap3.jpg",
-            "image_4": "media/redcap4.jpg"
+            "image_1": "redcap1.jpg",
+            "image_2": "redcap2.jpg",
+            "image_3": "redcap3.jpg",
+            "image_4": "redcap4.jpg"
         }
     },
     {
@@ -191,7 +191,7 @@
             "element": 1,
             "category": 2,
             "rating": 4.9,
-            "image_1": "media/redbracelet1.jpg",
+            "image_1": "redbracelet1.jpg",
             "image_2": "",
             "image_3": "",
             "image_4": ""
@@ -209,10 +209,10 @@
             "element": 2,
             "category": 1,
             "rating": 4.8,
-            "image_1": "media/bluejumper.jpg",
-            "image_2": "media/bluejumper2.jpg",
-            "image_3": "media/bluejumper3.jpg",
-            "image_4": "media/bluejumper4.jpg"
+            "image_1": "bluejumper.jpg",
+            "image_2": "bluejumper2.jpg",
+            "image_3": "bluejumper3.jpg",
+            "image_4": "bluejumper4.jpg"
         }
     },
     {
@@ -227,9 +227,9 @@
             "element": 2,
             "category": 1,
             "rating": 4.7,
-            "image_1": "media/bluehoodie.jpg",
-            "image_2": "media/bluehoodie2.jpg",
-            "image_3": "media/bluehoodie3.webp",
+            "image_1": "bluehoodie.jpg",
+            "image_2": "bluehoodie2.jpg",
+            "image_3": "bluehoodie3.webp",
             "image_4": ""
         }
     },
@@ -245,10 +245,10 @@
             "element": 2,
             "category": 1,
             "rating": 4.9,
-            "image_1": "media/blueT1.jpg",
-            "image_2": "media/blueT2.jpg",
-            "image_3": "media/blueT3.webp",
-            "image_4": "media/blueT4.webp"
+            "image_1": "blueT1.jpg",
+            "image_2": "blueT2.jpg",
+            "image_3": "blueT3.webp",
+            "image_4": "blueT4.webp"
         }
     },
     {
@@ -263,9 +263,9 @@
             "element": 2,
             "category": 1,
             "rating": 4.6,
-            "image_1": "media/bluepants1.jpg",
-            "image_2": "media/bluepants2.jpg",
-            "image_3": "media/bluepants3.jpg",
+            "image_1": "bluepants1.jpg",
+            "image_2": "bluepants2.jpg",
+            "image_3": "bluepants3.jpg",
             "image_4": ""
         }
     },
@@ -281,9 +281,9 @@
             "element": 2,
             "category": 1,
             "rating": 4.7,
-            "image_1": "media/bluesocks1.jpg",
-            "image_2": "media/bluesocks2.jpg",
-            "image_3": "media/bluesocks3.jpg",
+            "image_1": "bluesocks1.jpg",
+            "image_2": "bluesocks2.jpg",
+            "image_3": "bluesocks3.jpg",
             "image_4": ""
         }
     },
@@ -299,9 +299,9 @@
             "element": 2,
             "category": 2,
             "rating": 4.6,
-            "image_1": "media/bluescarf1.jpg",
-            "image_2": "media/bluescarf2.jpg",
-            "image_3": "media/bluescarf3.jpg",
+            "image_1": "bluescarf1.jpg",
+            "image_2": "bluescarf2.jpg",
+            "image_3": "bluescarf3.jpg",
             "image_4": ""
         }
     },
@@ -317,9 +317,9 @@
             "element": 2,
             "category": 2,
             "rating": 4.8,
-            "image_1": "media/bluewallet1.jpg",
-            "image_2": "media/bluewallet2.jpg",
-            "image_3": "media/bluewallet3.jpg",
+            "image_1": "bluewallet1.jpg",
+            "image_2": "bluewallet2.jpg",
+            "image_3": "bluewallet3.jpg",
             "image_4": ""
         }
     },
@@ -335,9 +335,9 @@
             "element": 2,
             "category": 2,
             "rating": 4.7,
-            "image_1": "media/bluewatch1.png",
-            "image_2": "media/bluewatch2.png",
-            "image_3": "media/bluewatch3.jpg",
+            "image_1": "bluewatch1.png",
+            "image_2": "bluewatch2.png",
+            "image_3": "bluewatch3.jpg",
             "image_4": ""
         }
     },
@@ -353,9 +353,9 @@
             "element": 2,
             "category": 2,
             "rating": 4.8,
-            "image_1": "media/bluehat1.jpg",
-            "image_2": "media/bluehat2.jpg",
-            "image_3": "media/bluehat3.jpg",
+            "image_1": "bluehat1.jpg",
+            "image_2": "bluehat2.jpg",
+            "image_3": "bluehat3.jpg",
             "image_4": ""
         }
     },
@@ -371,9 +371,9 @@
             "element": 2,
             "category": 2,
             "rating": 4.8,
-            "image_1": "media/bluecap1.jpg",
-            "image_2": "media/bluecap2.jpg",
-            "image_3": "media/bluecap3.jpg",
+            "image_1": "bluecap1.jpg",
+            "image_2": "bluecap2.jpg",
+            "image_3": "bluecap3.jpg",
             "image_4": ""
         }
     },
@@ -389,7 +389,7 @@
             "element": 2,
             "category": 2,
             "rating": 4.9,
-            "image_1": "media/bluebracelet1.jpg",
+            "image_1": "bluebracelet1.jpg",
             "image_2": "",
             "image_3": "",
             "image_4": ""
@@ -407,10 +407,10 @@
             "element": 3,
             "category": 1,
             "rating": 4.8,
-            "image_1": "media/yellowjumper.jpg",
-            "image_2": "media/yellowjumper2.jpg",
-            "image_3": "media/yellowjumper3.jpg",
-            "image_4": "media/yellowjumper4.jpg"
+            "image_1": "yellowjumper.jpg",
+            "image_2": "yellowjumper2.jpg",
+            "image_3": "yellowjumper3.jpg",
+            "image_4": "yellowjumper4.jpg"
         }
     },
     {
@@ -425,9 +425,9 @@
             "element": 3,
             "category": 1,
             "rating": 4.7,
-            "image_1": "media/yellowhoodie.jpg",
-            "image_2": "media/yellowhoodie2.jpg",
-            "image_3": "media/yellowhoodie3.jpg",
+            "image_1": "yellowhoodie.jpg",
+            "image_2": "yellowhoodie2.jpg",
+            "image_3": "yellowhoodie3.jpg",
             "image_4": ""
         }
     },
@@ -443,9 +443,9 @@
             "element": 3,
             "category": 1,
             "rating": 4.9,
-            "image_1": "media/yellowT1.jpg",
-            "image_2": "media/yellowT2.jpg",
-            "image_3": "media/yellowT3.jpg",
+            "image_1": "yellowT1.jpg",
+            "image_2": "yellowT2.jpg",
+            "image_3": "yellowT3.jpg",
             "image_4": ""
         }
     },
@@ -461,9 +461,9 @@
             "element": 3,
             "category": 1,
             "rating": 4.6,
-            "image_1": "media/yellowpants1.jpg",
-            "image_2": "media/yellowpants2.jpg",
-            "image_3": "media/yellowpants3.jpg",
+            "image_1": "yellowpants1.jpg",
+            "image_2": "yellowpants2.jpg",
+            "image_3": "yellowpants3.jpg",
             "image_4": ""
         }
     },
@@ -479,8 +479,8 @@
             "element": 3,
             "category": 1,
             "rating": 4.7,
-            "image_1": "media/yellowsocks.jpg",
-            "image_2": "media/yellowsocks2.jpg",
+            "image_1": "yellowsocks.jpg",
+            "image_2": "yellowsocks2.jpg",
             "image_3": "",
             "image_4": ""
         }
@@ -497,9 +497,9 @@
             "element": 3,
             "category": 2,
             "rating": 4.6,
-            "image_1": "media/yellowscarf.jpg",
-            "image_2": "media/yellowscarf2.webp",
-            "image_3": "media/yellowscarf3.webp",
+            "image_1": "yellowscarf.jpg",
+            "image_2": "yellowscarf2.webp",
+            "image_3": "yellowscarf3.webp",
             "image_4": ""
         }
     },
@@ -515,9 +515,9 @@
             "element": 3,
             "category": 2,
             "rating": 4.8,
-            "image_1": "media/yellowwallet1.jpg",
-            "image_2": "media/yellowwallet2.jpg",
-            "image_3": "media/yellowwallet3.jpg",
+            "image_1": "yellowwallet1.jpg",
+            "image_2": "yellowwallet2.jpg",
+            "image_3": "yellowwallet3.jpg",
             "image_4": ""
         }
     },
@@ -533,10 +533,10 @@
             "element": 3,
             "category": 2,
             "rating": 4.7,
-            "image_1": "media/yellowwatch1.jpg",
-            "image_2": "media/yellowwatch2.jpg",
-            "image_3": "media/yellowwatch3.jpg",
-            "image_4": "media/yellowwatch4.jpg"
+            "image_1": "yellowwatch1.jpg",
+            "image_2": "yellowwatch2.jpg",
+            "image_3": "yellowwatch3.jpg",
+            "image_4": "yellowwatch4.jpg"
         }
     },
     {
@@ -551,9 +551,9 @@
             "element": 3,
             "category": 2,
             "rating": 4.8,
-            "image_1": "media/yellowhat1.jpg",
-            "image_2": "media/yellowhat2.webp",
-            "image_3": "media/yellowhat3.webp",
+            "image_1": "yellowhat1.jpg",
+            "image_2": "yellowhat2.webp",
+            "image_3": "yellowhat3.webp",
             "image_4": ""
         }
     },
@@ -569,10 +569,10 @@
             "element": 3,
             "category": 2,
             "rating": 4.8,
-            "image_1": "media/yellowcap1.webp",
-            "image_2": "media/yellowcap2.jpg",
-            "image_3": "media/yellowcap3.jpg",
-            "image_4": "media/yellowcap4.webp"
+            "image_1": "yellowcap1.webp",
+            "image_2": "yellowcap2.jpg",
+            "image_3": "yellowcap3.jpg",
+            "image_4": "yellowcap4.webp"
         }
     },
     {
@@ -587,7 +587,7 @@
             "element": 3,
             "category": 2,
             "rating": 4.9,
-            "image_1": "media/yellowbracelet1.jpg",
+            "image_1": "yellowbracelet1.jpg",
             "image_2": "",
             "image_3": "",
             "image_4": ""
@@ -605,10 +605,10 @@
             "element": 4,
             "category": 1,
             "rating": 4.8,
-            "image_1": "media/greenjumper1.jpg",
-            "image_2": "media/greenjumper2.jpg",
-            "image_3": "media/greenjumper3.jpg",
-            "image_4": "media/greenjumper4.jpg"
+            "image_1": "greenjumper1.jpg",
+            "image_2": "greenjumper2.jpg",
+            "image_3": "greenjumper3.jpg",
+            "image_4": "greenjumper4.jpg"
         }
     },
     {
@@ -623,9 +623,9 @@
             "element": 4,
             "category": 1,
             "rating": 4.7,
-            "image_1": "media/greenhoodie1.jpg",
-            "image_2": "media/greenhoodie2.jpg",
-            "image_3": "media/greenhoodie3.jpg",
+            "image_1": "greenhoodie1.jpg",
+            "image_2": "greenhoodie2.jpg",
+            "image_3": "greenhoodie3.jpg",
             "image_4": ""
         }
     },
@@ -641,8 +641,8 @@
             "element": 4,
             "category": 1,
             "rating": 4.9,
-            "image_1": "media/greenT1.jpg",
-            "image_2": "media/greenT2.jpg",
+            "image_1": "greenT1.jpg",
+            "image_2": "greenT2.jpg",
             "image_3": "",
             "image_4": ""
         }
@@ -659,10 +659,10 @@
             "element": 4,
             "category": 1,
             "rating": 4.6,
-            "image_1": "media/greenpants1.jpg",
-            "image_2": "media/greenpants2.webp",
-            "image_3": "media/greenpants3.jpg",
-            "image_4": "media/greenpants4.jpg"
+            "image_1": "greenpants1.jpg",
+            "image_2": "greenpants2.webp",
+            "image_3": "greenpants3.jpg",
+            "image_4": "greenpants4.jpg"
         }
     },
     {
@@ -677,8 +677,8 @@
             "element": 4,
             "category": 1,
             "rating": 4.7,
-            "image_1": "media/greensocks1.jpg",
-            "image_2": "media/greensocks2.jpg",
+            "image_1": "greensocks1.jpg",
+            "image_2": "greensocks2.jpg",
             "image_3": "",
             "image_4": ""
         }
@@ -695,9 +695,9 @@
             "element": 4,
             "category": 1,
             "rating": 4.6,
-            "image_1": "media/greenscarf1.jpg",
-            "image_2": "media/greenscarf2.jpg",
-            "image_3": "media/greenscarf3.jpg",
+            "image_1": "greenscarf1.jpg",
+            "image_2": "greenscarf2.jpg",
+            "image_3": "greenscarf3.jpg",
             "image_4": ""
         }
     },
@@ -713,9 +713,9 @@
             "element": 4,
             "category": 1,
             "rating": 4.8,
-            "image_1": "media/greenwallet1.jpg",
-            "image_2": "media/greenwallet2.jpg",
-            "image_3": "media/greenwallet3.jpg",
+            "image_1": "greenwallet1.jpg",
+            "image_2": "greenwallet2.jpg",
+            "image_3": "greenwallet3.jpg",
             "image_4": ""
         }
     },
@@ -731,9 +731,9 @@
             "element": 4,
             "category": 1,
             "rating": 4.7,
-            "image_1": "media/greenwatch1.png",
-            "image_2": "media/greenwatch2.png",
-            "image_3": "media/greenwatch3.jpg",
+            "image_1": "greenwatch1.png",
+            "image_2": "greenwatch2.png",
+            "image_3": "greenwatch3.jpg",
             "image_4": ""
         }
     },
@@ -749,10 +749,10 @@
             "element": 4,
             "category": 1,
             "rating": 4.8,
-            "image_1": "media/greenhat1.jpg",
-            "image_2": "media/greenhat2.jpg",
-            "image_3": "media/greenhat3.jpg",
-            "image_4": "media/greenwatch4.png"
+            "image_1": "greenhat1.jpg",
+            "image_2": "greenhat2.jpg",
+            "image_3": "greenhat3.jpg",
+            "image_4": "greenwatch4.png"
         }
     },
     {
@@ -767,9 +767,9 @@
             "element": 4,
             "category": 1,
             "rating": 4.8,
-            "image_1": "media/greencap1.jpg",
-            "image_2": "media/greencap2.jpg",
-            "image_3": "media/greencap3.webp",
+            "image_1": "greencap1.jpg",
+            "image_2": "greencap2.jpg",
+            "image_3": "greencap3.webp",
             "image_4": ""
         }
     },
@@ -785,7 +785,7 @@
             "element": 4,
             "category": 1,
             "rating": 4.9,
-            "image_1": "media/greenbracelet.jpg",
+            "image_1": "greenbracelet.jpg",
             "image_2": "",
             "image_3": "",
             "image_4": ""
