@@ -92,6 +92,10 @@ body {
 	z-index: -1;
 }
 
+.new-line {
+    white-space: pre-line;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
