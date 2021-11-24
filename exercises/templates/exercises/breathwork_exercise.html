@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'exercises/css/exercises.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -77,9 +81,29 @@
             </div>
         </div>
         <hr>
+        <div class="container text-centre">
+            <div class="breath_bubble_container">
+                Focused Breathing
+                <div class="breath_bubble">
+                    <main>
+                        <div></div>
+                    </main>
+                </div>
+                <div>
+                    Rounds
+                </div>
+                <div>
+                    Time to complete
+                </div>
+                <div>
+                    start/reset
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
 
 {% block postloadjs %}
-{{ block.super }}
+    {{ block.super }}
+    <script src="{% static 'exercises/js/breath_sync.js' %}"></script>
 {% endblock %}

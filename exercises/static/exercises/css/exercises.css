@@ -1,0 +1,69 @@
+:root {
+    --primary-color: lightsteelblue;
+    --secondary-color: lightpink;
+    --large: 200px;
+    --small: 50px;
+    --inhale-1-time: 8s;
+    --exhale-1-time: 16s;
+    --inhale-hold-time: 2s;
+
+}
+
+
+main {
+    text-align: center;
+    height: 300px;
+}
+
+.breath_bubble_container {
+    text-align: center;
+} 
+
+.breath_bubble {
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    width: var(--small);
+    height: var(--small);
+    border-radius: calc( var(--small) / 2);
+    animation: inhale_1 var(--inhale-1-time) linear forwards,
+                inhale_ht var(--inhale-hold-time) var(--inhale-1-time) linear none,
+                exhale_1 var(--exhale-1-time) linear forwards var(--inhale-1-time); /* infinite */
+               
+}
+
+
+/* @keyframes breath {
+    25%, 50% {
+       background-color: var(--secondary-color);
+       width: var(--large);
+       height: var(--large);
+       border-radius: calc( var(--large) / 2);
+    }   
+   } */
+
+@keyframes inhale_1 {
+    100% {
+       background-color: var(--secondary-color);
+       width: var(--large);
+       height: var(--large);
+       border-radius: calc( var(--large) / 2);
+    }   
+}
+
+@keyframes exhale_1 {
+    100% {
+        background-color: var(--primary-color);
+        width: var(--small);
+        height: var(--small);
+        border-radius: calc( var(--small) / 2);
+    }   
+}
+
+@keyframes inhale_ht {
+    0% {
+       background-color: var(--secondary-color);
+       width: var(--large);
+       height: var(--large);
+       border-radius: calc( var(--large) / 2);
+    }   
+}
