@@ -5,7 +5,8 @@
     --small: 50px;
     --inhale-1-time: 8s;
     --exhale-1-time: 16s;
-    --inhale-hold-time: 2s;
+    --inhale-hold-time: 3s;
+    --exhale-hold-time: 4s;
 
 }
 
@@ -24,10 +25,10 @@ main {
     background-color: var(--primary-color);
     width: var(--small);
     height: var(--small);
-    border-radius: calc( var(--small) / 2);
-    animation: inhale_1 var(--inhale-1-time) linear forwards,
+    border-radius: calc( var(--small) / 2); 
+    animation: inhale_1 var(--inhale-1-time) linear forwards, /* calc( var(--inhale-1-time) + var(--inhale-hold-time) + var(--exhale-1-time) + var(--exhale-hold-time)) */
                 inhale_ht var(--inhale-hold-time) var(--inhale-1-time) linear none,
-                exhale_1 var(--exhale-1-time) linear forwards var(--inhale-1-time); /* infinite */
+                exhale_1 var(--exhale-1-time) linear forwards calc( var(--inhale-1-time) + var(--inhale-hold-time)); /* infinite */
                
 }
 
@@ -42,15 +43,30 @@ main {
    } */
 
 @keyframes inhale_1 {
+    0% {
+        background-color: var(--primary-color);
+        width: var(--small);
+        height: var(--small);
+        border-radius: calc( var(--small) / 2);
+    }
     100% {
        background-color: var(--secondary-color);
        width: var(--large);
        height: var(--large);
        border-radius: calc( var(--large) / 2);
+       content: "Breathe In";
     }   
 }
 
 @keyframes exhale_1 {
+    0% {
+        background-color: var(--secondary-color);
+       width: var(--large);
+       height: var(--large);
+       border-radius: calc( var(--large) / 2);
+       content: "Breathe In";
+    }
+
     100% {
         background-color: var(--primary-color);
         width: var(--small);
@@ -65,5 +81,14 @@ main {
        width: var(--large);
        height: var(--large);
        border-radius: calc( var(--large) / 2);
+    }   
+}
+
+@keyframes exhale_ht {
+    0% {
+       background-color: var(--primary-color);
+       width: var(--small);
+       height: var(--small);
+       border-radius: calc( var(--small) / 2);
     }   
 }
