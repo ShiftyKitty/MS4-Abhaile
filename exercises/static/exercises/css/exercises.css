@@ -5,9 +5,8 @@
     --small: 5em;
     --inhale-1-time: 8s;
     --exhale-1-time: 16s;
-    --inhale-hold-time: 3s;
-    --exhale-hold-time: 4s;
-
+    --post_inhale_ht: 3s;
+    --post_exhale_ht: 4s;
 }
 
 
@@ -25,11 +24,7 @@ main {
     background-color: var(--primary-color);
     width: var(--small);
     height: var(--small);
-    border-radius: calc( var(--small) / 2); 
-    /* animation: inhale_1 var(--inhale-1-time) forwards, /* calc( var(--inhale-1-time) + var(--inhale-hold-time) + var(--exhale-1-time) + var(--exhale-hold-time)) */
-               /* inhale_ht var(--inhale-hold-time) calc(var(--inhale-1-time) + var(--exhale-hold-time)) linear none, */
-               /* exhale_1 var(--exhale-1-time) linear forwards calc( var(--inhale-1-time) + var(--inhale-hold-time) + var(--exhale-hold-time)); */
-               
+    border-radius: calc( var(--small) / 2);                
 }
 
 
@@ -43,6 +38,54 @@ main {
    } */
 
 @keyframes inhale_1 {
+    0% {
+        background-color: var(--primary-color);
+        width: var(--small);
+        height: var(--small);
+        border-radius: calc( var(--small) / 2);
+    }
+    100% {
+       background-color: var(--secondary-color);
+       width: var(--large);
+       height: var(--large);
+       border-radius: calc( var(--large) / 2);
+       content: "Breathe In";
+    }   
+}
+
+@keyframes inhale_2 {
+    0% {
+        background-color: var(--primary-color);
+        width: var(--small);
+        height: var(--small);
+        border-radius: calc( var(--small) / 2);
+    }
+    100% {
+       background-color: var(--secondary-color);
+       width: var(--large);
+       height: var(--large);
+       border-radius: calc( var(--large) / 2);
+       content: "Breathe In";
+    }   
+}
+
+@keyframes inhale_3 {
+    0% {
+        background-color: var(--primary-color);
+        width: var(--small);
+        height: var(--small);
+        border-radius: calc( var(--small) / 2);
+    }
+    100% {
+       background-color: var(--secondary-color);
+       width: var(--large);
+       height: var(--large);
+       border-radius: calc( var(--large) / 2);
+       content: "Breathe In";
+    }   
+}
+
+@keyframes inhale_4 {
     0% {
         background-color: var(--primary-color);
         width: var(--small);
@@ -75,6 +118,57 @@ main {
     }   
 }
 
+@keyframes exhale_2 {
+    0% {
+        background-color: var(--secondary-color);
+       width: var(--large);
+       height: var(--large);
+       border-radius: calc( var(--large) / 2);
+       content: "Breathe In";
+    } 
+
+    100% {
+        background-color: var(--primary-color);
+        width: var(--small);
+        height: var(--small);
+        border-radius: calc( var(--small) / 2);
+    }   
+}
+
+@keyframes exhale_3 {
+    0% {
+        background-color: var(--secondary-color);
+       width: var(--large);
+       height: var(--large);
+       border-radius: calc( var(--large) / 2);
+       content: "Breathe In";
+    } 
+
+    100% {
+        background-color: var(--primary-color);
+        width: var(--small);
+        height: var(--small);
+        border-radius: calc( var(--small) / 2);
+    }   
+}
+
+@keyframes exhale_4 {
+    0% {
+        background-color: var(--secondary-color);
+       width: var(--large);
+       height: var(--large);
+       border-radius: calc( var(--large) / 2);
+       content: "Breathe In";
+    } 
+
+    100% {
+        background-color: var(--primary-color);
+        width: var(--small);
+        height: var(--small);
+        border-radius: calc( var(--small) / 2);
+    }   
+}
+
 @keyframes inhale_ht {
     0%, 100% {
        background-color: var(--secondary-color);
@@ -85,7 +179,7 @@ main {
 }
 
 @keyframes exhale_ht {
-    0% {
+    0%, 100% {
        background-color: var(--primary-color);
        width: var(--small);
        height: var(--small);
