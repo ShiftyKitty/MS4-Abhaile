@@ -96,14 +96,36 @@
                     Time to complete
                 </div>
                 <div>
-                    start/reset
+                    <button class="start">Start</button>
+                    <button class="reset">Reset</button>
                 </div>
             </div>
         </div>
+        <input type="hidden" id="inhale_1" value="{{ exercise.inhale_1 }}">
+        <input type="hidden" id="exhale_1" value="{{ exercise.exhale_1 }}">
+        <input type="hidden" id="inhale_2" value="{{ exercise.inhale_2 }}">
+        <input type="hidden" id="exhale_2" value="{{ exercise.exhale_2 }}">
+        <input type="hidden" id="inhale_3" value="{{ exercise.inhale_3 }}">
+        <input type="hidden" id="exhale_3" value="{{ exercise.exhale_3 }}">
+        <input type="hidden" id="inhale_4" value="{{ exercise.inhale_4 }}">
+        <input type="hidden" id="exhale_4" value="{{ exercise.exhale_4 }}">
+        <input type="hidden" id="post_inhale_ht" value="{{ exercise.post_inhale_ht }}">
+        <input type="hidden" id="post_exhale_ht" value="{{ exercise.post_exhale_ht }}">
+        <input type="hidden" id="post_reps_breath_hold" value="{{ exercise.post_reps_breath_hold }}">
+        <input type="hidden" id="recovery_inhale" value="{{ exercise.recovery_inhale }}">
+        <input type="hidden" id="recovery_exhale" value="{{ exercise.recovery_exhale }}">
+        <input type="hidden" id="recovery_bh" value="{{ exercise.recovery_bh }}">
+        <input type="hidden" id="inhale_reps" value="{{ exercise.inhale_reps }}">
+        <input type="hidden" id="exhale_reps" value="{{ exercise.exhale_reps }}">
+        <input type="hidden" id="breath_reps" value="{{ exercise.breath_reps }}">
     </div>
 {% endblock %}
 
 {% block postloadjs %}
     {{ block.super }}
     <script src="{% static 'exercises/js/breath_sync.js' %}"></script>
+    <script>
+        let inhale_hold_time = document.querySelector("#post_inhale_ht").value;
+        console.log(inhale_hold_time)
+    </script>   
 {% endblock %}
