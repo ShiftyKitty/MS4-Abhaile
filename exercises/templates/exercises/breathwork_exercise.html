@@ -95,7 +95,7 @@
                 <div>
                     Time to complete
                 </div>
-                <div>Breath Count: <span class="breath_counter"></span></div>
+                <div>Breath Count: <span class="breath_counter">0</span></div>
                 <div>
                     <button class="start">Start</button>
                     <button class="reset">Reset</button>
@@ -125,8 +125,4 @@
 {% block postloadjs %}
     {{ block.super }}
     <script src="{% static 'exercises/js/breath_sync.js' %}"></script>
-    <script>
-        let inhale_hold_time = document.querySelector("#post_inhale_ht").value;
-        console.log(inhale_hold_time)
-    </script>   
 {% endblock %}

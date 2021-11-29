@@ -113,8 +113,8 @@ function animate(elem, animation) {
 
 async function chainAnimations() {
     
-    let counter = document.querySelector(".breath_counter").innerText;
-    counter = 0;
+    let breathCounter = document.querySelector(".breath_counter").innerHTML;
+    
 
     for (let i = 0; i < breath_reps; i++) {
         // apply the inhale animation
@@ -127,7 +127,9 @@ async function chainAnimations() {
         await animate(BreathBubble, Exhale_HT());
 
         BreathBubble.style.innerText = 'something';
-        counter = counter + 1
+        breathCounter++;
+        document.querySelector(".breath_counter").innerHTML = breathCounter;
+
       }
   }
 
