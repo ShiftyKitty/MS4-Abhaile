@@ -128,11 +128,19 @@ function roundChanger () {
 }
 roundChanger();
 
+function sleep(dur) {
+    var d = new Date().getTime() + dur;
+    while (new Date().getTime() <= d) {
+       //Do nothing
+    }
+ }
+
 
 async function chainAnimations() {
     
     let breathCounter = document.querySelector(".breath_counter").innerHTML;
     let roundCounter = document.querySelector(".round_counter").innerHTML;
+    let PostRoundHoldTimer = document.querySelector(".post_round_hold_timer");
 
     roundChanger();
     var roundAmount = roundSelector.value;
@@ -141,7 +149,7 @@ async function chainAnimations() {
     
     
     for (let j = 0; j < roundAmount; j++) {
-        for (let i = 0; i < breath_reps; i++) {
+        for (let i = 1; i < (breath_reps+1); i++) {
             // apply the inhale animation
             await animate(BreathBubble, Inhale_1());
             // apply inhale HT animation
@@ -151,8 +159,14 @@ async function chainAnimations() {
             // apply exhale HT animation
             await animate(BreathBubble, Exhale_HT());
 
-            breathCounter++;
-            document.querySelector(".breath_counter").innerHTML = breathCounter;
+            
+            document.querySelector(".breath_counter").innerHTML = i;
+            console.log(i);
+
+            if (i == breath_reps) {
+                sleep(post_reps_breath_hold);
+                console.log("I am equal to breath reps")
+             }
         }
         let roundCounter = document.querySelector(".round_counter").innerHTML
         roundCounter--;
