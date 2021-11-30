@@ -102,6 +102,7 @@ function Exhale_HT() {
     BreathBubble.style.animation = "exhale_ht var(--post_exhale_ht) linear none";
 };
 
+
 //2. Link them together
 function animate(elem, animation) {
     return new Promise((resolve, reject) => {
@@ -153,6 +154,7 @@ async function chainAnimations() {
             breathCounter++;
             document.querySelector(".breath_counter").innerHTML = breathCounter;
         }
+        let roundCounter = document.querySelector(".round_counter").innerHTML
         roundCounter--;
         document.querySelector(".round_counter").innerHTML = roundCounter;
     }
