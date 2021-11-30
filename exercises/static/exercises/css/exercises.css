@@ -16,8 +16,20 @@ main {
 }
 
 .breath_bubble_container {
+    position: relative;
     text-align: center;
 } 
+
+.bubble-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 25em;
+    min-height: 25em;
+    border-radius: 50%;
+    border: 1px solid black;
+}
 
 .breath_bubble {
     margin: 0 auto;

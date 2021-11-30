@@ -32,6 +32,9 @@ document.documentElement.style.setProperty('--post_inhale_ht', (post_inhale_ht/1
 let post_exhale_ht = document.querySelector("#post_exhale_ht").value * 1000;
 document.documentElement.style.setProperty('--post_exhale_ht', (post_exhale_ht/1000) + "s");
 
+let post_reps_breath_hold = document.querySelector("#post_reps_breath_hold").value * 1000;
+document.documentElement.style.setProperty('--post_reps_breath_hold', (post_reps_breath_hold/1000) + "s");
+
 let recovery_inhale = document.querySelector("#recovery_inhale").value * 1000;
 document.documentElement.style.setProperty('--recovery_inhale', (recovery_inhale/1000) + "s");
 
@@ -51,6 +54,7 @@ let breath_reps = document.querySelector("#breath_reps").value;
 document.documentElement.style.setProperty('--breath_reps', (breath_reps/1000) + "s");
 
 console.log(breath_reps)
+console.log(post_reps_breath_hold)
 
 // what do i need to do
 
@@ -111,26 +115,47 @@ function animate(elem, animation) {
     });
   }
 
+let roundSelector = document.querySelector(".round-selector");
+  console.log(roundSelector.value)
+
+function roundChanger () {
+    roundSelector.addEventListener('change', (event) => {
+        var roundAmount = roundSelector.value;
+        document.querySelector(".round_counter").innerHTML = `${roundAmount}`;
+        console.log(roundAmount)
+    })
+}
+roundChanger();
+
+
 async function chainAnimations() {
     
     let breathCounter = document.querySelector(".breath_counter").innerHTML;
+    let roundCounter = document.querySelector(".round_counter").innerHTML;
+
+    roundChanger();
+    var roundAmount = roundSelector.value;
+    document.querySelector(".round_counter").innerHTML = `${roundAmount}`;
+    console.log(roundAmount)
     
+    
+    for (let j = 0; j < roundAmount; j++) {
+        for (let i = 0; i < breath_reps; i++) {
+            // apply the inhale animation
+            await animate(BreathBubble, Inhale_1());
+            // apply inhale HT animation
+            await animate(BreathBubble, Inhale_HT());
+            // apply exhale animation
+            await animate(BreathBubble, Exhale_1());
+            // apply exhale HT animation
+            await animate(BreathBubble, Exhale_HT());
 
-    for (let i = 0; i < breath_reps; i++) {
-        // apply the inhale animation
-        await animate(BreathBubble, Inhale_1());
-        // apply inhale animation
-        await animate(BreathBubble, Inhale_HT());
-        // apply another animation
-        await animate(BreathBubble, Exhale_1());
-        // add a done text after the animation finishes.
-        await animate(BreathBubble, Exhale_HT());
-
-        BreathBubble.style.innerText = 'something';
-        breathCounter++;
-        document.querySelector(".breath_counter").innerHTML = breathCounter;
-
-      }
+            breathCounter++;
+            document.querySelector(".breath_counter").innerHTML = breathCounter;
+        }
+        roundCounter--;
+        document.querySelector(".round_counter").innerHTML = roundCounter;
+    }
   }
 
 //   await animate(BreathBubble, Inhale_2());

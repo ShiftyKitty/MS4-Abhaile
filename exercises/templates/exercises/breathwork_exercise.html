@@ -84,13 +84,22 @@
         <div class="container text-centre">
             <div class="breath_bubble_container">
                 Focused Breathing
-                <div class="breath_bubble">
-                    <main>
-                        <div></div>
-                    </main>
+                <div class="bubble-container">
+                    <div class="breath_bubble">
+                        <main>
+                            <div></div>
+                        </main>
+                    </div>
                 </div>
-                <div>
-                    Rounds
+                <div class="rounds-container">
+                    Rounds left: <span class="round_counter">0</span>
+                    <select class="form-control round-selector col-12 col-md-4 col-lg-2" name="rounds" id='rounds'>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
                 </div>
                 <div>
                     Time to complete
