@@ -131,13 +131,19 @@ roundChanger();
 function sleep(dur) {
     var d = new Date().getTime() + dur;
     while (new Date().getTime() <= d) {
-       //Do nothing
+
     }
- }
+}
+
+let holdTimer = post_reps_breath_hold / 1000;
+console.log(holdTimer)
+document.querySelector(".post_round_hold_timer").innerHTML = holdTimer;
+
+
 
 
 async function chainAnimations() {
-    
+
     let breathCounter = document.querySelector(".breath_counter").innerHTML;
     let roundCounter = document.querySelector(".round_counter").innerHTML;
     let PostRoundHoldTimer = document.querySelector(".post_round_hold_timer");
@@ -146,10 +152,10 @@ async function chainAnimations() {
     var roundAmount = roundSelector.value;
     document.querySelector(".round_counter").innerHTML = `${roundAmount}`;
     console.log(roundAmount)
-    
-    
+
+
     for (let j = 0; j < roundAmount; j++) {
-        for (let i = 1; i < (breath_reps+1); i++) {
+        for (let i = 1; i < (breath_reps + 1); i++) {
             // apply the inhale animation
             await animate(BreathBubble, Inhale_1());
             // apply inhale HT animation
@@ -159,20 +165,37 @@ async function chainAnimations() {
             // apply exhale HT animation
             await animate(BreathBubble, Exhale_HT());
 
-            
+
             document.querySelector(".breath_counter").innerHTML = i;
             console.log(i);
 
             if (i == breath_reps) {
                 sleep(post_reps_breath_hold);
                 console.log("I am equal to breath reps")
-             }
+                //  } if (i == breath_reps) {
+                //     let roundStartIn = holdTimer;
+                //     let countDown = setInterval(roundStartTimer, 1000);
+
+                //     function roundStartTimer() {
+
+                //         roundStartIn--;
+                //         //condition in place to stop countdown going passed 0
+                //         //once 0 is hit, "GO" shows up indicating start of game
+                //         if (roundStartIn <= 0) {
+                //             clearInterval(countDown);
+                //             document.querySelector(".post_round_hold_timer").innerHTML = `${holdTimer}`;
+                //             return;
+                //         }
+                //         // to show countdown within timer
+                //         document.querySelector(".post_round_hold_timer").innerHTML = `${roundStartIn}`
+                //     };
+            }
         }
         let roundCounter = document.querySelector(".round_counter").innerHTML
         roundCounter--;
         document.querySelector(".round_counter").innerHTML = roundCounter;
     }
-  }
+}
 
 //   await animate(BreathBubble, Inhale_2());
 

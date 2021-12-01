@@ -62,6 +62,7 @@ main {
        height: var(--large);
        border-radius: calc( var(--large) / 2);
        content: "Breathe In";
+       color: white;
     }   
 }
 
@@ -119,7 +120,7 @@ main {
        width: var(--large);
        height: var(--large);
        border-radius: calc( var(--large) / 2);
-       content: "Breathe In";
+       
     } 
 
     100% {
@@ -127,6 +128,7 @@ main {
         width: var(--small);
         height: var(--small);
         border-radius: calc( var(--small) / 2);
+        
     }   
 }
 
