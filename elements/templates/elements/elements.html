@@ -1,4 +1,4 @@
-<!-- {% extends "base.html" %}
+{% extends "base.html" %}
 {% load static %}
 
 {% block page_header %}
@@ -24,17 +24,10 @@
                     {% for element in elements %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
-                                {% if element.image %}
                                 <a href="{% url 'element' element.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ element.image.url }}" alt="{{ element.name }}">
+                                    <img class="card-img-top img-fluid" src="{{ element.horizontal_image.url }}" alt="{{ element.name }}">
                                 </a>
-                                {% else %}
-                                <a href="{% url 'element' element.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ element.name }}">
-                                </a>
-                                {% endif %}
                                 <div class="card-body pb-0">
-                                    
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
@@ -102,4 +95,4 @@
             }
         })
     </script>
-{% endblock %} -->
+{% endblock %}
