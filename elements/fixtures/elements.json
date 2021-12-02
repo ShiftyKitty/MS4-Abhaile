@@ -4,7 +4,12 @@
         "model": "elements.element",
         "fields": {
             "name": "fire",
-            "friendly_name": "Fire"
+            "friendly_name": "Fire",
+            "element_description": "What is Fire? Fire is energy. Fire is explosion. Fire is the thing you need to get you started. It is what you need to get you up and going. Fire is what makes you go. Turn your fear into fire and let yourself go.",
+            "why": "If you feel you lack energy in your day to day life, you need Fire.",
+            "vertical_image": "fire_image_v.jpg" ,
+            "horizontal_image": "fire_image_h.jpg"
+
         }
     },
     {
@@ -12,7 +17,12 @@
         "model": "elements.element",
         "fields": {
             "name": "water",
-            "friendly_name": "Water"
+            "friendly_name": "Water",
+            "element_description": "What is Water? Water is creativity. Water is intelligence. Water is flow. Water is focus in your day to day tasks. Water is what is needed to wake the brain up and allow you to think passed your obstacles. Be water my friend. ",
+            "why": "If you feel you lack focus and creativity in your day to day life, you need Water.",
+            "vertical_image": "water_image_v.jpg",
+            "horizontal_image": "water_image_h2.jpg"
+
         }
     },
     {
@@ -20,7 +30,12 @@
         "model": "elements.element",
         "fields": {
             "name": "air",
-            "friendly_name": "Air"
+            "friendly_name": "Air",
+            "element_description": "What is Air? Air is free. Air is freedom. Air is spirituality. Air is releasing yourself from the issues and problems in your life. Air is constant as should be your efforts to look after you and your mental wellbeing. Take a deep breath, you got this. ",
+            "why": "If you feel like you are suffocating in your life, you need Air.",
+            "vertical_image": "air_image_v.jpeg",
+            "horizontal_image": "air_image_h.jpeg"
+
         }
     },
     {
@@ -28,7 +43,11 @@
         "model": "elements.element",
         "fields": {
             "name": "earth",
-            "friendly_name": "Earth"
+            "friendly_name": "Earth",
+            "element_description": "What is earth? Earth is strength. Earth is the physical. Earth is the vessel. Earth is your body. The Earth is a container for all the other elements. While the Earth grows, so do the rest of the elements. Look after and protect the Earth. It is the only one you have.",
+            "why": "If you lack strength and purpose, you need Earth. ",
+            "vertical_image": "earth_image_v2.jpg",
+            "horizontal_image": "earth_image_h.jpg"
         }
     }
 ]
