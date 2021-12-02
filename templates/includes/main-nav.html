@@ -5,10 +5,11 @@
                 Elements
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="elements-link">
-                <a href="" class="dropdown-item">Fire</a>
-                <a href="" class="dropdown-item">Water</a>
-                <a href="" class="dropdown-item">Air</a>
-                <a href="" class="dropdown-item">Earth</a>
+                    <a href="" class="dropdown-item">Fire</a>
+                    <a href="" class="dropdown-item">Water</a>
+                    <a href="" class="dropdown-item">Air</a>
+                    <a href="" class="dropdown-item">Earth</a>
+                    <a href="{% url 'elements' %}" class="dropdown-item">All Elements</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -16,10 +17,10 @@
                 Exercises
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="exercises-link">
-                <a href="" class="dropdown-item">For Energy</a>
-                <a href="" class="dropdown-item">For Focus and Creativity</a>
-                <a href="" class="dropdown-item">For Mental Health & Wellbeing</a>
-                <a href="" class="dropdown-item">For Physical Wellbeing</a>
+                <a href="{% url 'exercises' %}?element=fire" class="dropdown-item">For Energy</a>
+                <a href="{% url 'exercises' %}?element=water" class="dropdown-item">For Focus and Creativity</a>
+                <a href="{% url 'exercises' %}?element=air" class="dropdown-item">For Mental Health & Wellbeing</a>
+                <a href="{% url 'exercises' %}?element=earth" class="dropdown-item">For Physical Wellbeing</a>
                 <a href="{% url 'exercises' %}" class="dropdown-item">All Exercises</a>
             </div>
         </li>
@@ -28,10 +29,10 @@
                 Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Fire Products</a>
-                <a href="" class="dropdown-item">Water Products</a>
-                <a href="" class="dropdown-item">Air Products</a>
-                <a href="" class="dropdown-item">Earth Products</a>
+                <a href="{% url 'products' %}?element=fire" class="dropdown-item">Fire Products</a>
+                <a href="{% url 'products' %}?element=water" class="dropdown-item">Water Products</a>
+                <a href="{% url 'products' %}?element=air" class="dropdown-item">Air Products</a>
+                <a href="{% url 'products' %}?element=earth" class="dropdown-item">Earth Products</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
