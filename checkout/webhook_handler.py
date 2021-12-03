@@ -59,6 +59,7 @@ class StripeWH_Handler:
             if value == "":
                 shipping_details.address[field] = None
 
+        # Update profile info if save_info was checked
         profile = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
