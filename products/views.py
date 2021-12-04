@@ -16,6 +16,7 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     categories = None
+    elements = None
     sort = None
     direction = None
 
@@ -34,10 +35,10 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
             
-        if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            products = products.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
+        if 'element' in request.GET:
+            elements = request.GET['element'].split(',')
+            products = products.filter(element__name__in=elements)
+            elements = Element.objects.filter(name__in=elements)
 
         if 'q' in request.GET:
             query = request.GET['q']
