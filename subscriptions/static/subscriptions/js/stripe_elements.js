@@ -1,118 +1,160 @@
-/*
-    Core logic/payment flow for this comes from here:
-    https://stripe.com/docs/payments/accept-a-payment
-    CSS from here: 
-    https://stripe.com/docs/stripe-js
-*/
+document.getElementById("submit").disabled = true;
 
-var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
-var clientSecret = $('#id_client_secret').text().slice(1, -1);
-var stripe = Stripe(stripePublicKey);
-var elements = stripe.elements();
-var style = {
-    base: {
-        color: '#000',
+stripeElements();
+
+function stripeElements() {
+  stripe = Stripe('pk_test_E52Nh0gTCRpJ7h4JhuEX7BIO006LVew6GG');
+
+  if (document.getElementById('card-element')) {
+    let elements = stripe.elements();
+
+    // Card Element styles
+    let style = {
+      base: {
+        color: "#32325d",
         fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-        fontSmoothing: 'antialiased',
-        fontSize: '16px',
-        '::placeholder': {
-            color: '#aab7c4'
+        fontSmoothing: "antialiased",
+        fontSize: "16px",
+        "::placeholder": {
+          color: "#aab7c4"
         }
-    },
-    invalid: {
-        color: '#dc3545',
-        iconColor: '#dc3545'
-    }
-};
-var card = elements.create('card', {style: style});
-card.mount('#card-element');
-
-// Handle realtime validation errors on the card element
-card.addEventListener('change', function (event) {
-    var errorDiv = document.getElementById('card-errors');
-    if (event.error) {
-        var html = `
-            <span class="icon" role="alert">
-                <i class="fas fa-times"></i>
-            </span>
-            <span>${event.error.message}</span>
-        `;
-        $(errorDiv).html(html);
-    } else {
-        errorDiv.textContent = '';
-    }
-});
-
-// Handle form submit
-var form = document.getElementById('payment-form');
-
-form.addEventListener('submit', function(ev) {
-    ev.preventDefault();
-    card.update({ 'disabled': true});
-    $('#submit-button').attr('disabled', true);
-    $('#payment-form').fadeToggle(100);
-    $('#loading-overlay').fadeToggle(100);
-
-    var saveInfo = Boolean($('#id-save-info').attr('checked'));
-    // From using {% csrf_token %} in the form
-    var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
-    var postData = {
-        'csrfmiddlewaretoken': csrfToken,
-        'client_secret': clientSecret,
-        'save_info': saveInfo,
+      },
+      invalid: {
+        color: "#fa755a",
+        iconColor: "#fa755a"
+      }
     };
-    var url = '/checkout/cache_checkout_data/';
 
-    $.post(url, postData).done(function () {
-        stripe.confirmCardPayment(clientSecret, {
-            payment_method: {
-                card: card,
-                billing_details: {
-                    name: $.trim(form.full_name.value),
-                    phone: $.trim(form.phone_number.value),
-                    email: $.trim(form.email.value),
-                    address:{
-                        line1: $.trim(form.street_address1.value),
-                        line2: $.trim(form.street_address2.value),
-                        city: $.trim(form.town_or_city.value),
-                        country: $.trim(form.country.value),
-                        state: $.trim(form.county.value),
-                    }
-                }
-            },
-            shipping: {
-                name: $.trim(form.full_name.value),
-                phone: $.trim(form.phone_number.value),
-                address: {
-                    line1: $.trim(form.street_address1.value),
-                    line2: $.trim(form.street_address2.value),
-                    city: $.trim(form.town_or_city.value),
-                    country: $.trim(form.country.value),
-                    postal_code: $.trim(form.postcode.value),
-                    state: $.trim(form.county.value),
-                }
-            },
-        }).then(function(result) {
-            if (result.error) {
-                var errorDiv = document.getElementById('card-errors');
-                var html = `
-                    <span class="icon" role="alert">
-                    <i class="fas fa-times"></i>
-                    </span>
-                    <span>${result.error.message}</span>`;
-                $(errorDiv).html(html);
-                $('#payment-form').fadeToggle(100);
-                $('#loading-overlay').fadeToggle(100);
-                card.update({ 'disabled': false});
-                $('#submit-button').attr('disabled', false);
-            } else {
-                if (result.paymentIntent.status === 'succeeded') {
-                    form.submit();
-                }
-            }
-        });
-    }).fail(function () {
-        // just reload the page, the error will be in django messages
-        location.reload();
+
+    card = elements.create('card', { style: style });
+
+    card.mount('#card-element');
+
+    card.on('focus', function () {
+      let el = document.getElementById('card-errors');
+      el.classList.add('focused');
+    });
+
+    card.on('blur', function () {
+      let el = document.getElementById('card-errors');
+      el.classList.remove('focused');
+    });
+
+    card.on('change', function (event) {
+      displayError(event);
+    });
+  }
+  //we'll add payment form handling here
+}
+
+function displayError(event) {
+ 
+  let displayError = document.getElementById('card-errors');
+  if (event.error) {
+    displayError.textContent = event.error.message;
+  } else {
+    displayError.textContent = '';
+  }
+}
+
+function planSelect(name, price, priceId) {
+  var inputs = document.getElementsByTagName('input');
+
+  for(var i = 0; i<inputs.length; i++){
+    inputs[i].checked = false;
+    if(inputs[i].name== name){
+
+      inputs[i].checked = true;
+    }
+  }
+
+  var n = document.getElementById('plan');
+  var p = document.getElementById('price');
+  var pid = document.getElementById('priceId');
+  n.innerHTML = name;
+  p.innerHTML = price;
+  pid.innerHTML = priceId;
+      document.getElementById("submit").disabled = false;
+
+}
+
+  //we'll add payment form handling here
+  let paymentForm = document.getElementById('subscription-form');
+  if (paymentForm) {
+
+    paymentForm.addEventListener('submit', function (evt) {
+      evt.preventDefault();
+      changeLoadingState(true);
+
+
+        // create new payment method & create subscription
+        createPaymentMethod({ card });
+    });
+  }
+
+}
+
+
+
+function createPaymentMethod({ card }) {
+
+  // Set up payment method for recurring usage
+  let billingName = '{{user.username}}';
+
+  stripe
+    .createPaymentMethod({
+      type: 'card',
+      card: card,
+      billing_details: {
+        name: billingName,
+      },
     })
-});
+    .then((result) => {
+      if (result.error) {
+        displayError(result);
+      } else {
+       const paymentParams = {
+          price_id: document.getElementById("priceId").innerHTML,
+          payment_method: result.paymentMethod.id,
+      };
+      fetch("/create-sub", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken':'{{ csrf_token }}',
+        },
+        credentials: 'same-origin',
+        body: JSON.stringify(paymentParams),
+      }).then((response) => {
+        return response.json(); 
+      }).then((result) => {
+        if (result.error) {
+          // The card had an error when trying to attach it to a customer
+          throw result;
+        }
+        return result;
+      }).then((result) => {
+        if (result && result.status === 'active') {
+
+         window.location.href = '/complete';
+        };
+      }).catch(function (error) {
+          displayError(result.error.message);
+
+      });
+      }
+    });
+}
+
+
+var changeLoadingState = function(isLoading) {
+  if (isLoading) {
+    document.getElementById("submit").disabled = true;
+    document.querySelector("#spinner").classList.remove("hidden");
+    document.querySelector("#button-text").classList.add("hidden");
+  } else {
+    document.getElementById("submit").disabled = false;
+    document.querySelector("#spinner").classList.add("hidden");
+    document.querySelector("#button-text").classList.remove("hidden");
+  }
+};

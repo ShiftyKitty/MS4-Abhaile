@@ -2,6 +2,7 @@ from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
+from elements.models import Element
 
 def cart_contents(request):
 
@@ -52,3 +53,17 @@ def cart_contents(request):
     }
 
     return context
+
+
+
+def subscribe_element(request): 
+
+    element_items = []
+    subs_total = 0
+
+    context = {
+        "element_items": element_items,
+        "subs_total": subs_total
+    }
+
+    return context 

@@ -6,8 +6,10 @@ class Element(models.Model):
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
     element_description = models.TextField(null=True)
     why = models.TextField(null=True)
+    sub_benefits = models.TextField(null=True)
     vertical_image = models.ImageField(null=True, blank=True)
     horizontal_image = models.ImageField(null=True, blank=True)
+    price = models.DecimalField(null=True, max_digits=6, decimal_places=2)
 
 
     def __str__(self):

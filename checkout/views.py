@@ -8,6 +8,7 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from products.models import Product
+from elements.models import Element
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 
@@ -181,3 +182,4 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
+

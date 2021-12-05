@@ -7,8 +7,10 @@
             "friendly_name": "Fire",
             "element_description": "What is Fire? Fire is energy. Fire is explosion. Fire is the thing you need to get you started. It is what you need to get you up and going. Fire is what makes you go. Turn your fear into fire and let yourself go.",
             "why": "If you feel you lack energy in your day to day life, you need Fire.",
+            "sub_benefits": "Sign up today for full access to all Fire exercises and 10% off all Fire products in store",
             "vertical_image": "fire_image_v.jpg" ,
-            "horizontal_image": "fire_image_h.jpg"
+            "horizontal_image": "fire_image_h.jpg",
+            "price": 4.95
 
         }
     },
@@ -20,8 +22,10 @@
             "friendly_name": "Water",
             "element_description": "What is Water? Water is creativity. Water is intelligence. Water is flow. Water is focus in your day to day tasks. Water is what is needed to wake the brain up and allow you to think passed your obstacles. Be water my friend. ",
             "why": "If you feel you lack focus and creativity in your day to day life, you need Water.",
+            "sub_benefits": "Sign up today for full access to all Water exercises and 10% off all Water products in store",
             "vertical_image": "water_image_v.jpg",
-            "horizontal_image": "water_image_h2.jpg"
+            "horizontal_image": "water_image_h2.jpg",
+            "price": 4.95
 
         }
     },
@@ -32,9 +36,11 @@
             "name": "air",
             "friendly_name": "Air",
             "element_description": "What is Air? Air is free. Air is freedom. Air is spirituality. Air is releasing yourself from the issues and problems in your life. Air is constant as should be your efforts to look after you and your mental wellbeing. Take a deep breath, you got this. ",
-            "why": "If you feel like you are suffocating in your life, you need Air.",
+            "why": "If you feel like you are overwhelmed in your life, you need Air.",
+            "sub_benefits": "Sign up today for full access to all Air exercises and 10% off all Air products in store",
             "vertical_image": "air_image_v.jpeg",
-            "horizontal_image": "air_image_h.jpeg"
+            "horizontal_image": "air_image_h.jpeg",
+            "price": 4.95
 
         }
     },
@@ -46,8 +52,24 @@
             "friendly_name": "Earth",
             "element_description": "What is earth? Earth is strength. Earth is the physical. Earth is the vessel. Earth is your body. The Earth is a container for all the other elements. While the Earth grows, so do the rest of the elements. Look after and protect the Earth. It is the only one you have.",
             "why": "If you lack strength and purpose, you need Earth. ",
+            "sub_benefits": "Sign up today for full access to all Earth exercises and 10% off all Earth products in store",
             "vertical_image": "earth_image_v2.jpg",
-            "horizontal_image": "earth_image_h.jpg"
+            "horizontal_image": "earth_image_h.jpg",
+            "price": 4.95
+        }
+    },
+    {
+        "pk": 5,
+        "model": "elements.element",
+        "fields": {
+            "name": "all_elements",
+            "friendly_name": "Full Subscription",
+            "element_description": "‘Nil Aon Tin Tan Mar Do Thin Tan Fein’. There is no fire like your own fire. This is the basis of Abhaile. We here at Abhaile firmly believe that all of our strength comes from within. There is nothing we can’t accomplish from looking inward and utilizing all of our own innate talents, energies, experiences, and wisdoms. Abhaile is here to help guide you and release your own incredible potential through various exercises and meditations.",
+            "why": "If you want access to all that Abhaile has to offer, including full access to all exercises, 10% discount on all products in store and Free Delivery sign up to our full subscription today",
+            "sub_benefits": "Sign up today for full access to all Exercises, 10% discount on all Products in store and Free Delivery",
+            "vertical_image": "earth_image_v2.jpg",
+            "horizontal_image": "earth_image_h.jpg",
+            "price": 12.00
         }
     }
 ]

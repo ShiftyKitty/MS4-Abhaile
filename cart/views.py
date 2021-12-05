@@ -4,6 +4,7 @@ from django.shortcuts import (
 from django.contrib import messages
 
 from products.models import Product
+from elements.models import Element
 
 
 def view_cart(request):
@@ -19,6 +20,7 @@ def add_to_cart(request, item_id):
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     size = None
+
     if 'product_size' in request.POST:
         size = request.POST['product_size']
     cart = request.session.get('cart', {})
@@ -52,6 +54,24 @@ def add_to_cart(request, item_id):
             messages.success(request, f'Added {product.name} to your cart')
 
     request.session['cart'] = cart
+    print(request.session['cart'])
+    return redirect(redirect_url)
+
+
+def add_element_to_cart(request, element_id):
+    """ Add specified element to be subbed to """
+    
+    quantity_e = int(request.POST.get('quantity'))
+    redirect_url = request.POST.get('redirect_url')
+    element_select = request.session.get('element_select', {})
+
+    if element_id in list(element_select.keys()):
+        element_select[element_id] += quantity_e
+    else:
+        element_select[element_id] = quantity_e
+
+    request.session['element_select'] = element_select
+    print(request.session['element_select'])
     return redirect(redirect_url)
 
 

@@ -1,14 +1,8 @@
-from django.contrib import admin
-from .models import Subscriber, Subscription
+# from django.contrib import admin
+# from .models import User
 
 
-class AdminSubscription(admin.ModelAdmin):
-    pass
+# class AdminUser(admin.ModelAdmin):
+#     pass
 
-
-class AdminSubscriber(admin.ModelAdmin):
-    pass
-
-
-admin.site.register(Subscription, AdminSubscription)
-admin.site.register(Subscriber, AdminSubscriber)
+# admin.site.register(User, AdminUser)

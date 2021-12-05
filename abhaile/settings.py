@@ -39,9 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'djstripe',
     'allauth',
     'allauth.account',
-    'allauth.socialaccount',
+    'allauth.socialaccount',#
+    'abhaile',
     'home',
     'products',
     'elements', 
@@ -84,7 +86,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
-                'cart.contexts.cart_contents'
+                'cart.contexts.cart_contents',
+                'cart.contexts.subscribe_element',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
@@ -185,13 +188,17 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
+STRIPE_TEST_PUBLIC_KEY = os.getenv('STRIPE_TEST_PUBLIC_KEY', '')
+STRIPE_TEST_SECRET_KEY = 'sk_test_51JdIFMCgA9z4ehGF9GwUHlCz6jgUgYFqnxQHNbVmjBjZ3jDATVTe5hTtHRQ49LYvlBUx6ykHYl4IejLZnN4nF0v600VBb6IQh3'
+STRIPE_LIVE_MODE = False  # Change to True in production
+DJSTRIPE_WEBHOOK_SECRET = "whsec_xxx"
+DJSTRIPE_FOREIGN_KEY_TO_FIELD = "id"
+
 # Subscription Ids
 FULL_SUBSCRIPTION = os.getenv('FULL_SUBSCRIPTION', '')
 FIRE_SUBSCRIPTION = os.getenv('FIRE_SUBSCRIPTION', '')
 WATER_SUBSCRIPTION = os.getenv('WATER_SUBSCRIPTION', '')
 AIR_SUBSCRIPTION = os.getenv('AIR_SUBSCRIPTION', '')
 EARTH_SUBSCRIPTION = os.getenv('EARTH_SUBSCRIPTION', '')
-
-
 
 DEFAULT_FROM_EMAIL = 'abhaile@example.com'
