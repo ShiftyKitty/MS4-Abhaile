@@ -60,6 +60,17 @@ def subscribe_element(request):
 
     element_items = []
     subs_total = 0
+    element_select = request.session.get('element_select', {})
+
+    for sub_id, sub_data in element_select.items():
+        element = get_object_or_404(Element, pk=sub_id)
+        subs_total += sub_data * element.price
+        element_items.append({
+                    'sub_id': sub_id,
+                    'quantity_e': sub_data,
+                    'element': element,
+                })
+
 
     context = {
         "element_items": element_items,

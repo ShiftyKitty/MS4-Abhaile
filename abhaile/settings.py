@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'djstripe',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',#
@@ -51,7 +50,6 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
     'profiles',
-    'subscriptions',
 
     # other
     'crispy_forms'
@@ -191,8 +189,7 @@ STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 STRIPE_TEST_PUBLIC_KEY = os.getenv('STRIPE_TEST_PUBLIC_KEY', '')
 STRIPE_TEST_SECRET_KEY = 'sk_test_51JdIFMCgA9z4ehGF9GwUHlCz6jgUgYFqnxQHNbVmjBjZ3jDATVTe5hTtHRQ49LYvlBUx6ykHYl4IejLZnN4nF0v600VBb6IQh3'
 STRIPE_LIVE_MODE = False  # Change to True in production
-DJSTRIPE_WEBHOOK_SECRET = "whsec_xxx"
-DJSTRIPE_FOREIGN_KEY_TO_FIELD = "id"
+
 
 # Subscription Ids
 FULL_SUBSCRIPTION = os.getenv('FULL_SUBSCRIPTION', '')

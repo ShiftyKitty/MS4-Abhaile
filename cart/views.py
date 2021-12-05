@@ -58,21 +58,22 @@ def add_to_cart(request, item_id):
     return redirect(redirect_url)
 
 
-def add_element_to_cart(request, element_id):
+def add_element_to_cart(request, sub_id):
     """ Add specified element to be subbed to """
     
     quantity_e = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     element_select = request.session.get('element_select', {})
 
-    if element_id in list(element_select.keys()):
-        element_select[element_id] += quantity_e
+    if sub_id in list(element_select.keys()):
+        element_select[sub_id] += quantity_e
     else:
-        element_select[element_id] = quantity_e
+        element_select[sub_id] = quantity_e
 
     request.session['element_select'] = element_select
     print(request.session['element_select'])
     return redirect(redirect_url)
+
 
 
 def adjust_cart(request, item_id):
