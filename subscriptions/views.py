@@ -47,26 +47,19 @@ def payment_method(request):
     context['payment_intent_id'] = payment_intent.id
     context['stripe_plan_id'] = plan_inst.stripe_plan_id
 
-    return render(request, 'subscriptions/subscribe.html', context)
+    return render(request, 'subscriptions/subscribe_checkout.html', context)
 
 
 @login_required
 def subscribe_checkout(request):
-
     payment_intent_id = request.POST['payment_intent_id']
-    payment_method_id = request.POST['payment_method_id']
     stripe_plan_id = request.POST['stripe_plan_id']
-    stripe.api_key = stripe_secret_key
+    stripe.api_key = stripe_secret_key    
 
-   
+        # create subs
     customer = stripe.Customer.create(
         email=request.user.email,
-        payment_method=payment_method_id,
-        invoice_settings={
-            'default_payment_method': payment_method_id
-        }
     )
-
     s = stripe.Subscription.create(
         customer=customer.id,
         items=[
@@ -81,17 +74,22 @@ def subscribe_checkout(request):
         latest_invoice.payment_intent
     )
 
-    if ret.status == 'requires_action':
-        pi = stripe.PaymentIntent.retrieve(
-            latest_invoice.payment_intent
-        )
-        context = {}
-        context['payment_intent_secret'] = pi.client_secret
-        context['STRIPE_PUBLIC_KEY'] = settings.STRIPE_PUBLIC_KEY
+        # if ret.status == 'requires_action':
+        #     pi = stripe.PaymentIntent.retrieve(
+        #         latest_invoice.payment_intent
+        #     )
+        #     context = {}
 
-        return render(request, 'land/payments/3dsec.html', context)
+        #     context['payment_intent_secret'] = pi.client_secret
+        #     context['STRIPE_PUBLISHABLE_KEY'] = settings.STRIPE_PUBLISHABLE_KEY
 
-    return render(request, 'land/payments/thank_you.html')
+        #     return render(request, 'land/payments/3dsec.html', context)
+    
+    stripe.PaymentIntent.modify(
+        payment_intent_id,
+    )
+
+    return render(request, 'subscriptions/subscribe_checkout.html')
 
 def subscribe_success(request, order_number):
     """
@@ -128,7 +126,7 @@ def subscribe_success(request, order_number):
     if 'cart' in request.session:
         del request.session['cart']
 
-    template = 'checkout/checkout_success.html'
+    template = 'subscription/subscribe_success.html'
     context = {
         'order': order,
     }
