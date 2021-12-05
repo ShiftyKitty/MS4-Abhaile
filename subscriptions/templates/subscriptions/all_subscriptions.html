@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="row py-3">
+    <div class="col-lg-12 col-md-12">
+       <div class="container">
+            <h3>Upgrade to PRO</h3>
+            <form method="POST" action="{% url 'payment_method' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Plan</label>
+                  <select class="form-control" id="exampleFormControlSelect1" name="plan">
+                    <option value="f" default>Fire 4.95</option>
+                    <option value="w" default>Water 4.95</option>
+                    <option value="a" default>Air 4.95</option>
+                    <option value="er" default>Earth 4.95</option>
+                    <option value="full" default>Full Subscription 4.95</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-success mb-2">Continue</button>
+            </form>
+       </div>
+    </div>
+</div>  
+    
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+    
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
+{% endblock %}

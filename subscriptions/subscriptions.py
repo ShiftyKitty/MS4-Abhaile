@@ -40,12 +40,6 @@ class FullSubPlan:
         self.amount = 1000
 
 
-class VideosAnnualPlan:
-    def __init__(self):
-        self.stripe_plan_id = settings.STRIPE_PLAN_ANNUAL_ID
-        self.amount = 1000
-
-
 class SubscriptionPlan:
     def __init__(self, plan_id):
         """
