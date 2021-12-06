@@ -51,9 +51,12 @@
                         </td>
                         <td class="py-3">
                             <p class="my-0">€{{ item.element.price}}</p>
-                            <p class="my-0">€{{ item.element.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0">€{{ item.element.price | calc_subtotal:item.quantity_e }}</p>
                         </td>
                     </tr>
+                    <a class="remove-item text-danger float-right" id="remove_{{ item.sub_id }}"
+                                data-element="{{ item.quantity_e }}"><small>Remove</small></a>
+                    <input type="hidden" name="quantity_element" value="{{ item.quantity_e }}">
                     {% endfor %}
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
@@ -216,8 +219,9 @@
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
         var size = $(this).data('product_size');
+        var element_q = $(this).data('element');
         var url = `/cart/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size, 'element': element_q};
 
         $.post(url, data)
          .done(function() {

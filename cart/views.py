@@ -58,24 +58,6 @@ def add_to_cart(request, item_id):
     return redirect(redirect_url)
 
 
-def add_element_to_cart(request, sub_id):
-    """ Add specified element to be subbed to """
-    
-    quantity_e = int(request.POST.get('quantity'))
-    redirect_url = request.POST.get('redirect_url')
-    element_select = request.session.get('element_select', {})
-
-    if sub_id in list(element_select.keys()):
-        element_select[sub_id] += quantity_e
-    else:
-        element_select[sub_id] = quantity_e
-
-    request.session['element_select'] = element_select
-    print(request.session['element_select'])
-    return redirect(redirect_url)
-
-
-
 def adjust_cart(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
 
@@ -138,6 +120,48 @@ def remove_from_cart(request, item_id):
             messages.success(request, f'Removed {product.name} from your cart')
 
         request.session['cart'] = cart
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
+        return HttpResponse(status=500)
+
+
+def add_element_to_cart(request, sub_id):
+    """ Add specified element to be subbed to """
+    
+    quantity_e = int(request.POST.get('quantity'))
+    redirect_url = request.POST.get('redirect_url')
+    element_select = request.session.get('element_select', {})
+
+    if sub_id in list(element_select.keys()):
+        element_select[sub_id] += quantity_e
+    else:
+        element_select[sub_id] = quantity_e
+
+    request.session['element_select'] = element_select
+    print(request.session['element_select'])
+    return redirect(redirect_url)
+
+
+def remove_element_from_cart(request, sub_id):
+    """Remove the element from element cart"""
+
+    try:
+        element = get_object_or_404(Element, pk=sub_id)
+        quantity_e = None
+        if 'quantity_element' in request.POST:
+            quantity_e = request.POST['quantity_element']
+        element_select = request.session.get('element_select', {})
+
+        if quantity_e:
+            del element_select[sub_id]['quantity_element'][quantity_e]
+
+        else:
+            element_select.pop(sub_id)
+            messages.success(request, f'Removed {element.name} from your cart')
+
+        request.session['element_select'] = element_select
         return HttpResponse(status=200)
 
     except Exception as e:

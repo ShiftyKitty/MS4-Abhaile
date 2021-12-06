@@ -152,12 +152,6 @@ function roundChanger () {
 }
 roundChanger();
 
-function sleep(dur) {
-    var d = new Date().getTime() + dur;
-    while (new Date().getTime() <= d) {
-
-    }
-}
 
 let holdTimer = post_reps_breath_hold / 1000;
 console.log(holdTimer)
