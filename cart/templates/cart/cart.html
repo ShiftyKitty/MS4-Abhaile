@@ -221,7 +221,7 @@
         var size = $(this).data('product_size');
         var element_q = $(this).data('element');
         var url = `/cart/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size, 'element': element_q};
+        var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
 
         $.post(url, data)
          .done(function() {

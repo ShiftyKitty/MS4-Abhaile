@@ -36,6 +36,23 @@
                         <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                     </div>
                 </div>
+                {% for item in element_items %}
+                    <div class="row">
+                        <div class="col-2 mb-1">
+                            <a href="{% url 'element' item.element.id %}">
+                                <img class="w-100" src="{{ item.element.vertical_image.url }}" alt="{{ element.name }}">
+                            </a>
+                        </div>
+                        <div class="col-7">
+                            <p class="my-0"><strong>{{ item.element.name }}</strong></p>
+                            <p class="my-0 small text-muted">Qty: {{ item.quantity_e }}</p>
+                        </div>
+                        <div class="col-3 text-right">
+                            <p class="my-0 small text-muted">€{{ item.element.price | calc_subtotal:item.quantity_e }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+                    <h6><strong>Monthly Subscription Amount: €{{ subs_total|floatformat:2 }}</strong></h6>
                 {% for item in cart_items %}
                     <div class="row">
                         <div class="col-2 mb-1">
