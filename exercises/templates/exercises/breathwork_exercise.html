@@ -2,143 +2,144 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'exercises/css/exercises.css' %}">
+<link rel="stylesheet" href="{% static 'exercises/css/exercises.css' %}">
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div class="image-container my-5">
-                    {% if exercise.image %}
-                        <a href="{{ exercise.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ exercise.image.url }}" alt="{{ exercise.name }}">
-                        </a>
-                        {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ exercise.name }}">
-                        </a>
-                    {% endif %}
-                </div>
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container my-5">
+                {% if exercise.image %}
+                <a href="{{ exercise.image.url }}" target="_blank">
+                    <img class="card-img-top img-fluid" src="{{ exercise.image.url }}" alt="{{ exercise.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ exercise.name }}">
+                </a>
+                {% endif %}
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="product-details-container mb-5 mt-md-5">
-                    <h4 class="mb-0">{{ exercise.name }}</h4>
-                    {% if exercise.element %}
-                    <p class="small mt-1 mb-0">
-                        <a class="text-muted" href="{% url 'exercises' %}?element={{ exercise.element.name }}">
-                            {{ exercise.element.friendly_name }}
-                        </a>
-                        {% if request.user.is_superuser %}
-                        <small class="ml-3">
-                            <a href="{% url 'edit_breathwork_exercise' exercise.id %}">Edit</a> | 
-                            <a class="text-danger" href="{% url 'delete_exercise' exercise.id %}">Delete</a>
-                        </small>
-                        {% endif %}
-                    </p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-details-container mb-5 mt-md-5">
+                <h4 class="mb-0">{{ exercise.name }}</h4>
+                {% if exercise.element %}
+                <p class="small mt-1 mb-0">
+                    <a class="text-muted" href="{% url 'exercises' %}?element={{ exercise.element.name }}">
+                        {{ exercise.element.friendly_name }}
+                    </a>
+                    {% if request.user.is_superuser %}
+                    <small class="ml-3">
+                        <a href="{% url 'edit_breathwork_exercise' exercise.id %}">Edit</a> |
+                        <a class="text-danger" href="{% url 'delete_exercise' exercise.id %}">Delete</a>
+                    </small>
                     {% endif %}
-                    <p class="mt-3">{{ exercise.description }}</p>
-                    <div class="accordion" id="accordionExample">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse"
-                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        How To
-                                    </button>
-                                </h5>
-                            </div>
-
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                data-parent="#accordionExample">
-                                <div class="card-body new-line">
-                                    {{ exercise.how_to }}
-                                </div>
-                            </div>
+                </p>
+                {% endif %}
+                <p class="mt-3">{{ exercise.description }}</p>
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How To
+                                </button>
+                            </h5>
                         </div>
 
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Benefits
-                                    </button>
-                                </h5>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body new-line">
+                                {{ exercise.how_to }}
                             </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                data-parent="#accordionExample">
-                                <div class="card-body new-line">
-                                    {{ exercise.benefits }}
-                                </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Benefits
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body new-line">
+                                {{ exercise.benefits }}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <hr>
-        <div class="container text-centre">
-            <div class="breath_bubble_container">
-                Focused Breathing
-                <div class="bubble-container">
-                    <div class="breath_bubble">
-                        <main>
-                            <div></div>
-                        </main>
-                    </div>
-                </div>
-                <div class="rounds-container">
-                    Rounds left: <span class="round_counter">0</span>
-                    <select class="form-control round-selector col-12 col-md-4 col-lg-2" name="rounds" id='rounds'>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3" selected>3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-                <div>
-                    Time to complete
-                </div>
-                <div>Breath Count: <span class="breath_counter">0</span></div>
-                <div>Hold Timer: <span class="post_round_hold_timer">0</span></div>
-                <div>
-                    <button class="start">Start</button>
-                    <button class="reset">Reset</button>
-                </div>
-            </div>
-        </div>
-        <input type="hidden" id="inhale_1" value="{{ exercise.inhale_1 }}">
-        <input type="hidden" id="exhale_1" value="{{ exercise.exhale_1 }}">
-        <input type="hidden" id="inhale_2" value="{{ exercise.inhale_2 }}">
-        <input type="hidden" id="exhale_2" value="{{ exercise.exhale_2 }}">
-        <input type="hidden" id="inhale_3" value="{{ exercise.inhale_3 }}">
-        <input type="hidden" id="exhale_3" value="{{ exercise.exhale_3 }}">
-        <input type="hidden" id="inhale_4" value="{{ exercise.inhale_4 }}">
-        <input type="hidden" id="exhale_4" value="{{ exercise.exhale_4 }}">
-        <input type="hidden" id="post_inhale_ht" value="{{ exercise.post_inhale_ht }}">
-        <input type="hidden" id="post_exhale_ht" value="{{ exercise.post_exhale_ht }}">
-        <input type="hidden" id="post_reps_breath_hold" value="{{ exercise.post_reps_breath_hold }}">
-        <input type="hidden" id="recovery_inhale" value="{{ exercise.recovery_inhale }}">
-        <input type="hidden" id="recovery_exhale" value="{{ exercise.recovery_exhale }}">
-        <input type="hidden" id="recovery_bh" value="{{ exercise.recovery_bh }}">
-        <input type="hidden" id="inhale_reps" value="{{ exercise.inhale_reps }}">
-        <input type="hidden" id="exhale_reps" value="{{ exercise.exhale_reps }}">
-        <input type="hidden" id="breath_reps" value="{{ exercise.breath_reps }}">
     </div>
+    <hr>
+    <div class="container text-centre">
+        <div class="breath_bubble_container">
+            Focused Breathing
+            <div class="bubble-container">
+                <div class="breath_bubble">
+                    <main>
+                        <div></div>
+                    </main>
+                </div>
+            </div>
+            <div class="rounds-container">
+                Rounds left: <span class="round_counter">0</span>
+                <select class="form-control round-selector col-12 col-md-4 col-lg-2" name="rounds" id='rounds'>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div>
+                Time to complete
+            </div>
+            <div class="breaths">Breath Count: <span class="breath_counter">0</span></div>
+            <div>Hold Timer: <span class="post_round_hold_timer">0</span></div>
+            <div>
+                <button class="start">Start</button>
+                <button class="reset">Reset</button>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="inhale_1" value="{{ exercise.inhale_1 }}">
+    <input type="hidden" id="exhale_1" value="{{ exercise.exhale_1 }}">
+    <input type="hidden" id="inhale_2" value="{{ exercise.inhale_2 }}">
+    <input type="hidden" id="exhale_2" value="{{ exercise.exhale_2 }}">
+    <input type="hidden" id="inhale_3" value="{{ exercise.inhale_3 }}">
+    <input type="hidden" id="exhale_3" value="{{ exercise.exhale_3 }}">
+    <input type="hidden" id="inhale_4" value="{{ exercise.inhale_4 }}">
+    <input type="hidden" id="exhale_4" value="{{ exercise.exhale_4 }}">
+    <input type="hidden" id="post_inhale_ht" value="{{ exercise.post_inhale_ht }}">
+    <input type="hidden" id="post_exhale_ht" value="{{ exercise.post_exhale_ht }}">
+    <input type="hidden" id="post_reps_breath_hold" value="{{ exercise.post_reps_breath_hold }}">
+    <input type="hidden" id="recovery_inhale" value="{{ exercise.recovery_inhale }}">
+    <input type="hidden" id="recovery_exhale" value="{{ exercise.recovery_exhale }}">
+    <input type="hidden" id="recovery_bh" value="{{ exercise.recovery_bh }}">
+    <input type="hidden" id="inhale_reps" value="{{ exercise.inhale_reps }}">
+    <input type="hidden" id="exhale_reps" value="{{ exercise.exhale_reps }}">
+    <input type="hidden" id="breath_reps" value="{{ exercise.breath_reps }}">
+    <input type="hidden" id="breath_counter_trigger">
+</div>
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <script src="{% static 'exercises/js/breath_sync.js' %}"></script>
+{{ block.super }}
+<script src="{% static 'exercises/js/breath_sync.js' %}"></script>
 {% endblock %}

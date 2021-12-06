@@ -53,8 +53,28 @@ document.documentElement.style.setProperty('--exhale_reps', (exhale_reps/1000) +
 let breath_reps = document.querySelector("#breath_reps").value;
 document.documentElement.style.setProperty('--breath_reps', (breath_reps/1000) + "s");
 
+let breathCounterTally = document.querySelector(".breath_counter").innerText
+
 console.log(breath_reps)
 console.log(post_reps_breath_hold)
+console.log(breathCounterTally)
+
+$(document).ready(function() {
+    $("#breath_counter_trigger").html($(".breaths span").html());
+});
+
+
+
+// console.log(breathCounterTrigger())
+
+// function breathCounterTrigger () {
+    
+//     console.log(breathCounterTally)
+// }
+
+// breathCounterTrigger();
+
+// console.log(breathCounterTrigger());
 
 // what do i need to do
 
@@ -102,6 +122,10 @@ function Exhale_HT() {
     BreathBubble.style.animation = "exhale_ht var(--post_exhale_ht) linear none";
 };
 
+function Post_Round_HT() {
+    BreathBubble.style.animation = "exhale_ht var(--post_reps_breath_hold) linear none";
+};
+
 
 //2. Link them together
 function animate(elem, animation) {
@@ -139,12 +163,13 @@ let holdTimer = post_reps_breath_hold / 1000;
 console.log(holdTimer)
 document.querySelector(".post_round_hold_timer").innerHTML = holdTimer;
 
-
+let breathCounterTrigger = $(document).change(function() {
+    $("#breath_counter_trigger").html($(".breaths span").html());
+});
 
 
 async function chainAnimations() {
 
-    let breathCounter = document.querySelector(".breath_counter").innerHTML;
     let roundCounter = document.querySelector(".round_counter").innerHTML;
     let PostRoundHoldTimer = document.querySelector(".post_round_hold_timer");
 
@@ -168,28 +193,29 @@ async function chainAnimations() {
 
             document.querySelector(".breath_counter").innerHTML = i;
             console.log(i);
+            if (i == (breath_reps-1)) {
+                let roundStartIn = holdTimer;
+                let countDown = setInterval(roundStartTimer, 1000);
+
+                function roundStartTimer() {
+
+                    roundStartIn--;
+                    //condition in place to stop countdown going passed 0
+                    //once 0 is hit, "GO" shows up indicating start of game
+                    if (roundStartIn <= 0) {
+                        clearInterval(countDown);
+                        document.querySelector(".post_round_hold_timer").innerHTML = `${holdTimer}`;
+                        return;
+                    }
+                    // to show countdown within timer
+                    document.querySelector(".post_round_hold_timer").innerHTML = `${roundStartIn}`
+                };
+            }
 
             if (i == breath_reps) {
-                sleep(post_reps_breath_hold);
-                console.log("I am equal to breath reps")
-                //  } if (i == breath_reps) {
-                //     let roundStartIn = holdTimer;
-                //     let countDown = setInterval(roundStartTimer, 1000);
-
-                //     function roundStartTimer() {
-
-                //         roundStartIn--;
-                //         //condition in place to stop countdown going passed 0
-                //         //once 0 is hit, "GO" shows up indicating start of game
-                //         if (roundStartIn <= 0) {
-                //             clearInterval(countDown);
-                //             document.querySelector(".post_round_hold_timer").innerHTML = `${holdTimer}`;
-                //             return;
-                //         }
-                //         // to show countdown within timer
-                //         document.querySelector(".post_round_hold_timer").innerHTML = `${roundStartIn}`
-                //     };
+                await animate(BreathBubble, Post_Round_HT())
             }
+            
         }
         let roundCounter = document.querySelector(".round_counter").innerHTML
         roundCounter--;
