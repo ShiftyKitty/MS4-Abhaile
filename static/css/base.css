@@ -2,16 +2,166 @@ html {
     height: 100%;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: #333;
+}
+
+header {
+    background: #111;
+}
+
+.headline {
+    position: relative;
+    height: 45vw;
+    color: #fff;
+    text-align: center;
+    background: url('/media/italy-mountains-dawn-daybreak-147411.jpeg') no-repeat center center;
+    background-size: cover;
+}
+
+.headline:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, 0.5);
+}
+
+.inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    z-index: 10;
+    transform: translateX(-50%) translateY(-50%);
+    animation: fade-in 0.75s 0.25s ease-in forwards;
+}
+
+.inner h1 {
+    margin: 0;
+    font-size: 4em;
+    line-height: 1.2em;
+}
+
+.inner p {
+    margin: 0;
+    font-size: 1.4em;
+    font-style: italic;
+    font-family: serif;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+nav.scrolled {
+    background: rgba(17, 17, 17, 0.9);
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    padding: 25px;
+    margin: 0;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    font-size: 0.9em;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0 0 20px;
+    display: block;
+}
+
+nav a:hover {
+    color: #ededed;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding-left: 2%;
+    float: left;
+}
+
+.logo:before,
+.logo:after {
+    position: absolute;
+    font-size: 2em;
+    font-weight: 300;
+    line-height: 0;
+    color: #fff;
+    top: 25px;
+}
+
+.logo:before {
+    left: 20px;
+}
+
+.logo:after {
+    left: 34px;
+}
+
+section {
+    width: 100%;
+    margin: 25px auto;
+    padding: 20px;
+    max-width: 70%;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    box-sizing: border-box;
+
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.dropdown-menu {
+    background-color: yellow;
+}
+
+
+.dropdown-menu a {
+    margin: 0 auto;
+}
+
+p {
+    font-family: 'Khula', sans-serif;;
+}
+
+
+/* 
 body {
     background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Alegreya Sans SC', sans-serif;
+    
 }
 
 /* from Bulma */
-.icon {
+/* .icon {
     align-items: center;
     display: inline-flex;
     justify-content: center;
@@ -80,8 +230,8 @@ body {
 
 .earth {
     background-color: rgb(255,225,1);
-}
-
+} */
+/* 
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -90,7 +240,7 @@ body {
 	position: fixed;
 	background: white;
 	z-index: -1;
-}
+} */
 
 .new-line {
     white-space: pre-line;
@@ -100,9 +250,9 @@ body {
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+    .container {
+        max-width: 80%;
+    }
 }
 
 /* fixed top navbar only on medium and up */
@@ -123,8 +273,10 @@ body {
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: #6c757d;
+    /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -142,8 +294,8 @@ body {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
+    /* btn */
+    display: inline-block;
     font-weight: 400;
     color: #fff;
     text-align: center;
@@ -160,18 +312,19 @@ body {
     border-radius: 0;
 
     /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #fff;
     background-color: #222;
     border-color: #222;
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+    color: #17a2b8;
+    /* text-info */
 }
 
 /* Product Form */
@@ -204,7 +357,8 @@ body {
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black !important;
+    /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
@@ -330,7 +484,8 @@ body {
         font-size: .75rem;
     }
 
-    .increment-qty, .decrement-qty {
+    .increment-qty,
+    .decrement-qty {
         padding: .25rem .5rem !important;
     }
 }
