@@ -42,7 +42,6 @@ def checkout(request):
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
-        element_select = request.session.get('element_select', {})
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -62,8 +61,6 @@ def checkout(request):
             order.stripe_pid = pid
 
             order.original_cart = json.dumps(cart)
-
-            order.original_element_select = json.dumps(element_select)
 
             order.save()
             for item_id, item_data in cart.items():
@@ -93,24 +90,6 @@ def checkout(request):
                     order.delete()
                     return redirect(reverse('view_cart'))
 
-            for sub_id, sub_data in element_select.items():
-                try:
-                    element = get_object_or_404(Element, pk=sub_id)
-                    order_line_item = OrderLineItem(
-                            order=order,
-                            element=element,
-                            quantity_e=sub_data,
-                        )
-                    order_line_item.save()
-
-                except Element().DoesNotExist:
-                    messages.error(request, (
-                        "One of the products in your cart wasn't found in our database. "
-                        "Please call us for assistance!")
-                    )
-                    order.delete()
-                    return redirect(reverse('elements'))
-
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
@@ -121,11 +100,6 @@ def checkout(request):
         if not cart:
             messages.error(request, "There's nothing in your cart at the moment")
             return redirect(reverse('products'))
-
-        element_select = request.session.get('element_select', {})
-        if not element_select:
-            messages.error(request, "No subscriptions have been selected")
-            return redirect(reverse('elements'))
 
 
         current_cart = cart_contents(request)
