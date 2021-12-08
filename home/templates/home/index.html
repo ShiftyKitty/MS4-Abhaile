@@ -2,6 +2,14 @@
  {% load static %}
 
  {% block content %}
+ {% include 'includes/home-page-nav.html' %} 
+<header>
+    <div class="headline">
+        <div class="inner">
+            <p></p>
+        </div>
+    </div>
+</header>
  <section>
      <div class="text-center">
          <div class="row">
@@ -45,4 +53,29 @@
          {% endfor %}
      </div>
  </div>
+
+ <script>
+     var $headline = $('.headline'),
+        $inner = $('.inner'),
+        $nav = $('nav'),
+        navHeight = 75;
+
+        $(window).scroll(function() {
+        var scrollTop = $(this).scrollTop(),
+        headlineHeight = $headline.outerHeight() - navHeight,
+        navOffset = $nav.offset().top;
+
+        $headline.css({
+        'opacity': (1 - scrollTop / headlineHeight)
+        });
+        $inner.children().css({
+        'transform': 'translateY('+ scrollTop * 0.4 +'px)'
+        });
+        if (navOffset > headlineHeight) {
+        $nav.addClass('scrolled');
+        } else {
+        $nav.removeClass('scrolled');
+        }
+        });
+ </script>
  {% endblock %}
