@@ -138,7 +138,7 @@ section {
 }
 
 .dropdown-menu {
-    background-color: yellow;
+    background-color: white;
 }
 
 
@@ -275,6 +275,43 @@ p {
 .card {
     min-height: 100%;
     padding: 0;
+}
+
+.element-container-image-prod {
+    min-width: 100%;
+    min-height: 80%;
+}
+
+.element-container-image-prod img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.text-fire {
+    color: rgba(247, 55, 24);
+}
+
+.text-water {
+    color: rgba(35, 137, 218);
+}
+
+.text-air {
+    color: rgba(252,217,91);
+}
+
+.text-earth {
+    color: rgba(34,139,34);
+}
+
+.element-drop {
+    border: 0.5px solid grey;
+    color: darkgray;
+    font-weight: 100;
+}
+
+.white {
+    color: white;
 }
 
 /* .card-body {
