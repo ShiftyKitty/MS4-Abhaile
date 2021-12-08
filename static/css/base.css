@@ -339,35 +339,74 @@ body {
     width: 1.5rem;
 }
 
-.logo-font {
-    text-transform: uppercase;
-}
-
-.main-logo-link {
-    width: fit-content;
-}
-
 .shop-now-button {
     background: black;
     color: white;
     min-width: 260px;
 }
+ */
 
-.btn-black {
-    background: black;
+
+.btn-fire {
+    background: rgba(247, 55, 24);
+    color: white;
+}
+
+.btn-water {
+    background: rgba(35, 137, 218);
+    color: white;
+}
+
+.btn-air {
+    background: rgba(252,217,91);
+    color: black;
+}
+
+.btn-earth {
+    background: rgba(34,139,34);
     color: white;
 }
 
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
+.btn-fire:hover,
+.btn-fire:active,
+.btn-fire:focus {
+    background: rgba(247, 55, 24);
     color: white;
 }
 
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-water:hover,
+.btn-water:active,
+.btn-water:focus {
+    background: rgba(35, 137, 218);
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-air:hover,
+.btn-air:active,
+.btn-air:focus {
+    background: rgba(252,217,91);
+    color: black;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-earth:hover,
+.btn-earth:active,
+.btn-earth:focus {
+    background: rgba(34,139,34);
+    color: white;
+}
+/* 
 .text-black {
     color: #000 !important;
 }
@@ -399,8 +438,8 @@ body {
 }
 
 .earth {
-    background-color: rgb(255,225,1);
-} */
+    background-color: rgb(255,225,1); 
+}
 /* 
 .overlay {
 	height: 100%;
@@ -546,6 +585,103 @@ body {
 .btn-black:active,
 .btn-black:focus {
     background: #222;
+    color: white;
+}
+
+
+.btn-outline-fire {
+    background: white;
+    color: rgba(247, 55, 24) !important;
+    /* use important to override link colors for <a> elements */
+    border: 1px solid rgba(247, 55, 24);
+}
+
+.btn-outline-fire:hover,
+.btn-outline-fire:active,
+.btn-outline-fire:focus {
+    background: rgba(247, 55, 24);
+    color: white !important;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-fire:hover,
+.btn-fire:active,
+.btn-fire:focus {
+    background: rgba(247, 55, 24);
+    color: white;
+}
+
+.btn-outline-water {
+    background: white;
+    color: rgba(35, 137, 218) !important;
+    /* use important to override link colors for <a> elements */
+    border: 1px solid rgba(35, 137, 218);
+}
+
+.btn-outline-water:hover,
+.btn-outline-water:active,
+.btn-outline-water:focus {
+    background: rgba(35, 137, 218);
+    color: white !important;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-water:hover,
+.btn-water:active,
+.btn-water:focus {
+    background: rgba(35, 137, 218);
+    color: white;
+}
+
+.btn-outline-air {
+    background: black;
+    color: rgba(252,217,91) !important;
+    /* use important to override link colors for <a> elements */
+    border: 1px solid rgba(252,217,91);
+}
+
+.btn-outline-air:hover,
+.btn-outline-air:active,
+.btn-outline-air:focus {
+    background: rgba(252,217,91);
+    color: black !important;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-air:hover,
+.btn-air:active,
+.btn-air:focus {
+    background: rgba(252,217,91);
+    color: black;
+}
+
+.btn-outline-earth {
+    background: white;
+    color: rgba(34,139,34) !important;
+    /* use important to override link colors for <a> elements */
+    border: 1px solid rgba(34,139,34);
+}
+
+.btn-outline-earth:hover,
+.btn-outline-earth:active,
+.btn-outline-earth:focus {
+    background: rgba(34,139,34);
+    color: white !important;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-earth:hover,
+.btn-earth:active,
+.btn-earth:focus {
+    background: rgba(34,139,34);
     color: white;
 }
 

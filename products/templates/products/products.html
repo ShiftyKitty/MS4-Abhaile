@@ -40,7 +40,7 @@
                         </div>
                         <div class="sort-select-wrapper w-50">
                             <select id="element-selector" class="custom-select rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by Element...</option>
+                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort Element...</option>
                                 <option value="fire" {% if current_sorting == 'fire' %}selected{% endif %}>Fire</option>
                                 <option value="water" {% if current_sorting == 'water' %}selected{% endif %}>Water</option>
                                 <option value="air" {% if current_sorting == 'air' %}selected{% endif %}>Air</option>
@@ -79,10 +79,12 @@
                                             {% endif %}
                                             {% if request.user.is_superuser %}
                                             <small class="ml-3">
-                                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                <a href="{% url 'edit_product' product.id %}">Edit</a> | <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                             </small>
                                             {% endif %}
+                                        </div>
+                                        <div class="col">
+                                            
                                         </div>
                                     </div>
                                 </div>
