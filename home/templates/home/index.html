@@ -28,15 +28,18 @@
      <br>
      <div class="row">
          {% for element in elements %}
-         <div class="card col-md-3 col-xs-6">
+         <div class="card col-lg-3 col-sm-6 img-wrap">
              <a class="element-container-image" href="{% url 'element' element.id %}">
-                     <img src="{{ element.horizontal_image.url }}" class="card-img-top" alt="{{ element.name }}">
+                 <img src="{{ element.horizontal_image.url }}" class="card-img-top" alt="{{ element.name }}">
+                 <div class="img-text-{{ element.name }}">
+                     <div class="img-description">
+                         <h4>{{ element.friendly_name }}</h4>
+                         <p class="card-text">{{element.element_description}}</p>
+                     </div>
+                 </div>
              </a>
              <div class="card-body">
-                 <a href="{% url 'element' element.id %}">
-                     <h4>{{ element.friendly_name }}</h4>
-                 </a>
-                 <p class="card-text">{{element.element_description}}</p>
+
              </div>
          </div>
          {% endfor %}

@@ -17,7 +17,7 @@ header {
 
 .headline {
     position: relative;
-    height: 45vw;
+    height: 40vw;
     color: #fff;
     text-align: center;
     background: url('/media/italy-mountains-dawn-daybreak-147411.jpeg') no-repeat center center;
@@ -147,11 +147,12 @@ section {
 }
 
 p {
-    font-family: 'Khula', sans-serif;;
+    font-family: 'Khula', sans-serif;
+    ;
 }
 
 .element-container {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
 
 }
@@ -167,13 +168,121 @@ p {
     object-fit: cover;
 }
 
-.card {
-    min-height: 100%;
+/* .element-container-image img:hover {
+    opacity: 0;
+    transition:opacity 2s;
+} */
+
+.img-text-fire {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(247, 55, 24, 0.6);
+    color: #fff;
+    font-weight: 500;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .2s, visibility .2s;
 }
 
-.card-body {
-    min-height: 100%;
+.img-text-water {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(35, 137, 218, 0.6);
+    color: #fff;
+    font-weight: 500;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .2s, visibility .2s;
 }
+
+.img-text-air {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(252,217,91, 0.6);
+    color: black;
+    font-weight: 500;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .2s, visibility .2s;
+}
+
+.img-text-earth {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(34,139,34, 0.6);
+    color: #fff;
+    font-weight: 500;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .2s, visibility .2s;
+}
+
+.img-wrap:hover .img-text-fire {
+    visibility: visible;
+    opacity: 1;
+}
+
+.img-wrap:hover .img-text-water {
+    visibility: visible;
+    opacity: 1;
+}
+
+.img-wrap:hover .img-text-air {
+    visibility: visible;
+    opacity: 1;
+}
+
+.img-wrap:hover .img-text-earth {
+    visibility: visible;
+    opacity: 1;
+}
+
+.img-description {
+    transition: .2s;
+    transform: translateY(1em);
+    text-align: center;
+}
+
+.img-wrap:hover .img-description {
+    transform: translateY(0);
+}
+
+
+.card {
+    min-height: 100%;
+    padding: 0;
+}
+
+/* .card-body {
+    min-height: 100%;
+} */
+
+
+
 
 /* 
 body {

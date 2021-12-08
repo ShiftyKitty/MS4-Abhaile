@@ -29,7 +29,7 @@
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
                                 <a href="{% url 'element' element.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ element.horizontal_image.url }}" alt="{{ element.name }}">
+                                    <img class="card-img-top img-fluid {{ element.name }}" src="{{ element.horizontal_image.url }}" alt="{{ element.name }}">
                                 </a>
                                 <div class="card-body pb-0">
                                 </div>
