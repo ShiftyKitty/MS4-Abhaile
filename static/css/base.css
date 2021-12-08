@@ -150,6 +150,30 @@ p {
     font-family: 'Khula', sans-serif;;
 }
 
+.element-container {
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.element-container-image {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.element-container-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card {
+    min-height: 100%;
+}
+
+.card-body {
+    min-height: 100%;
+}
 
 /* 
 body {

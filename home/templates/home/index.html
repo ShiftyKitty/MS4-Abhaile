@@ -11,68 +11,35 @@
                  <p>‘Nil Aon Tin Tan Mar Do Thin Tan Fein’. There is no fire like your own fire. This is the basis of
                      Abhaile. We here at Abhaile firmly believe that all of our strength comes from within. There is
                      nothing we can’t accomplish from looking inward and utilizing all of our own innate talents,
-                     energies, experiences, and wisdoms. Abhaile is here to help guide you and release your own
+                     energies, experiences, and wisdoms. </p>
+
+                 <p>Abhaile is here to help guide you and release your own
                      incredible potential through various exercises and meditations.</p>
 
-                     <p>Welcome Home.</p>
-             </div>
-         </div>
-         <br>
-         <div class="row">
-             <div class="fire col-md-6">
-                 <h4>What is Fire?</h4>
-                 <p></p>
-             </div>
-             <div class="water col-md-6">
-                 <h4>What is Water?</h4>
-                 <p></p>
-             </div>
-         </div>
-         <div class="row">
-             <div class="air col-md-6">
-                 <h4>What is Air?</h4>
-                 <p></p>
-             </div>
-             <div class="earth col-md-6">
-                 <h4>What is Earth?</h4>
-                 <p></p>
+                 <p>Welcome Home.</p>
              </div>
          </div>
      </div>
-     <div class="row">
-         <a class="col-md-3 col-xs-6 fire" href="">
-             fire,
-             <img src="media/star-clusters-rosette-nebula-star-galaxies-73873.jpeg" class="d-block w-100"
-                 alt="fire cluster">
-         </a>
-         <a class="col-md-3 col-xs-6 water" href="">
-             water,
-             <img src="media/pexels-photo-1350197.jpeg" class="d-block w-100" alt="water">
-         </a>
-         <a class="col-md-3 col-xs-6 air" href="">
-             air,
-             <img src="media/pexels-photo-531767_tint.jpeg" class="d-block w-100" alt="sky">
-         </a>
-         <a class="col-md-3 col-xs-6 earth" href="">
-             earth
-             <img src="media/pexels-photo-2882599.jpeg" class="d-block w-100" alt="mountains">
-         </a>
-     </div>
-     <br>
-
+     <hr>
  </section>
-
-
- <!-- <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    The new collections are here
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                    </h4>
-                </div>
-            </div> -->
- </div>
+ <br>
+ <div class="text-center element-container">
+     <h2>Choose your Element to get started...</h2>
+     <br>
+     <div class="row">
+         {% for element in elements %}
+         <div class="card col-md-3 col-xs-6">
+             <a class="element-container-image" href="{% url 'element' element.id %}">
+                     <img src="{{ element.horizontal_image.url }}" class="card-img-top" alt="{{ element.name }}">
+             </a>
+             <div class="card-body">
+                 <a href="{% url 'element' element.id %}">
+                     <h4>{{ element.friendly_name }}</h4>
+                 </a>
+                 <p class="card-text">{{element.element_description}}</p>
+             </div>
+         </div>
+         {% endfor %}
+     </div>
  </div>
  {% endblock %}

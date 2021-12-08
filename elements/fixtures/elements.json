@@ -50,26 +50,12 @@
         "fields": {
             "name": "earth",
             "friendly_name": "Earth",
-            "element_description": "What is earth? Earth is strength. Earth is the physical. Earth is the vessel. Earth is your body. The Earth is a container for all the other elements. While the Earth grows, so do the rest of the elements. Look after and protect the Earth. It is the only one you have.",
+            "element_description": "What is Earth? Earth is strength. Earth is the physical. Earth is the vessel. Earth is your body. The Earth is a container for all the other elements. While the Earth grows, so do the rest of the elements. Look after and protect the Earth. It is the only one you have.",
             "why": "If you lack strength and purpose, you need Earth. ",
             "sub_benefits": "Sign up today for full access to all Earth exercises and 10% off all Earth products in store",
             "vertical_image": "earth_image_v2.jpg",
             "horizontal_image": "earth_image_h.jpg",
             "price": 4.95
-        }
-    },
-    {
-        "pk": 5,
-        "model": "elements.element",
-        "fields": {
-            "name": "all_elements",
-            "friendly_name": "Full Subscription",
-            "element_description": "‘Nil Aon Tin Tan Mar Do Thin Tan Fein’. There is no fire like your own fire. This is the basis of Abhaile. We here at Abhaile firmly believe that all of our strength comes from within. There is nothing we can’t accomplish from looking inward and utilizing all of our own innate talents, energies, experiences, and wisdoms. Abhaile is here to help guide you and release your own incredible potential through various exercises and meditations.",
-            "why": "If you want access to all that Abhaile has to offer, including full access to all exercises, 10% discount on all products in store and Free Delivery sign up to our full subscription today",
-            "sub_benefits": "Sign up today for full access to all Exercises, 10% discount on all Products in store and Free Delivery",
-            "vertical_image": "earth_image_v2.jpg",
-            "horizontal_image": "earth_image_h.jpg",
-            "price": 12.00
         }
     }
 ]
