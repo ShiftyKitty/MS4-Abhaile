@@ -2,113 +2,153 @@
 {% load static %}
 
 {% block page_header %}
-{% include 'includes/rest-of-site-nav.html' %} 
+{% include 'includes/rest-of-site-nav.html' %}
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container-fluid">
-        {% if product.element %}
-        <div class="row {{ product.element }}-bg">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2 ">
-                <div class="image-container my-5">
-                    {% if product.image_1 %}
-                        <a href="{{ product.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image_1.url }}" alt="{{ product.name }}">
-                        </a>
-                        {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                        </a>
-                    {% endif %}
+<div class="overlay"></div>
+<div class="container-fluid">
+    {% if product.element %}
+    <div class="row">
+        <div class="col-12 col-lg-4 offset-lg-2" id="content-wrapper">
+
+            <div class="column">
+                <img id=featured src="{{ product.image_1.url }}">
+
+                <div id="slide-wrapper">
+                    <div id="slider">
+                        <img class="thumbnail active" src="{{ product.image_1.url }}">
+                        {% if product.image_2 %}
+                        <img class="thumbnail" src="{{ product.image_2.url }}">
+                        {% endif %}
+                        {% if product.image_3 %}
+                        <img class="thumbnail" src="{{ product.image_3.url }}">
+                        {% endif %}
+                        {% if product.image_4 %}
+                        <img class="thumbnail" src="{{ product.image_4.url }}">
+                        {% endif %}
+                    </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="product-details-container text-cent mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.name }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold text-{{ product.element.name }}">€{{ product.price }}</p>
-                    {% if product.category %}
-                    <p class="small mt-1 mb-0">
-                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                        </a>
-                    </p>
-                    {{ product.element }}
-                    {% endif %}
-                    {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1 text-{{ product.element.name }}"></i>{{ product.rating }} / 5</small>
-                    {% else %}
-                        <small class="text-muted">No Rating</small>
-                    {% endif %}
-                    {% if request.user.is_superuser %}
-                        <small class="ml-3">
-                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                        </small>
-                    {% endif %}
-                    <p class="mt-3">{{ product.description }}</p>
-                    <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
-                        {% csrf_token %}
-                        <div class="form-row">
-                            {% with product.has_sizes as s %}
-                            {% if s %}
-                                <div class="col-12">
-                                    <p><strong>Size:</strong></p>
-                                    <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
-                                        <option value="xs">XS</option>
-                                        <option value="s">S</option>
-                                        <option value="m" selected>M</option>
-                                        <option value="l">L</option>
-                                        <option value="xl">XL</option>
-                                    </select>
-                                </div>
-                            {% endif %}
-                            <div class="col-12">
-                                <p class="mt-3"><strong>Quantity:</strong></p>
-                                <div class="form-group w-50">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-{{ product.element }} rounded-0" 
-                                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-minus"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                        <input class="form-control qty_input" type="number" name="quantity" value="1"
-                                            min="1" max="99" data-item_id="{{ product.id }}"
-                                            id="id_qty_{{ product.id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-qty btn btn-{{ product.element }} rounded-0"
-                                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                                <span class="icon">
-                                                    <i class="fas fa-plus"></i>
-                                                </span>
-                                            </button>
-                                        </div>
+        </div>
+        <div class="col-12 col-lg-4 offset-lg-1">
+            <div class="product-details-container text-cent mb-5 mt-md-5">
+                <p class="mb-0"><strong>{{ product.name }}</strong></p>
+                <p class="lead mb-0 text-left font-weight-bold text-{{ product.element.name }}">€{{ product.price }}</p>
+                {% if product.category %}
+                <p class="small mt-1 mb-0">
+                    <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                        <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                    </a>
+                </p>
+                {{ product.element }}
+                {% endif %}
+                {% if product.rating %}
+                <small class="text-muted"><i
+                        class="fas fa-star mr-1 text-{{ product.element.name }}"></i>{{ product.rating }} / 5</small>
+                {% else %}
+                <small class="text-muted">No Rating</small>
+                {% endif %}
+                {% if request.user.is_superuser %}
+                <small class="ml-3">
+                    <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                </small>
+                {% endif %}
+                <p class="mt-3">{{ product.description }}</p>
+                <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        {% with product.has_sizes as s %}
+                        {% if s %}
+                        <div class="col-12">
+                            <p><strong>Size:</strong></p>
+                            <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
+                                <option value="xs">XS</option>
+                                <option value="s">S</option>
+                                <option value="m" selected>M</option>
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                            </select>
+                        </div>
+                        {% endif %}
+                        <div class="col-12">
+                            <p class="mt-3"><strong>Quantity:</strong></p>
+                            <div class="form-group w-50">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="decrement-qty btn btn-{{ product.element }} rounded-0"
+                                            data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                            <span class="icon">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <input class="form-control qty_input" type="number" name="quantity" value="1"
+                                        min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    <div class="input-group-append">
+                                        <button class="increment-qty btn btn-{{ product.element }} rounded-0"
+                                            data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                            <span class="icon">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-12">
-                                <a href="{% url 'products' %}" class="btn btn-outline-{{ product.element }} rounded-0 mt-5">
-                                    <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
-                                </a>
-                                <input type="submit" class="btn btn-{{ product.element }} rounded-0 text-uppercase mt-5"
-                                    value="Add to Cart">
-                            </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                            {% endwith %}
                         </div>
-                    </form>
-                </div>
+
+                        <div class="col-12">
+                            <a href="{% url 'products' %}" class="btn btn-outline-{{ product.element }} rounded-0 mt-5">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Keep Shopping</span>
+                            </a>
+                            <input type="submit" class="btn btn-{{ product.element }} rounded-0 text-uppercase mt-5"
+                                value="Add to Cart">
+                        </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        {% endwith %}
+                    </div>
+                </form>
             </div>
-            {% endif %}
         </div>
+        {% endif %}
     </div>
+</div>
+<script type="text/javascript">
+    let thumbnails = document.getElementsByClassName('thumbnail')
+
+    let activeImages = document.getElementsByClassName('active')
+
+    for (var i = 0; i < thumbnails.length; i++) {
+
+        thumbnails[i].addEventListener('mouseover', function () {
+            console.log(activeImages)
+
+            if (activeImages.length > 0) {
+                activeImages[0].classList.remove('active')
+            }
+
+
+            this.classList.add('active')
+            document.getElementById('featured').src = this.src
+        })
+    }
+
+
+    let buttonRight = document.getElementById('slideRight');
+    let buttonLeft = document.getElementById('slideLeft');
+
+    buttonLeft.addEventListener('click', function () {
+        document.getElementById('slider').scrollLeft -= 180
+    })
+
+    buttonRight.addEventListener('click', function () {
+        document.getElementById('slider').scrollLeft += 180
+    })
+</script>
 {% endblock %}
 
 
