@@ -416,30 +416,6 @@ body {
     border-radius: 50%;
 }
 
-.img-side img {
-    height: 50%;
-}
-
-.img-middle img {
-    height: 25%;
-    width: 100%;
-}
-
-.fire {
-    background-color: rgb(207, 53, 46);
-}
-
-.water {
-    background-color: rgb(14,135,204);
-}
-
-.air {
-    background-color: rgb(14, 227, 184);
-}
-
-.earth {
-    background-color: rgb(255,225,1); 
-}
 /* 
 .overlay {
 	height: 100%;
@@ -875,3 +851,27 @@ body {
         padding: .25rem .5rem !important;
     }
 }
+
+.image-preview__image-image_1 {
+    display: none;
+    width: 25%;
+    height: 25%;
+  }
+
+  .image-preview__image-image_2 {
+    display: none;
+    width: 25%;
+    height: 25%;
+  }
+
+  .image-preview__image-image_3 {
+    display: none;
+    width: 25%;
+    height: 25%;
+  }
+
+  .image-preview__image-image_4 {
+    display: none;
+    width: 25%;
+    height: 25%;
+  }
