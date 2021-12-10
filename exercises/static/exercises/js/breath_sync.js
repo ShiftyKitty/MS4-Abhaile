@@ -2,6 +2,15 @@ let BreathBubble = document.querySelector(".breath_bubble")
 let start = document.querySelector(".start")
 let reset = document.querySelector(".reset")
 
+let primary_color = document.querySelector("#primary_color").value;
+document.documentElement.style.setProperty('--primary-color', primary_color);
+
+let secondary_color = document.querySelector("#secondary_color").value;
+document.documentElement.style.setProperty('--secondary-color', secondary_color);
+
+
+
+
 let inhale_1 = document.querySelector("#inhale_1").value * 1000;
 document.documentElement.style.setProperty('--inhale_1-time', (inhale_1/1000) + "s");
 

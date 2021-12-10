@@ -1,8 +1,47 @@
+.fire .card-header {
+    color: white;
+    background-color: rgba(247, 55, 24);
+}
+
+.fire .card-header button{
+    color: white;
+}
+
+.water .card-header {
+    color: white;
+    background-color: rgba(35, 137, 218);
+}
+
+.water .card-header button{
+    color: white;
+}
+
+.air .card-header {
+    color: white;
+    background-color: rgba(252,217,91);
+}
+
+.air .card-header button{
+    color: black;
+}
+
+.earth .card-header {
+    color: white;
+    background-color: rgba(34,139,34);
+}
+
+.earth .card-header button{
+    color: white;
+}
+
+
+
+
 :root {
     --primary-color: lightsteelblue;
     --secondary-color: lightpink;
-    --large: 20em;
-    --small: 5em;
+    --large: 36vh;
+    --small: 12vh;
     --inhale-1-time: 8s;
     --exhale-1-time: 16s;
     --post_inhale_ht: 3s;
@@ -26,8 +65,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 25em;
-    min-height: 25em;
+    max-width: 45vh;
+    min-height: 45vh;
     border-radius: 50%;
     border: 1px solid black;
 }

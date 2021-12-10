@@ -6,11 +6,9 @@
 {% endblock %}
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
+
+{% include 'includes/rest-of-site-nav.html' %}
+
 {% endblock %}
 
 {% block content %}
@@ -32,9 +30,9 @@
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-details-container mb-5 mt-md-5">
-                <h4 class="mb-0">{{ exercise.name }}</h4>
+                <h4 class="mb-0 text-{{ exercise.element.name }}">{{ exercise.name }}</h4>
                 {% if exercise.element %}
-                <p class="small mt-1 mb-0">
+                <p class="small mt-1 mb-0 text-{{ exercise.element.name }}">
                     <a class="text-muted" href="{% url 'exercises' %}?element={{ exercise.element.name }}">
                         {{ exercise.element.friendly_name }}
                     </a>
@@ -48,8 +46,8 @@
                 {% endif %}
                 <p class="mt-3">{{ exercise.description }}</p>
                 <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
+                    <div class="card {{ exercise.element.name }}">
+                        <div class="card-header " id="headingOne">
                             <h5 class="mb-0">
                                 <button class="btn btn-link" type="button" data-toggle="collapse"
                                     data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -57,7 +55,6 @@
                                 </button>
                             </h5>
                         </div>
-
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                             data-parent="#accordionExample">
                             <div class="card-body new-line">
@@ -65,8 +62,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="card">
+                    <div class="card {{ exercise.element.name }}">
                         <div class="card-header" id="headingTwo">
                             <h5 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
@@ -79,6 +75,22 @@
                             data-parent="#accordionExample">
                             <div class="card-body new-line">
                                 {{ exercise.benefits }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card {{ exercise.element.name }}">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Youtube Follow Along
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="card-body new-line">
+                                <iframe width="100%" height="315" src="{{ exercise.youtube_link }}"></iframe>
                             </div>
                         </div>
                     </div>
@@ -118,6 +130,8 @@
             </div>
         </div>
     </div>
+    <input type="hidden" id="primary_color" value="{{ exercise.primary_color }}">
+    <input type="hidden" id="secondary_color" value="{{ exercise.secondary_color }}">
     <input type="hidden" id="inhale_1" value="{{ exercise.inhale_1 }}">
     <input type="hidden" id="exhale_1" value="{{ exercise.exhale_1 }}">
     <input type="hidden" id="inhale_2" value="{{ exercise.inhale_2 }}">

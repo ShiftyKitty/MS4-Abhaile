@@ -1,7 +1,7 @@
 {% if widget.is_initial %}
     <p>{{ widget.initial_text }}:</p>
     <a href="{{ widget.value.url }}">
-        <img width="150" height="150" class="rounded shadow-sm" src="{{ widget.value.url }}">
+        <img width="140" height="140" class="rounded shadow-sm" src="{{ widget.value.url }}">
     </a>
     {% if not widget.required %}
         <div class="custom-control custom-checkbox mt-2">
@@ -11,11 +11,11 @@
     {% endif %}<br>
     {{ widget.input_text }}
 {% endif %}
-<span class="btn btn-{{ product.element.name }} rounded-0 btn-file">
+<span class="btn btn-black rounded-0 btn-file">
     Select Image <input id="id_{{ widget.name }}" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
 </span>
 <strong><p class="text-danger" id="filename_{{ widget.name }}"></p></strong>
 <div class="image-preview col s12 l5" id="imagePreview-{{ widget.name }}">
-    <img src="" width="96" height="96" class="image-preview__image-{{ widget.name }}">
+    <img src="" class="image-preview__image-{{ widget.name }}">
     <span class="image-preview__default-text{{ widget.name }}"></span>
 </div>
