@@ -38,7 +38,7 @@
          {% for element in elements %}
          <div class="card col-lg-3 col-sm-6 img-wrap">
              <a class="element-container-image" href="{% url 'element' element.id %}">
-                 <img src="{{ element.horizontal_image.url }}" class="card-img-top" alt="{{ element.name }}">
+                 <img src="{{ element.vertical_image.url }}" class="card-img-top" alt="{{ element.name }}">
                  <div class="img-text-{{ element.name }}">
                      <div class="img-description">
                          <h4>{{ element.friendly_name }}</h4>
@@ -46,9 +46,6 @@
                      </div>
                  </div>
              </a>
-             <div class="card-body">
-
-             </div>
          </div>
          {% endfor %}
      </div>

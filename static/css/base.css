@@ -160,10 +160,21 @@ p {
 
 .element-container-image {
     min-width: 100%;
-    min-height: 100%;
+    height: 50vh;
 }
 
 .element-container-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.element-pg-container-image {
+    min-width: 100%;
+    height: 60vh;
+}
+
+.element-pg-container-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -902,4 +913,235 @@ body {
     width: 100%;
     height: 95%;
     object-fit: cover;
+}
+
+
+/* element page  */
+
+.element-container-image-elem {
+    min-width: 100%;
+    height: 60%;
+}
+
+.element-container-image-elem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.water-bg {
+    background-color: #81BCEB;
+    height: 60%;
+}
+
+.fire_headline {
+    position: relative;
+    height: 35vw;
+    color: #fff;
+    text-align: center;
+    background: url('/media/fire_image_h.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.fire_headline:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(247, 55, 24, 0.7);
+}
+
+.fire_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    z-index: 10;
+    transform: translateX(-50%) translateY(-50%);
+    animation: fade-in 0.75s 0.25s ease-in forwards;
+}
+
+.fire_inner h1 {
+    margin: 0;
+    font-size: 4em;
+    line-height: 1.2em;
+}
+
+.fire_inner p {
+    margin: 0;
+    font-size: 1.4em;
+    font-style: italic;
+    font-family: serif;
+}
+
+.fire_nav {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.fire_nav.scrolled {
+    background: rgba(17, 17, 17, 0.9);
+}
+
+
+
+.water_headline {
+    position: relative;
+    height: 35vw;
+    color: #fff;
+    text-align: center;
+    background: url('/media/water_image_h2.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.water_headline:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(35, 137, 218, 0.7);
+}
+
+.water_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    z-index: 10;
+    transform: translateX(-50%) translateY(-50%);
+    animation: fade-in 0.75s 0.25s ease-in forwards;
+}
+
+.water_inner h1 {
+    margin: 0;
+    font-size: 4em;
+    line-height: 1.2em;
+}
+
+.water_inner p {
+    margin: 0;
+    font-size: 1.4em;
+    font-style: italic;
+    font-family: serif;
+}
+
+.water_nav {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.water_nav.scrolled {
+    background: rgba(17, 17, 17, 0.9);
+}
+
+.air_headline {
+    position: relative;
+    height: 35vw;
+    color: #fff;
+    text-align: center;
+    background: url('/media/air_image_h.jpeg') no-repeat center center;
+    background-size: cover;
+}
+
+.air_headline:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(252,217,91, 0.5);
+}
+
+.air_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    z-index: 10;
+    transform: translateX(-50%) translateY(-50%);
+    animation: fade-in 0.75s 0.25s ease-in forwards;
+}
+
+.air_inner h1 {
+    margin: 0;
+    font-size: 4em;
+    line-height: 1.2em;
+}
+
+.air_inner p {
+    margin: 0;
+    font-size: 1.4em;
+    font-style: italic;
+    font-family: serif;
+}
+
+.air_nav {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    color: black;
+}
+
+
+.air_nav.scrolled {
+    background: rgba(17, 17, 17, 0.9);
+}
+
+.earth_headline {
+    position: relative;
+    height: 35vw;
+    color: #fff;
+    text-align: center;
+    background: url('/media/earth_image_h.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.earth_headline:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(34,139,34, 0.6);
+}
+
+.earth_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    z-index: 10;
+    transform: translateX(-50%) translateY(-50%);
+    animation: fade-in 0.75s 0.25s ease-in forwards;
+}
+
+.earth_inner h1 {
+    margin: 0;
+    font-size: 4em;
+    line-height: 1.2em;
+}
+
+.earth_inner p {
+    margin: 0;
+    font-size: 1.4em;
+    font-style: italic;
+    font-family: serif;
+}
+
+.earth_nav {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.earth_nav.scrolled {
+    background: rgba(17, 17, 17, 0.9);
 }

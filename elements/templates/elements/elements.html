@@ -3,11 +3,9 @@
 
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+
+{% include 'includes/rest-of-site-nav.html' %}
+
 {% endblock %}
 
 {% block content %}
@@ -21,83 +19,25 @@
                 <hr class="w-50 mb-1">
             </div>
         </div>
-
-        <div class="row">
-            <div class="product-container col-10 offset-1">
-                <div class="row">
-                    {% for element in elements %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
-                                <a href="{% url 'element' element.id %}">
-                                    <img class="card-img-top img-fluid {{ element.name }}" src="{{ element.horizontal_image.url }}" alt="{{ element.name }}">
-                                </a>
-                                <div class="card-body pb-0">
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0"><a href="{% url 'element' element.id %}">{{ element.friendly_name }}</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- overlay? -->
+        <div class="text-center element-container">
+            <h2>Choose your Element to get started...</h2>
+            <br>
+            <div class="row">
+                {% for element in elements %}
+                <div class="card col-lg-3 col-sm-6 img-wrap">
+                    <a class="element-pg-container-image" href="{% url 'element' element.id %}">
+                        <img src="{{ element.vertical_image.url }}" class="card-img-top" alt="{{ element.name }}">
+                        <div class="img-text-{{ element.name }}">
+                            <div class="img-description">
+                                <h4>{{ element.friendly_name }}</h4>
+                                <p class="card-text">{{element.element_description}}</p>
                             </div>
                         </div>
-                        {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}                        
-                        {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:4 %}
-                            <div class="col-12 d-none d-xl-block mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
+                    </a>
                 </div>
+                {% endfor %}
             </div>
         </div>
+        </div>
     </div>
-{% endblock %}
-
-{% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
-	</script>
-    
-    <script type="text/javascript">
-        $('#sort-selector').change(function() {
-            var selector = $(this);
-            var currentUrl = new URL(window.location);
-
-            var selectedVal = selector.val();
-            if(selectedVal != "reset"){
-                var sort = selectedVal.split("_")[0];
-                var direction = selectedVal.split("_")[1];
-
-                currentUrl.searchParams.set("sort", sort);
-                currentUrl.searchParams.set("direction", direction);
-
-                window.location.replace(currentUrl);
-            } else {
-                currentUrl.searchParams.delete("sort");
-                currentUrl.searchParams.delete("direction");
-
-                window.location.replace(currentUrl);
-            }
-        })
-    </script>
 {% endblock %}

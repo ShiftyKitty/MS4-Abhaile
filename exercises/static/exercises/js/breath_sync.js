@@ -1,4 +1,5 @@
 let BreathBubble = document.querySelector(".breath_bubble")
+
 let start = document.querySelector(".start")
 let reset = document.querySelector(".reset")
 
@@ -83,6 +84,7 @@ function Inhale_4() {
     BreathBubble.style.animation = "inhale_4 var(--inhale_4-time) linear forwards";
     };
 
+
 // all exhales
 function Exhale_1() {
     BreathBubble.style.animation = "exhale_1 var(--exhale_1-time) linear forwards";
@@ -99,6 +101,7 @@ function Exhale_3() {
 function Exhale_4() {
     BreathBubble.style.animation = "exhale_4 var(--exhale_4-time) linear forwards";
     };
+
     
 // hold times
 function Inhale_HT() {
@@ -230,6 +233,7 @@ async function chainAnimations() {
 
 start.addEventListener('click', () => {
     chainAnimations();
+    console.log("i am working")
 })
 
 
