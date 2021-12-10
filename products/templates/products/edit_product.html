@@ -36,8 +36,8 @@
                         {% endif %}
                     {% endfor %}
                     <div class="text-right mb-4">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-{{ product.element.name }} rounded-0" type="submit">Update Product</button>
+                        <a class="btn btn-outline-black" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn btn-{{ product.element.name }}" type="submit">Update Product</button>
                     </div>
                 </form>
             </div>            

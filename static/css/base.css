@@ -858,6 +858,12 @@ body {
     }
 }
 
+.image-preview__image-image {
+    display: none;
+    width: 30%;
+    height: 30%;
+  }
+
 .image-preview__image-image_1 {
     display: none;
     width: 25%;
@@ -881,6 +887,8 @@ body {
     width: 25%;
     height: 25%;
   }
+
+
 
 
 /* exercises page */

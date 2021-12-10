@@ -10,7 +10,8 @@ class BreathworkForm(forms.ModelForm):
         model = Breathwork
         fields = '__all__'
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(label='Image (required)', required=True, widget=CustomClearableFileInput)
+    youtube_link = forms.URLField(label='Youtube Embed Link (required)', required=True)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

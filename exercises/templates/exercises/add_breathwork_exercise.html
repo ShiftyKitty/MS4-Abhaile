@@ -2,11 +2,9 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+
+{% include 'includes/rest-of-site-nav.html' %}
+
 {% endblock %}
 
 {% block content %}
@@ -33,8 +31,8 @@
                         {% endif %}
                     {% endfor %}
                     <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'exercises' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Add Exercise</button>
+                        <a class="btn btn-outline-black" href="{% url 'exercises' %}">Cancel</a>
+                        <button class="btn btn-black" type="submit">Add Exercise</button>
                     </div>
                 </form>
             </div>            
@@ -45,9 +43,36 @@
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
-        $('#new-image').change(function() {
-            var file = $('#new-image')[0].files[0];
-            $('#filename').text(`Image will be set to: ${file.name}`);
+        $('#id_image').change(function() {
+            var file = $('#id_image')[0].files[0];
+            $('#filename_image').text(`Image will be set to: ${file.name}`);
         });
+
+        const previewContainer = document.getElementById("imagePreview-image");
+        const previewImage = previewContainer.querySelector(".image-preview__image-image"); 
+        const previewDefaultText = previewContainer.querySelector(".image-preview__default-textimage"); 
+
+        $('#id_image').change(function() {
+        const file = this.files[0];
+
+        if (file) {
+        const reader = new FileReader();
+
+        previewDefaultText.style.display = "none";
+        previewImage.style.display = "block";
+
+        reader.addEventListener("load", function() {
+        console.log(this);
+        previewImage.setAttribute("src", this.result);
+        });
+
+        reader.readAsDataURL(file);
+        } else {
+        previewDefaultText.style.display = null;
+        previewImage.style.display = null;
+        previewImage.setAttribute("src", "");
+        }
+        });
+
     </script>
 {% endblock %}
