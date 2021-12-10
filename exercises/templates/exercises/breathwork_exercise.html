@@ -17,15 +17,9 @@
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
-                {% if exercise.image %}
                 <a href="{{ exercise.image.url }}" target="_blank">
                     <img class="card-img-top img-fluid" src="{{ exercise.image.url }}" alt="{{ exercise.name }}">
                 </a>
-                {% else %}
-                <a href="">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ exercise.name }}">
-                </a>
-                {% endif %}
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
@@ -33,7 +27,7 @@
                 <h4 class="mb-0 text-{{ exercise.element.name }}">{{ exercise.name }}</h4>
                 {% if exercise.element %}
                 <p class="small mt-1 mb-0 text-{{ exercise.element.name }}">
-                    <a class="text-muted" href="{% url 'exercises' %}?element={{ exercise.element.name }}">
+                    <i class="fas fa-lungs mr-1 text-{{ exercise.element.name }}"></i><a class="text-muted" href="{% url 'exercises' %}?element={{ exercise.element.name }}">
                         {{ exercise.element.friendly_name }}
                     </a>
                     {% if request.user.is_superuser %}
@@ -101,7 +95,7 @@
     <hr>
     <div class="container text-centre">
         <div class="breath_bubble_container">
-            Focused Breathing
+            <strong>Focused Breathing</strong>
             <div class="bubble-container">
                 <div class="breath_bubble">
                     <main>
@@ -110,23 +104,21 @@
                 </div>
             </div>
             <div class="rounds-container">
-                Rounds left: <span class="round_counter">0</span>
+                <strong>Rounds left: <span class="round_counter">0</span></strong>
                 <select class="form-control round-selector col-12 col-md-4 col-lg-2" name="rounds" id='rounds'>
+                    <option value="0" selected>Choose your rounds:</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
-                    <option value="3" selected>3</option>
+                    <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
             </div>
-            <div>
-                Time to complete
-            </div>
-            <div class="breaths">Breath Count: <span class="breath_counter">0</span></div>
-            <div>Hold Timer: <span class="post_round_hold_timer">0</span></div>
-            <div>
-                <button class="start">Start</button>
-                <button class="reset">Reset</button>
+            <div class="breaths"><strong>Breath Count: <span class="breath_counter">0</span></strong></div>
+            <div><strong>Post Round Timer: <span class="post_round_hold_timer">0</span></strong></div>
+            <div class="margin-bottom">
+                <button class="start btn btn-{{ exercise.element.name }}">Start</button>
+                <button class="reset btn btn-outline-{{ exercise.element.name }}">Reset</button>
             </div>
         </div>
     </div>

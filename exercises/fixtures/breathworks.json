@@ -1694,37 +1694,5 @@
         "primary_color": "#228b22",
         "secondary_color": "#6CDB6C"
       }
-    },
-    {
-      "pk": 54,
-      "model": "exercises.breathwork",
-      "fields": {
-        "name": "Alternate Nostril Breathing Exercises",
-        "description": "Alternate nostril breathing is a yogic breath control practice. In Sanskrit, it’s known as nadi shodhana pranayama. This translates as “subtle energy clearing breathing technique.”\n",
-        "how_to": "Focus on keeping your breath slow, smooth, and continuous. Focusing on your breath will help you to remember where you are in the cycle. You should be able to breathe easily throughout the practice.\nStep 1: Sit in a comfortable position with your legs crossed.\nStep 2: Place your left hand on your left knee.\nStep 3: Lift your right hand up toward your nose.\nStep 4: Exhale completely and then use your right thumb to close your right nostril.\nStep 5: Inhale through your left nostril and then close the left nostril with your fingers.\nStep 6: Open the right nostril and exhale through this side.\nStep 7: Inhale through the right nostril and then close this nostril.\nStep 8: Open the left nostril and exhale through the left side.\nStep 9: This is one cycle.\nStep 10: Continue for up to 5 minutes.\nStep 11: Always complete the practice by finishing with an exhale on the left side.\nAt the end of each round, relax, breathe normally and get ready for the next round.\n",
-        "benefits": "Sharpen your concentration and mental clarity,\nLowers stress and improves cardiovascular function,\nImproves lung function and respiratory endurance, \nPromotes well-being",
-        "inhale_1": 5,
-        "exhale_1": 5,
-        "inhale_2": 0,
-        "exhale_2": 0,
-        "inhale_3": 0,
-        "exhale_3": 0,
-        "inhale_4": 0,
-        "exhale_4": 0,
-        "post_inhale_ht": 2,
-        "post_exhale_ht": 2,
-        "post_reps_breath_hold": 30,
-        "recovery_inhale": 0,
-        "recovery_exhale": 0,
-        "recovery_bh": 0,
-        "inhale_reps": 20,
-        "exhale_reps": 20,
-        "breath_reps": 20,
-        "element": 4,
-        "image": "nose.jpg",
-        "youtube_link": "https://youtube.com/embed/5Vgl9__Y0tY",
-        "primary_color": "#228b22",
-        "secondary_color": "#6CDB6C"
-      }
     }
   ]

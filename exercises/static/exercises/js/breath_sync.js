@@ -9,8 +9,6 @@ let secondary_color = document.querySelector("#secondary_color").value;
 document.documentElement.style.setProperty('--secondary-color', secondary_color);
 
 
-
-
 let inhale_1 = document.querySelector("#inhale_1").value * 1000;
 document.documentElement.style.setProperty('--inhale_1-time', (inhale_1/1000) + "s");
 
@@ -64,26 +62,6 @@ document.documentElement.style.setProperty('--breath_reps', (breath_reps/1000) +
 
 let breathCounterTally = document.querySelector(".breath_counter").innerText
 
-console.log(breath_reps)
-console.log(post_reps_breath_hold)
-console.log(breathCounterTally)
-
-$(document).ready(function() {
-    $("#breath_counter_trigger").html($(".breaths span").html());
-});
-
-
-
-// console.log(breathCounterTrigger())
-
-// function breathCounterTrigger () {
-    
-//     console.log(breathCounterTally)
-// }
-
-// breathCounterTrigger();
-
-// console.log(breathCounterTrigger());
 
 // what do i need to do
 
@@ -161,14 +139,19 @@ function roundChanger () {
 }
 roundChanger();
 
+var roundAmount = roundSelector.value;
+
+console.log(breath_reps)
+console.log(post_reps_breath_hold)
+console.log(roundAmount)
+
+
 
 let holdTimer = post_reps_breath_hold / 1000;
 console.log(holdTimer)
 document.querySelector(".post_round_hold_timer").innerHTML = holdTimer;
 
-let breathCounterTrigger = $(document).change(function() {
-    $("#breath_counter_trigger").html($(".breaths span").html());
-});
+
 
 
 async function chainAnimations() {
