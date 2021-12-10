@@ -9,7 +9,7 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12">
                 <hr>
                 <h2 class="logo-font mb-4">Product Management</h2>
                 <h5 class="text-muted">Add a Product</h5>
@@ -17,8 +17,8 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-12 col-md-6">
+        <div class="row card">
+            <div class="col-12">
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
