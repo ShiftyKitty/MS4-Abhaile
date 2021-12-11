@@ -1145,3 +1145,22 @@ body {
 .earth_nav.scrolled {
     background: rgba(17, 17, 17, 0.9);
 }
+
+.button-container {
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.element-buttons {
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1500%;
+}
+
+.element-buttons a {
+    font-size: 7%;
+}

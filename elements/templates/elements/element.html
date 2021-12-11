@@ -1,19 +1,24 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'elements/css/elements.css' %}">
+{% endblock %}
+
+
 {% block content %}
-{% include 'includes/home-page-nav.html' %} 
+{% include 'includes/home-page-nav.html' %}
 <header>
-   <div class="{{ element.name }}_headline">
-       <div class="{{ element.name }}_inner">
-           <p></p>
-       </div>
-   </div>
+    <div class="{{ element.name }}_headline">
+        <div class="{{ element.name }}_inner">
+            <p></p>
+        </div>
+    </div>
 </header>
 <section>
     <div class="text-center">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-sm-12 col-lg-6">
                 <h2>{{ element.friendly_name }}</h2>
                 <hr>
                 <p>{{ element.element_description }} </p>
@@ -27,41 +32,68 @@
                 <p>{{ element.sub_benefits}}</p>
                 <hr>
             </div>
-            <div class="col-md-6">
-                Products and Exercises go here
+            <hr>
+            <br>
+            <div class="col-sm-12 col-lg-6 button-container">
+                <div class="element-buttons">
+                <a href="{% url 'products' %}?element={{ element.name }}" class="dropdown-item element-button btn btn-{{ element.name }}">View all {{element.friendly_name}} Products</a>
+                
+                <div class="card-body"></div>
+                <!-- <div class="marquee">
+                    <ul class="marquee-content">
+                        <li><i class="fab fa-github"></i></li>
+                        <li><i class="fab fa-codepen"></i></li>
+                        <li><i class="fab fa-free-code-camp"></i></li>
+                    </ul>
+                </div> -->
+                
+                <a href="{% url 'exercises' %}?element={{ element.name }}" class="dropdown-item element-button btn btn-{{ element.name }}">View all {{element.friendly_name}} Exercises</a>
+                </div>
+                <br>
+                <!-- <div class="marquee2">
+                    <ul class="marquee-content2">
+                        <li><i class="fab fa-github"></i></li>
+                        <li><i class="fab fa-codepen"></i></li>
+                        <li><i class="fab fa-free-code-camp"></i></li>
+                        <li><i class="fab fa-node"></i></li>
+                        <li><i class="fab fa-wordpress"></i></li>
+                        <li><i class="fab fa-aws"></i></li>
+                        <li><i class="fab fa-docker"></i></li>
+                        <li><i class="fab fa-android"></i></li>
+                    </ul>
+                </div> -->
             </div>
         </div>
     </div>
-    
+
 </section>
-    <script>
-     var $headline = $('.{{ element.name }}_headline'),
+<script>
+    var $headline = $('.{{ element.name }}_headline'),
         $inner = $('.{{ element.name }}_inner'),
         $nav = $('.{{ element.name }}_nav'),
         navHeight = 75;
 
-        $(window).scroll(function() {
+    $(window).scroll(function () {
         var scrollTop = $(this).scrollTop(),
-        headlineHeight = $headline.outerHeight() - navHeight,
-        navOffset = $nav.offset().top;
+            headlineHeight = $headline.outerHeight() - navHeight,
+            navOffset = $nav.offset().top;
 
         $headline.css({
-        'opacity': (1 - scrollTop / headlineHeight)
+            'opacity': (1 - scrollTop / headlineHeight)
         });
         $inner.children().css({
-        'transform': 'translateY('+ scrollTop * 0.4 +'px)'
+            'transform': 'translateY(' + scrollTop * 0.4 + 'px)'
         });
         if (navOffset > headlineHeight) {
-        $nav.addClass('scrolled');
+            $nav.addClass('scrolled');
         } else {
-        $nav.removeClass('scrolled');
+            $nav.removeClass('scrolled');
         }
-        });
-        
-    </script>
+    });
+</script>
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <script src="{% static 'exercises/js/breath_sync.js' %}"></script>
+{{ block.super }}
+<script src="{% static 'elements/js/carousel_train.js' %}"></script>
 {% endblock %}

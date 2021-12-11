@@ -99,13 +99,13 @@
                         </div>
 
                         <div class="col-12">
-                            <a href="{% url 'products' %}" class="btn btn-outline-{{ product.element }} rounded-0 mt-5">
+                            <a href="{% url 'products' %}" class="btn btn-outline-{{ product.element }} mt-5">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <input type="submit" class="btn btn-{{ product.element }} rounded-0 text-uppercase mt-5"
+                            <input type="submit" class="btn btn-{{ product.element }} text-uppercase mt-5"
                                 value="Add to Cart">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
