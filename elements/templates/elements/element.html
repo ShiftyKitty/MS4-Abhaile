@@ -36,18 +36,32 @@
             <br>
             <div class="col-sm-12 col-lg-6 button-container">
                 <div class="element-buttons">
-                <a href="{% url 'products' %}?element={{ element.name }}" class="dropdown-item element-button btn btn-{{ element.name }}">View all {{element.friendly_name}} Products</a>
-                
-                <div class="card-body"></div>
-                <!-- <div class="marquee">
+                    <a href="{% url 'products' %}?element={{ element.name }}"
+                        class="dropdown-item element-button btn btn-{{ element.name }}">View all
+                        {{element.friendly_name}} Products</a>
+
+                    <div class="card-body"></div>
+                    <!-- <div class="marquee">
                     <ul class="marquee-content">
                         <li><i class="fab fa-github"></i></li>
                         <li><i class="fab fa-codepen"></i></li>
                         <li><i class="fab fa-free-code-camp"></i></li>
                     </ul>
                 </div> -->
-                
-                <a href="{% url 'exercises' %}?element={{ element.name }}" class="dropdown-item element-button btn btn-{{ element.name }}">View all {{element.friendly_name}} Exercises</a>
+                    {% if request.user.is_authenticated %}
+                    <a href="{% url 'exercises' %}?element={{ element.name }}"
+                        class="dropdown-item element-button btn btn-{{ element.name }}">View all
+                        {{element.friendly_name}} Exercises</a>
+                    {% else %}
+                    <div class="card mb-4">
+                        <h4>Sign up to Abhaile today to access {{element.friendly_name}} Breathing for entire
+                            year for free. Already a
+                            User?</h4><a href="{% url 'account_login' %}">Login here</a>
+                        <a href="{% url 'account_signup' %}" class="dropdown-item element-button btn btn-black">Sign Up
+                            to Abhaile</a>
+                    </div>
+                    {% endif %}
+
                 </div>
                 <br>
                 <!-- <div class="marquee2">

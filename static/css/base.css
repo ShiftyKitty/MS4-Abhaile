@@ -32,7 +32,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(17, 17, 17, 0.6);
+    background: rgba(17, 17, 17, 0.8);
 }
 
 .inner {
@@ -149,7 +149,6 @@ section {
 
 p {
     font-family: 'Khula', sans-serif;
-    ;
 }
 
 .element-container {
@@ -479,6 +478,7 @@ body {
 .allauth-form-inner-content input {
     border-color: #000;
     border-radius: 0;
+    font-family: 'Khula', sans-serif;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
@@ -506,7 +506,6 @@ body {
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: 0;
 
     /* standard bootstrap btn transitions */
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
@@ -521,6 +520,8 @@ body {
 
 .allauth-form-inner-content a {
     color: #17a2b8;
+    font-family: 'Khula', sans-serif;
+
     /* text-info */
 }
 
@@ -1153,6 +1154,8 @@ body {
 }
 
 .element-buttons {
+    margin-top: 8%;
+    margin-bottom: 5vh;
     position: absolute;
     width: 90%;
     top: 50%;
