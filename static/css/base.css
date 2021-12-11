@@ -32,7 +32,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(17, 17, 17, 0.5);
+    background: rgba(17, 17, 17, 0.6);
 }
 
 .inner {
@@ -121,7 +121,7 @@ section {
     width: 100%;
     margin: 25px auto;
     padding: 20px;
-    max-width: 70%;
+    max-width: 80%;
     font-size: 1.2em;
     line-height: 1.6em;
     box-sizing: border-box;
@@ -936,7 +936,7 @@ body {
 
 .fire_headline {
     position: relative;
-    height: 35vw;
+    height: 30vw;
     color: #fff;
     text-align: center;
     background: url('/media/fire_image_h.jpg') no-repeat center center;
@@ -990,7 +990,7 @@ body {
 
 .water_headline {
     position: relative;
-    height: 35vw;
+    height: 30vw;
     color: #fff;
     text-align: center;
     background: url('/media/water_image_h2.jpg') no-repeat center center;
@@ -1042,7 +1042,7 @@ body {
 
 .air_headline {
     position: relative;
-    height: 35vw;
+    height: 30vw;
     color: #fff;
     text-align: center;
     background: url('/media/air_image_h.jpeg') no-repeat center center;
@@ -1096,7 +1096,7 @@ body {
 
 .earth_headline {
     position: relative;
-    height: 35vw;
+    height: 30vw;
     color: #fff;
     text-align: center;
     background: url('/media/earth_image_h.jpg') no-repeat center center;

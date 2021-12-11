@@ -10,17 +10,30 @@
        </div>
    </div>
 </header>
-    <div class="container element-pg-container">
-        <div class="row {{ element.name }}-bg">
-            <div class="col-12 col-md-6">
-                <div class="product-details-container">
-                    <h4 class="mb-0">{{ element.friendly_name }}</h4>
-                    <p class="mt-3">{{ element.element_description }}</p>
-                    <p class="mt-3">{{ element.why }}</p>
-                </div>
+<section>
+    <div class="text-center">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>{{ element.friendly_name }}</h2>
+                <hr>
+                <p>{{ element.element_description }} </p>
+                <hr>
+                <br>
+                <h4>Why choose {{element.friendly_name}}?</h4>
+                <p>{{ element.why }}</p>
+                <hr>
+                <br>
+                <h4>What does {{element.friendly_name}} breathing do?</h4>
+                <p>{{ element.sub_benefits}}</p>
+                <hr>
+            </div>
+            <div class="col-md-6">
+                Products and Exercises go here
             </div>
         </div>
     </div>
+    
+</section>
     <script>
      var $headline = $('.{{ element.name }}_headline'),
         $inner = $('.{{ element.name }}_inner'),
