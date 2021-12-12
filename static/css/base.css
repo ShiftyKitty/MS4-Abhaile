@@ -1147,9 +1147,12 @@ body {
     background: rgba(17, 17, 17, 0.9);
 }
 
+.text-container {
+    margin-bottom: 10%;
+}
+
 .button-container {
     position: relative;
-    margin-top: 10%;
     margin-bottom: 10%;
 }
 
