@@ -19,7 +19,7 @@ The elements are associated with the following benefits:
 
 By opting to an element, gives the user full access to all the different exercises associated with that element.
 There will be an online store selling merch dedicated to each element. This online store will be open to all users. 
-Eventually I would like to add more exercises that will improve wellbeing across the different elements that go outside the scope of breathwork. This may happen after this project. In addition I would like to add a subscription element where users can subscribe to the element they feel they are lacking in their life. This will come post MS4
+Eventually I would like to add more exercises that will improve wellbeing across the different elements that go outside the scope of breathwork. This may happen after this project. In addition I would like to add a subscription element where users can subscribe to the element they feel they are lacking in their life. This may come post MS4
 
 
 
@@ -153,6 +153,13 @@ User Stories:
 -	As an existing/new user, I want to be guided through my breathwork so that I can better understand and learn the different breathing techniques in an engaging environment. 
 -	As an existing/new user, I want to be able to search appropriately so that I can better navigate and find the items I need. 
 
+- As an admin user, I want to be able to add products to the site
+- As an admin user, I want to be able to edit products on the site
+- As an admin user, I want to be able to see preview images of products I am adding before submitting on edit/add products forms
+- As an admin user, I want to be able to add exercises to the site
+- As an admin user, I want to be able to edit exercises on the site
+- As an admin user, I want to be able to see preview images of exercises I am adding before submitting on edit/add exercises forms
+
 
 
 <br>
@@ -167,6 +174,7 @@ Different Pages:
 - (5) Exercise/s Page/s
 - (6) Sign Up
 - (7) Login
+- (8) Checkout
 
 
 The below image provides the sitemap to Project Abhaile and illustrates the interconnecting parts:
@@ -223,7 +231,7 @@ Database Mockups
 - Responsive across all devices
 - Functional email send system sent from specially made email address for Project Abhaile. 
 
-###
+<br>
 
 ## Technologies Used 
 <hr>
@@ -312,6 +320,7 @@ USE_AWS | TRUE
 11. In the "Manual Deployment" section of this page make sure master/main branch is selected and then click "Deploy Branch".
 12. The site is now successfully deployed through Heroku. 
 
+<br>
 
 ## Credits
 <hr>
@@ -360,7 +369,7 @@ USE_AWS | TRUE
 
 ### Media
 
-- All data used in the making and formualting of Breathwork data came from the following literary sources:
+- All data used in the making and formualting of Breathwork exercises came from the following literary sources:
     - [Breathe: A Life in Flow](https://www.amazon.co.uk/Breathe-Life-Flow-Rickson-Gracie/dp/0008440107/ref=asc_df_0008440107/?tag=googshopuk-21&linkCode=df0&hvadid=499292279914&hvpos=&hvnetw=g&hvrand=8691250157275803741&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007908&hvtargid=pla-1226897722026&psc=1&th=1&psc=1)
     - [The Wim Hof Method: Activate Your Full Human Potential](https://www.wimhofmethod.com/the-wim-hof-method-book)
     - [Breath: The New Science of a Lost Art](https://www.amazon.co.uk/Breath-New-Science-Lost-Art/dp/0241289122/ref=asc_df_0241289122/?tag=googshopuk-21&linkCode=df0&hvadid=500848842883&hvpos=&hvnetw=g&hvrand=13823040445547608249&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007908&hvtargid=pla-984701754398&psc=1&th=1&psc=1)
@@ -370,20 +379,27 @@ USE_AWS | TRUE
 
 <br>
 
-- All data used in the making and formualting of Breathwork data came from the following youtube sources:
+- All data used in the making and formualting of Breathwork exercises came from the following youtube sources:
     - [Take a Deep Breath](https://www.youtube.com/c/TAKEADEEPBREATH/videos)
     - [Wim Hof](https://www.youtube.com/user/wimhof1/videos)
     - [Yoga With Adriene](https://www.youtube.com/c/yogawithadriene/videos)
     - [Caren Baginski](https://www.youtube.com/c/CarenBaginskiYoga/videos)
     - [SOMA Breath](https://www.youtube.com/user/alchemysoundtherapy)
 
-- All icons used on site were taken from [FontAwesome](https://fontawesome.com/)
-- All images used for exercises and elements came from the following sources:
-    -   [Pexels](https://www.pexels.com/)
-    -   [Unsplash](https://unsplash.com/)
-    -   [Pinterest](https://www.pinterest.ie/)
-    -   [Imgur](https://i.imgur.com/a8kcT.jpg)
+<br>
 
+- All icons used on site were taken from [FontAwesome](https://fontawesome.com/)
+
+<br>
+
+- All images used for exercises and elements came from the following sources:
+    - [Pexels](https://www.pexels.com/)
+    - [Unsplash](https://unsplash.com/)
+    - [Pinterest](https://www.pinterest.ie/)
+    - [Imgur](https://i.imgur.com/a8kcT.jpg)
+
+<br>
+<br>
 
 - All images used for products came with permission from local shops in New Ross (Co. Wexford), Graignamanagh (Co. Kilkenny) and Carlow Town (Co. Carlow). Images were of stock photos of stock they had in store:
     -   [Barrons](https://www.google.com/search?rlz=1C1CHBF_en-GBIE980IE980&tbs=lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u16!2m2!16m1!1e1!1m4!1u16!2m2!16m1!1e2!2m1!1e2!2m1!1e16!2m1!1e3!3sIAE,lf:1,lf_ui:10&tbm=lcl&sxsrf=AOaemvJ2YwM9LJBML9I2ngQsYnohBSc06A:1639324117520&q=clothes%20shops%20near%20me&rflfq=1&num=10&sa=X&ved=2ahUKEwjx4Midzt70AhUKV8AKHXd2CkUQjGp6BAgFEF4&biw=1920&bih=961&dpr=1&rlst=f#rlfi=hd:;si:16854777670165113175,l,ChVjbG90aGVzIHNob3BzIG5lYXIgbWUiA5ABAUiN5vKpmJaAgAhaJRAAEAEYASIVY2xvdGhlcyBzaG9wcyBuZWFyIG1lKgYIAxAAEAGSAQpzaG9lX3N0b3JlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU4zZUVrdFNIRkJSUkFCqgEVEAEqESINY2xvdGhlcyBzaG9wcygA,y,t8gobLKDlcw;mv:[[52.7284381,-6.5288876],[52.2341201,-7.284632800000001]])
@@ -403,8 +419,8 @@ USE_AWS | TRUE
 
 - Would like to thank all friends and family who helped test this app and report back usability issues and technical bugs. 
 
-- The name Abhaile is the Irish for home. Each project so far done with Code Institute secretly followed the 4 elements. MS1-Earth, MS2-Water, MS3-Air/Wind and MS4 was based off Fire. "Nil Aon Tin Tan Mar Do Thin Tan Fein", which translates to "There is no fire like your own fire". "There is no home like your own home". This is the origins of this project. 
+- The name "Abhaile" is the Irish for "Home". Each project so far done with Code Institute secretly followed the 4 elements. MS1-Earth, MS2-Water, MS3-Air/Wind and MS4 was based off Fire. "Nil Aon Tin Tan Mar Do Thin Tan Fein", which translates to "There is no fire like your own fire". "There is no home like your own home". This is the origins of this project. 
 
-- Continuing on with anime theme through, a main inspiration of the different elemental breaths came from the series [Kimetsu no Yaiba](https://www.google.com/search?q=kimetsu+no+yaiba&rlz=1C1CHBF_en-GBIE980IE980&oq=kimet&aqs=chrome.0.0i131i355i433i512j46i131i433i512j69i57j0i131i433i512j0i512j46i512j69i60l2.3129j0j7&sourceid=chrome&ie=UTF-8)
+- Continuing on with anime theme throughout, a main inspiration of the different elemental breaths came from the series [Kimetsu no Yaiba](https://www.google.com/search?q=kimetsu+no+yaiba&rlz=1C1CHBF_en-GBIE980IE980&oq=kimet&aqs=chrome.0.0i131i355i433i512j46i131i433i512j69i57j0i131i433i512j0i512j46i512j69i60l2.3129j0j7&sourceid=chrome&ie=UTF-8)
 
 - Many features were left out due to time constraints and lack of skill/knowledge however I will be building upon what is here in this project over time. 
