@@ -228,7 +228,7 @@ Database Mockups
 ## Technologies Used 
 <hr>
 
-Project Frugaol made use of the following technologies, languages and frameworks:
+Project Abhaile made use of the following technologies, languages and frameworks:
 
 - HTML: To create structure of site
 
@@ -328,7 +328,7 @@ USE_AWS | TRUE
 
 <br>
 
-- Focused Breath Sync Feature on Breathwork exercise pages came from the following sources:
+- Info and inspiration for focused Breath Sync Feature on Breathwork exercise pages came from the following sources:
     - [Chaining CSS Animations using JS](https://ccscoder.medium.com/chaining-css-animations-using-javascript-1b171708360e)
     - [CSS @keyframes Rule](https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp)
     - [CSSStyleDeclaration.getPropertyValue](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue)
@@ -337,7 +337,7 @@ USE_AWS | TRUE
 
 <br>
 
-- CSS and JS for product images was taken and adapted from [divanov11](https://github.com/divanov11/image_slider_frontend) Github
+- CSS and JS for product hover images were taken and adapted from [divanov11](https://github.com/divanov11/image_slider_frontend) Github
 
 - Idea for Homepage and Element page headers came from [epilande](https://codepen.io/epilande/pen/usHIw) on Codepen. Originally from [StackOverflow](https://stackoverflow.com/)
 
@@ -352,6 +352,10 @@ USE_AWS | TRUE
 - Various error messages were understood and solved by using [StackOverflow](https://stackoverflow.com/)
 
 - Authentication and Allauth template editing came from [Allauth Docs](https://django-allauth.readthedocs.io/en/latest/)
+
+- How to centre a div methods came from [How to Center Anything with CSS - Align a Div, Text, and More](https://www.freecodecamp.org/news/how-to-center-anything-with-css-align-a-div-text-and-more/)
+
+
 
 
 ### Media
@@ -381,14 +385,26 @@ USE_AWS | TRUE
     -   [Imgur](https://i.imgur.com/a8kcT.jpg)
 
 
--  All images used for products came with permission from local shops in New Ross (Co. Wexford), Graignamanagh (Co. Kilkenny) and Carlow Town (Co. Carlow). Images were of stock photos of stock they had in store:
-    -   
+- All images used for products came with permission from local shops in New Ross (Co. Wexford), Graignamanagh (Co. Kilkenny) and Carlow Town (Co. Carlow). Images were of stock photos of stock they had in store:
+    -   [Barrons](https://www.google.com/search?rlz=1C1CHBF_en-GBIE980IE980&tbs=lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u16!2m2!16m1!1e1!1m4!1u16!2m2!16m1!1e2!2m1!1e2!2m1!1e16!2m1!1e3!3sIAE,lf:1,lf_ui:10&tbm=lcl&sxsrf=AOaemvJ2YwM9LJBML9I2ngQsYnohBSc06A:1639324117520&q=clothes%20shops%20near%20me&rflfq=1&num=10&sa=X&ved=2ahUKEwjx4Midzt70AhUKV8AKHXd2CkUQjGp6BAgFEF4&biw=1920&bih=961&dpr=1&rlst=f#rlfi=hd:;si:16854777670165113175,l,ChVjbG90aGVzIHNob3BzIG5lYXIgbWUiA5ABAUiN5vKpmJaAgAhaJRAAEAEYASIVY2xvdGhlcyBzaG9wcyBuZWFyIG1lKgYIAxAAEAGSAQpzaG9lX3N0b3JlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU4zZUVrdFNIRkJSUkFCqgEVEAEqESINY2xvdGhlcyBzaG9wcygA,y,t8gobLKDlcw;mv:[[52.7284381,-6.5288876],[52.2341201,-7.284632800000001]])
+    - [Revolution](https://www.google.com/search?rlz=1C1CHBF_en-GBIE980IE980&tbs=lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u16!2m2!16m1!1e1!1m4!1u16!2m2!16m1!1e2!2m1!1e2!2m1!1e16!2m1!1e3!3sIAE,lf:1,lf_ui:10&tbm=lcl&sxsrf=AOaemvJ2YwM9LJBML9I2ngQsYnohBSc06A:1639324117520&q=clothes%20shops%20near%20me&rflfq=1&num=10&sa=X&ved=2ahUKEwjx4Midzt70AhUKV8AKHXd2CkUQjGp6BAgFEF4&biw=1920&bih=961&dpr=1&rlst=f#rlfi=hd:;si:5009692705233257827,l,ChVjbG90aGVzIHNob3BzIG5lYXIgbWUiA5ABAVofIhVjbG90aGVzIHNob3BzIG5lYXIgbWUqBggDEAAQAZIBDmNsb3RoaW5nX3N0b3JlqgEVEAEqESINY2xvdGhlcyBzaG9wcygA,y,Y14G4zGMtvM;mv:[[52.7284381,-6.5288876],[52.2341201,-7.284632800000001]])
+    - [Fields Jewelers](https://www.fields.ie/)
+    - [Forristals Jewellers](https://www.facebook.com/forristalsjewellers1/)
+    - [Lady Melia](https://ladymelia.com/)
+    - [Mister H. Menswear](https://misterhmenswear.ie/)
+    - [Amy Janes Boutique](https://amyjanes.ie/)
+    - [Blossoms](https://blossomsladieswear.ie/)
+    - [Bonita](https://www.bonita-boutique.com/)
+    - [Alicia & Chloe](https://aliciaandchloe.com/)
+
 
 
 ### Acknowledgements 
 
 - Would like to thank all friends and family who helped test this app and report back usability issues and technical bugs. 
 
-- The name FruGaol comes from the word "Frugal" meaning thrifty or costing little and the Irish word "Gaol" which translates to relationships. Together it comes to Thrifty Relationships which was the inspiration behind this app and its purpose of connecting Businesses and Consumers through special deals and offers. 
+- The name Abhaile is the Irish for home. Each project so far done with Code Institute secretly followed the 4 elements. MS1-Earth, MS2-Water, MS3-Air/Wind and MS4 was based off Fire. "Nil Aon Tin Tan Mar Do Thin Tan Fein", which translates to "There is no fire like your own fire". "There is no home like your own home". This is the origins of this project. 
+
+- Continuing on with anime theme through, a main inspiration of the different elemental breaths came from the series [Kimetsu no Yaiba](https://www.google.com/search?q=kimetsu+no+yaiba&rlz=1C1CHBF_en-GBIE980IE980&oq=kimet&aqs=chrome.0.0i131i355i433i512j46i131i433i512j69i57j0i131i433i512j0i512j46i512j69i60l2.3129j0j7&sourceid=chrome&ie=UTF-8)
 
 - Many features were left out due to time constraints and lack of skill/knowledge however I will be building upon what is here in this project over time. 
