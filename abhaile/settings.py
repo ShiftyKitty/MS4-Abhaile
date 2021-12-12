@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-(m8h=cqlbn7u^5hsohafj@j3==1!v4mg6^g)@wi!8r54b()nia
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ms4-abhaile.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -123,11 +124,27 @@ WSGI_APPLICATION = 'abhaile.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+
+DATABASES = {
+    'default': dj_database_url.parse('postgres://prjeamxoqgvnjs:b8bbe5d0be96c2e3ef2280fdef92140f74bd7957316bbcbe3f66c6ecd45705d4@ec2-52-19-164-214.eu-west-1.compute.amazonaws.com:5432/d8qrk2cuq3nno2')
 }
 
 
