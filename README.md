@@ -10,16 +10,16 @@ The 4 different parts of Project Abhaile will be the following:
 -	Earth
 -	Air
 
-These 4 elements will essentially house the different breathworks. The user can subscribe to each individual element or subscribe to all 4 at an overall cheaper rate. 
+These 4 elements will essentially house the different breathworks. The user can opt to each individual element.
 The elements are associated with the following benefits:
 -	Fire = Energy/Adrenaline/Burst/Red
 -	Water = Intelligence/Focus/Creativity/Blue
--	Earth = Physical/Physical health benefits/Yellow+Brown
--	Air = Meditiation/Spirituaility/Balance/Mental Wellbeing/Destress/Teal-Green
+-	Earth = Physical/Physical health benefits/Green
+-	Air = Meditiation/Spirituaility/Balance/Mental Wellbeing/Destress/Yellow
 
-By subscribing to an element gives the user full access to all the different exercises associated with that element.
-In addition, there will be an online store selling merch dedicated to each element. This online store will be open to all users however, there will be discount perks and delivery perks that allow subscribed users to take advantage of. If a user is subscribed to all elements, they receive 15% off all products on site and free delivery. If user is subscribed to 1 element they receive 10% off products associated with that element. 
-Eventually I would like to add more exercises that will improve wellbeing across the different elements that go outside the scope of breathwork. This may happen after this project. 
+By opting to an element, gives the user full access to all the different exercises associated with that element.
+There will be an online store selling merch dedicated to each element. This online store will be open to all users. 
+Eventually I would like to add more exercises that will improve wellbeing across the different elements that go outside the scope of breathwork. This may happen after this project. In addition I would like to add a subscription element where users can subscribe to the element they feel they are lacking in their life. This will come post MS4
 
 
 
@@ -62,7 +62,7 @@ For Consumers: <br>
 -  For this app, the user will be brought to home page. On homepage there will be 4 different tiles that have Fire, Water, Air and Earth. By hovering on each tile shows to user why one would want to subscribe to this element. 
 -  A good experience would be one that is rewarding upon every use. In addition, good experience is one that is seamless and effortless. You do not want to be dreading the experience or putting it off. If this app is designed well, users would want to make this app a part of their day to day life
 - As this app is a wellness app, users will mainly use this to feel well and motivated. This can be if user has experienced a tough day and needs to destress or needs to complete a task/project and needs to focus or improve concentration. 
-- Before subscribing, user will need to consult their doc/gp before undergoing. If this app was to ever reach market in real life, all the practices would need to be medically cleared as this is holistic science, its practices are still more pseudo than factual
+- Before engaging, user will need to consult their doc/gp before undergoing. If this app was to ever reach market in real life, all the practices would need to be medically cleared as this is holistic science, its practices are still more pseudo than factual
 - After using, user would ideally feel the benefits immediately after practicing. 
 
 For Businesses: <br>
@@ -77,32 +77,43 @@ What's worth doing?
 
 Opportunity/Problem | Important | Feasability/Viability 
 --- | --- | ---
-Sign Up and Log in Feature (through social media) | 5 | 3 |
-Customer sign up | 5	| 5
-Subscribe element to subscribe to the elements  | 5 | 4
+Sign Up and Log in Feature | 5 | 5 |
+Social media sign Up and log in Feature | 2 | 2 
+Ecom website that presents products and allows card transactions | 5 | 5 
+Customer sign up | 5 | 5
+Exercises only available to Abhaile users | 5 | 5
 Products page  | 5 | 5
+Product page properly displays product image in engaging way | 5 | 3
 Exercise page | 5 | 5
-Audio synthesizer that matches up with the breath work  | 5 | 3
-XP System | 3 |2
-Stripe System | 5 |5
+Breath synthesizer that matches up with the breath work  | 5 | 3
+XP System | 1 | 2
+Stripe Payment System | 5 | 5
 Search functionality | 5 | 5
 Round system | 4 | 3
-Mp3 looped audio | 2 | 3
+Mp3 looped audio | 1 | 3
+Admin access to add, edit and delete products | 5 | 5
+Admin access to add, edit and delete exercises | 5 | 5
+Youtube follow along links in case user cant use breath sync | 5 | 5
+Product and Exercise carrousel that appears on element page | 1 | 1
+
 
 		
 
 <br>
 
 What are we making in the first place? <br>
-We are making an app that helps to promote wellness and peace for its users (for a price). 
+We are making an app that helps to promote wellness and peace for its users. 
 The goal is to have a wellness app that is equal parts fun, engaging and calming. From past experience, meditation and anything similar are difficult to repeatedly do. Other people who attempt to preach this practice state that the difficulty is due to the users subconcious not wanting to go through the changes associated for meditation as your mental state does change during such activities. To combat this might go outside the scope of this project but sure we will give it a go. 
 
 A compelling user experience with any app is the ability to leave the user wanting more. In the instance of Project Abhaile, this may take up the shape of levels starting off on beginner exercises and progressing with the user. The more they participate, the more they will level up unlocking new and more difficult challenges. This again might be outside scope of project but something worth considering. 
 
+Initially these exercises will be freely available to all users. Taking inspiration from Andrew Chens book, The Cold Start problem, it is beneficial at early stages of app deployment that offers a service to be free to improve Network Effects and in turn improve business growth. Eventually I would like to add some sort of subscription system where users subscribe to individual elements and then reap the benefits of said element through new exercises and potential store discounts. This will be post MS4
+
+In addition, if the elements take off as concepts they will double as advertising for the procucts in store. 
 
 
 How is our offering, or proposed offering, different from our competitors and substitutes? <br>
-The difference in offering can be split into short term and long term. Short term is that I don’t think anyone else is separating the wellbeing into the categories of energy(fire), intelligence(water), mindfulness/enlightenment(air) and physical wellbeing (earth). Being able to succinctly tap into the element you want more of for that instance isn’t a concept I believe that has been explored too much by other wellness apps. Long term, my endgoal for this app is that it is something that is provided to everyone by the Government as it is seen as very beneficial to help people cope and succeed in their everyday lives. Eventually I would like more exercises that fall in line with the aforementioned categories that go beyond scope of breathwork. An encyclopadia/catalogue of wellness practices to help people. 
+The difference in offering can be split into short term and long term. Short term is that I don’t think anyone else is separating the wellbeing into the categories of energy(fire), intelligence(water), mindfulness/enlightenment(air) and physical wellbeing (earth). Being able to succinctly tap into the element you want more of for that instance isn’t a concept I believe that has been explored too much by other wellness apps. Long term, my endgoal for this app is that it is something that is provided to everyone by the Government as it is seen as very beneficial to help people cope and succeed in their everyday lives (maybe too ambitious). Eventually I would like more exercises that fall in line with the aforementioned categories that go beyond scope of breathwork. An encyclopadia/catalogue of wellness practices to help people. 
 
 What can the user expect? <br>
 User can expect an app that will be a massive benefit to them and the way they feel and their outlook on life. 
@@ -118,37 +129,29 @@ User can expect an app that will be a massive benefit to them and the way they f
 Whats on the table?
 - Sign Up and Login (through social media account)
 - Customer sign up
-- Subscription system that allows users to subscribe to individual elements or all elements. 
 - Online, ecom store that allows purchasing or merch from site. Merch to include bracelets, t-shirts, jumpers, hoodies, books, etc. 
-- In addition, subscription to each element brings with it 10% discount to products associated with that element. 
-- Subscription to all brings with it 15% off all items on site as well as free delivery
 - Search functionality 
 - Stripe System
-- Audio synthesizer that matches up with the breath work 
+- Breath syncronizer that matches up with the breath work 
 - Level up system that aims to encourage user to keep participating in the exercises. (user gains xp per exercise. By completing an exercise they gain certain amount of xp depending on factors such as difficulty and consistent logins)
 - Profile page that highlights what elements user has subscribed to, exercises complete to date and purchases made thus far. 
-- Round system that allows users to select how many rounds of work they would like to do (and how long it should take them to complete the exercise)
+- Round system that allows users to select how many rounds of work they would like to do
 - Mp3 looped audio added to create ambiance associated with that element ie air mp3 may incorporate wind chimes and so on. 
 
 
 User Stories:
 -	As a new user, I want to be able to know the layout of the app easily so that I can navigate the app with ease and avoid frustration
 -	As a new user, I want to be able to know what the different elements mean so that I can make an informed decision on what element I want to subscribe to
--	As a new user, I want to be able to know why I should subscribe so that I can make a better purchasing decision and decide whether this is the app for me
+-	As a new user, I want to be able to know why I should join and decide whether this is the app for me
 -	As a new user, I want to be able to browse the online store easily so that I can purchase something I like. 
--	As a new user, I want to be able to know how I can subscribe/join so that I can make a better purchasing decision
--	As a new user, I want to be able to sign up through social media so that I don’t have to fill out all my details again 
+-	As a new user, I want to be able to know how I can join so that I can make a better purchasing decision
 -	As a new user, I want to be advised of the health risks involved so that I don’t die 
 
 
--	As an existing user, I want to be able to see what elements I have subscribed to so that I can track my progress and see what else I can subscribe to
--	As an existing user, I want to be able to see what breathworks I have completed so that I can track my progress 
 -	As an existing user, I want to be able to see how long each exercise takes so that I can fit the exercise into my schedule 
--	As an existing user, I want to be able my card info saved so that I can subscribe/purchase items from site without needing to fill out my info again
-
-
+-	As an existing user, I want to be able my card info saved so that I can purchase items from site without needing to fill out my info again
 -	As an existing/new user, I want to be guided through my breathwork so that I can better understand and learn the different breathing techniques in an engaging environment. 
--	As an existing/new user, I want to be able to search appropriately so that I can better navigate and find the items/exercises I need. 
+-	As an existing/new user, I want to be able to search appropriately so that I can better navigate and find the items I need. 
 
 
 
@@ -187,40 +190,38 @@ In addition to this, the following database mockups were done through [LucidChar
 Database Mockups
 ![DB](readme_docs/MS4-Project_Abhaile-RelationalDBSchema.jpeg)
 
-<!-- 
+
 ### The Surface plane:
 
-- Font: 
+- Font: Fonts used were Alegreya Sans for headings and Khula for normal text. 
 
-- Color: 
+- Color: Main colors user were Orangered (fire), Dodgerblue (water), Khaki (air) and forestgreen (earth). Hotpink was used for loading screens overlay. 
 
 
 ## Features:
 <hr>
 
 #### Final project features include:
-- (1) MarketPlace page,
-    - (1.1.1) Options to search solely for services or products
-- (2) Business Profile Page 
-    - (2.1) One page has all info and 
-    - (2.2) other page shows all deals sent from business (similar look to Market place page but one photo rather than 2
-- (3) Consumer Profile Page
-- (4) Specific Item/Service pages
-    - Created by the business owner. Like a sales post. 
-    - Has details of product/service. Same page opens through from marketplace and business page. (2 ways to arrive at)
-    - Edit/Delete functionality for businesses to delete their offers from MarketPlace. 
+- (1) Homepage,
+    - (1.1) Allows user to see what Abhaile is about and pick an element to start with. 
+- (2) Elements Pages
+    - (2.1) Individual Element pages to display benefits of said element and exercises involved
+    - (2.2) Group element page to show user all elements
+- (3) Products Pages
+    - (3.1) Individual Product pages to display individual product info and allow user to add to cart. 
+    - (3.2) Group product page to show user all available products in store
+    - (3.3) Admin access to add, edit and delete products from store
+- (4) Exercises Pages
+    - (4.1) Individual Exercise pages to display individual exercise info with built in breath sync
+    - (4.2) Group exercise page to show user all available exercises
+    - (4.3) Admin access to add, edit and delete exercises from app
 - (5) Sign Up/Login page
-    - First page shown when new user comes to app. 
-        - Are you looking for business? 
-            - Brings through to Business Sign Up 
-        - Are you looking for deals?
-            - Brings through to user/customer sign up
-        - Sign In
-    - If remembers login, goes straight through to MarketPlace page.
-        - Logout page becomes available
+- (6) Profile Page
+- (7) Cart and Add to cart page
+- (8) Checkout page with Stripe enabled
 
 - Responsive across all devices
-- Star rating and review area for consumers to leave reviews on business offers. 
+- Functional email send system sent from specially made email address for Project Abhaile. 
 
 ###
 
@@ -233,13 +234,22 @@ Project Frugaol made use of the following technologies, languages and frameworks
 
 - CSS: To add styling and substance to project
 
-- JavaScript: To bring front end interativity to project.
+- JavaScript: To bring front end interactivity to project.
+
+- JSON: to store data in form of fixtures
 
 - jQuery: A javascript library, used in conjunction with JavaScript to help deliver on set out features and goals when it comes to adding interactivity to the site.
 
-- Python: To access MongoDB, Flask and other frameworks and to develop the back end of the site. 
+- Python: To access Postgres, Django, Stripe, AWS and other frameworks and to develop the back end of the site. 
 
- 
+- Stripe: Used as payment processor for app
+
+- Django: Used to create the various apps in Project Abhaile
+
+- AWS: To remotely store all static and media files. 
+
+- Heroku: Used to deploy the app. 
+
 
 <br>
 
@@ -255,21 +265,10 @@ Testing file can be found through the following [link](TESTING.md).
 
 This was developed using Gitpod IDE, committed to git and pushed to GitHub using the built in function within gitpod. 
 
-To deploy this page to GitHub pages from its GitHub repository, the following steps were taken:
-
-1. Log into GitHub.
-2. From list of repos on screen, select [ShiftyKitty/MS3-FruGaol](https://github.com/ShiftyKitty/MS3-FruGaol)
-3. From the menu items near the top of the page, select Settings.
-4. Scroll to GitHub Pages section. Alternatively select Pages tab on left hand side of screen in Desktop.
-5. Under Source click the drop-down menu labelled None and select Master Branch
-6. On selecting Master Branch the page is automatically refreshed. If this does not occur refresh the page. 
-7. Go back to GitHub Pages section to retrieve the link to the deployed website.
-
-
 ### How to run this project locally
 To clone this project from Github:
 
-1. Follow this link to [ShiftyKitty/MS3-FruGaol](https://github.com/ShiftyKitty/MS3-FruGaol)
+1. Follow this link to [ShiftyKitty/MS-Abhaile](https://github.com/ShiftyKitty/MS4-Abhaile)
 2. Above the list of files, click Code.
 3. In the Clone with HTTPs section, copy the clone URL for the repository. 
 4. In your local IDE open Git Bash.
@@ -287,22 +286,31 @@ To deploy to Heroku, take the following steps:
 4. Create a new app on the [Heroku website](https://www.heroku.com/) by clicking the "New" button in your dashboard. Give it a name and set the region to Europe.
 5. From heroku dashboard of your newly created application, click on "Deploy" > "Deployment method" and select Github. 
 6. Confirm the linking of the heroku app to the correct Github repository. 
-7. In the heroku dashboard for the application, click on "Settings" > "Reveal Config Vars".
-8. Set the following config vars:
+7. In the heroku resources, add Postgres to act as Database
+8. In the heroku dashboard for the application, click on "Settings" > "Reveal Config Vars".
+9. Set the following config vars:
 
 Key | Value 
 --- | --- 
-DEBUG | FALSE
-IP | 0.0.0.0
-MONGO_URI | mongodb+srv://< username >:< password >@< clustername >-jjbdh.mongodb.net/< database_name >?retryWrites=true&w=majority
-PORT | 5000
+AWS_ACCESS_KEY_ID | < your_aws_access_key >
+AWS_SECRET_ACCESS_KEY | < your_aws_secret_access_key >
+DATABASE_URL | < your_postgres_database_url >
+EMAIL_HOST_PASS | < your_email_host_pw >
+EMAIL_HOST_USER | < your_email_to_connect_to_app >
 SECRET_KEY | < your_secret_key >
+STRIPE_PUBLIC_KEY | < your_stripe_public_key >
+STRIPE_SECRET_KEY | < your_stripe_secret_key >
+STRIPE_WH_SECRET | < your_stripe_wh_secret_key >
+USE_AWS | TRUE
 
-- To get your own MONGO_URI read the MongoDB Atlas documentation [here](https://docs.atlas.mongodb.com/)
 
-9. In the heroku dashboard, click "Deploy"
-10. In the "Manual Deployment" section of this page make sure master/main branch is selected and then click "Deploy Branch".
-11. The site is now successfully deployed through Heroku. 
+- To get your Stripe details, you will need to sign up to Stripe through [here](https://stripe.com/en-ie)
+- To get your Email details, you will need to sign up to Gmail through [here](https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp)
+- To get your AWS details, you will need to sign up to AWS through [here](https://aws.amazon.com/)
+
+10. In the heroku dashboard, click "Deploy"
+11. In the "Manual Deployment" section of this page make sure master/main branch is selected and then click "Deploy Branch".
+12. The site is now successfully deployed through Heroku. 
 
 
 ## Credits
@@ -310,26 +318,72 @@ SECRET_KEY | < your_secret_key >
 
 ### Content
 
-- Code used for this project for the CRUD functionality was mainly taken from notes from the [Code Institute](https://codeinstitute.net/)
-
-- Image file upload python code was taken from the following sources:
-    - [Pretty Printed](https://www.youtube.com/watch?v=DsgAuceHha4)
-    - [Cairocoders](https://www.youtube.com/watch?v=I9BBGulrOmo)
-    - [CyberWolve](https://www.youtube.com/watch?v=XCRUzPi0X0Q)
-    - [Julian Nash](https://youtu.be/6WruncSoCdI)
-    - [Flask](https://flask.palletsprojects.com/en/2.0.x/patterns/fileuploads/)
+- The following code snippets were taken from notes from the [Code Institute](https://codeinstitute.net/):
+    - Django Set Up
+    - Stripe integration 
+    - Add to Cart functionality
+    - Product and Exercise CRUD functionality
+    - Profile set up
+    - Save Order History
 
 <br>
 
-- Javascript and CSS for Image preview on sign up came from [dcode](https://youtu.be/VElnT8EoEEM)
+- Focused Breath Sync Feature on Breathwork exercise pages came from the following sources:
+    - [Chaining CSS Animations using JS](https://ccscoder.medium.com/chaining-css-animations-using-javascript-1b171708360e)
+    - [CSS @keyframes Rule](https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp)
+    - [CSSStyleDeclaration.getPropertyValue](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue)
+    - [The Net Ninja](https://www.youtube.com/c/TheNetNinja/videos)
+    - [Shannon Crabill](https://shannoncrabill.com/)
 
-- Javascript and CSS for Star Widget on Review came from [Coding Nepal Web](https://www.codingnepalweb.com/star-rating-html-css-javascript/)
+<br>
+
+- CSS and JS for product images was taken and adapted from [divanov11](https://github.com/divanov11/image_slider_frontend) Github
+
+- Idea for Homepage and Element page headers came from [epilande](https://codepen.io/epilande/pen/usHIw) on Codepen. Originally from [StackOverflow](https://stackoverflow.com/)
+
+- Element hover feature on Homepage and Elements pages came from [joplomacedo](https://jsfiddle.net/joplomacedo/5cL31o0g/). Originally from [StackOverflow](https://stackoverflow.com/)
+
+- Full utilization of Jinja templating came from [Jinja Docs](https://jinja.palletsprojects.com/en/3.0.x/)
+
+- Further info on Django features and utilization came from [Django Docs](https://docs.djangoproject.com/en/4.0/)
+
+- Javascript and CSS for Image preview on add and edit products and exercises came from previous project [MS3 Frugaol](https://github.com/ShiftyKitty/MS3-FruGaol). 
 
 - Various error messages were understood and solved by using [StackOverflow](https://stackoverflow.com/)
 
+- Authentication and Allauth template editing came from [Allauth Docs](https://django-allauth.readthedocs.io/en/latest/)
+
+
 ### Media
+
+- All data used in the making and formualting of Breathwork data came from the following literary sources:
+    - [Breathe: A Life in Flow](https://www.amazon.co.uk/Breathe-Life-Flow-Rickson-Gracie/dp/0008440107/ref=asc_df_0008440107/?tag=googshopuk-21&linkCode=df0&hvadid=499292279914&hvpos=&hvnetw=g&hvrand=8691250157275803741&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007908&hvtargid=pla-1226897722026&psc=1&th=1&psc=1)
+    - [The Wim Hof Method: Activate Your Full Human Potential](https://www.wimhofmethod.com/the-wim-hof-method-book)
+    - [Breath: The New Science of a Lost Art](https://www.amazon.co.uk/Breath-New-Science-Lost-Art/dp/0241289122/ref=asc_df_0241289122/?tag=googshopuk-21&linkCode=df0&hvadid=500848842883&hvpos=&hvnetw=g&hvrand=13823040445547608249&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007908&hvtargid=pla-984701754398&psc=1&th=1&psc=1)
+    - [The Oxygen Advantage](https://www.bookdepository.com/The-Oxygen-Advantage-Patrick-McKeown/9780349406695?redirected=true&utm_medium=Google&utm_campaign=Base1&utm_source=IE&utm_content=The-Oxygen-Advantage&selectCurrency=EUR&w=AFFPAU9S7FX5F9A8V9RB&gclid=Cj0KCQiA2NaNBhDvARIsAEw55hjn1Lv9x1LQN55zY6DZW-l0Y2wkQ-8jLIrMP1MKP69ZFsUJK0HyHkUaAmoQEALw_wcB)
+    - [Breathing for Warriors](https://www.bookdepository.com/Breathing-for-Warriors-Belisa-Vranich/9781250308221?redirected=true&utm_medium=Google&utm_campaign=Base1&utm_source=IE&utm_content=Breathing-for-Warriors&selectCurrency=EUR&w=AFFPAU96765YJ4A8V9RB&gclid=Cj0KCQiA2NaNBhDvARIsAEw55hiDcJHISNeBf3AzXDdR5J-t8ic5jDP1fJVJX9YA1zQKvjpwkn44dNAaAk2REALw_wcB)
+    - [Activate Your Vagus Nerve](https://books.google.ie/books/about/Activate_Your_Vagus_Nerve.html?id=xgx-DwAAQBAJ&printsec=frontcover&source=kp_read_button&hl=en&redir_esc=y#v=onepage&q&f=false)
+
+<br>
+
+- All data used in the making and formualting of Breathwork data came from the following youtube sources:
+    - [Take a Deep Breath](https://www.youtube.com/c/TAKEADEEPBREATH/videos)
+    - [Wim Hof](https://www.youtube.com/user/wimhof1/videos)
+    - [Yoga With Adriene](https://www.youtube.com/c/yogawithadriene/videos)
+    - [Caren Baginski](https://www.youtube.com/c/CarenBaginskiYoga/videos)
+    - [SOMA Breath](https://www.youtube.com/user/alchemysoundtherapy)
+
 - All icons used on site were taken from [FontAwesome](https://fontawesome.com/)
-- All images stored in MongoDB were taken from personal computer from various clients whose permission was requested and granted. 
+- All images used for exercises and elements came from the following sources:
+    -   [Pexels](https://www.pexels.com/)
+    -   [Unsplash](https://unsplash.com/)
+    -   [Pinterest](https://www.pinterest.ie/)
+    -   [Imgur](https://i.imgur.com/a8kcT.jpg)
+
+
+-  All images used for products came with permission from local shops in New Ross (Co. Wexford), Graignamanagh (Co. Kilkenny) and Carlow Town (Co. Carlow). Images were of stock photos of stock they had in store:
+    -   
+
 
 ### Acknowledgements 
 
@@ -338,4 +392,3 @@ SECRET_KEY | < your_secret_key >
 - The name FruGaol comes from the word "Frugal" meaning thrifty or costing little and the Irish word "Gaol" which translates to relationships. Together it comes to Thrifty Relationships which was the inspiration behind this app and its purpose of connecting Businesses and Consumers through special deals and offers. 
 
 - Many features were left out due to time constraints and lack of skill/knowledge however I will be building upon what is here in this project over time. 
- -->
