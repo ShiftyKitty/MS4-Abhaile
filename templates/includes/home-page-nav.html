@@ -1,3 +1,5 @@
+{% load humanize %}
+
 <nav class="nav-extended fire_nav water_nav air_nav earth_nav">
     <a href="{% url 'home' %}">
         <h2 class="logo">Abhaile</h2>
@@ -72,7 +74,7 @@
                     <div><i class="fas fa-shopping-cart"></i></div>
                     <p class="my-0">
                         {% if grand_total %}
-                        €{{ grand_total|floatformat:2|intcomma }}
+                        €{{ grand_total|intcomma }}
                         {% else %}
                         {% endif %}
                     </p>
