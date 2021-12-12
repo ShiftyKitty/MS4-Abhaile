@@ -30,7 +30,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['ms4-abhaile.herokuapp.com', 'localhost']
 
 
-# Application definition
+# Application definiti
 
 INSTALLED_APPS = [
     'django.contrib.admin',
