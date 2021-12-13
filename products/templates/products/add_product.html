@@ -6,170 +6,172 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <hr>
-                <h2 class="logo-font mb-4">Product Management</h2>
-                <h5 class="text-muted">Add a Product</h5>
-                <hr>
-            </div>
-        </div>
-
-        <div class="row card">
-            <div class="col-12">
-                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {% for field in form %}
-                    <div class="col-12">
-                        {% if field.name != 'image_1' %}
-                            {{ field | as_crispy_field }}
-                        {% elif field.name != 'image_2' %}
-                            {{ field | as_crispy_field }}
-                        {% elif field.name != 'image_3' %}
-                            {{ field | as_crispy_field }}
-                        {% elif field.name != 'image_4' %}
-                            {{ field | as_crispy_field }}
-                        {% else %}
-                            {{ field }}
-                        {% endif %}
-                    </div>
-                    {% endfor %}
-                    <div class="text-right mb-4">
-                        <a class="btn btn-outline-black" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-black" type="submit">Add Product</button>
-                    </div>
-                </form>
-            </div>            
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <hr>
+            <h2 class="logo-font mb-4">Product Management</h2>
+            <h5 class="text-muted">Add a Product</h5>
+            <hr>
         </div>
     </div>
+
+    <div class="row card">
+        <div class="col-12">
+            <!-- image viewer -->
+            <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="col-12">
+                    {% if field.name != 'image_1' %}
+                    {{ field | as_crispy_field }}
+                    {% elif field.name != 'image_2' %}
+                    {{ field | as_crispy_field }}
+                    {% elif field.name != 'image_3' %}
+                    {{ field | as_crispy_field }}
+                    {% elif field.name != 'image_4' %}
+                    {{ field | as_crispy_field }}
+                    {% else %}
+                    {{ field }}
+                    {% endif %}
+                </div>
+                {% endfor %}
+                <div class="text-right mb-4">
+                    <a class="btn btn-outline-black" href="{% url 'products' %}">Cancel</a>
+                    <button class="btn btn-black" type="submit">Add Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-         $('#id_image_1').change(function() {
-            var file = $('#id_image_1')[0].files[0];
-            $('#filename_image_1').text(`Image will be set to: ${file.name}`);
-        });
-        $('#id_image_2').change(function() {
-            var file = $('#id_image_2')[0].files[0];
-            $('#filename_image_2').text(`Image will be set to: ${file.name}`);
-        });
-        $('#id_image_3').change(function() {
-            var file = $('#id_image_3')[0].files[0];
-            $('#filename_image_3').text(`Image will be set to: ${file.name}`);
-        });
-        $('#id_image_4').change(function() {
-            var file = $('#id_image_4')[0].files[0];
-            $('#filename_image_4').text(`Image will be set to: ${file.name}`);
-        });
+{{ block.super }}
+<script type="text/javascript">
+    // current image display. taken from code institute. referenced in readme docs under content 
+    $('#id_image_1').change(function () {
+        var file = $('#id_image_1')[0].files[0];
+        $('#filename_image_1').text(`Image will be set to: ${file.name}`);
+    });
+    $('#id_image_2').change(function () {
+        var file = $('#id_image_2')[0].files[0];
+        $('#filename_image_2').text(`Image will be set to: ${file.name}`);
+    });
+    $('#id_image_3').change(function () {
+        var file = $('#id_image_3')[0].files[0];
+        $('#filename_image_3').text(`Image will be set to: ${file.name}`);
+    });
+    $('#id_image_4').change(function () {
+        var file = $('#id_image_4')[0].files[0];
+        $('#filename_image_4').text(`Image will be set to: ${file.name}`);
+    });
 
-        const previewContainer1 = document.getElementById("imagePreview-image_1");
-        const previewImage1 = previewContainer1.querySelector(".image-preview__image-image_1"); 
-        const previewDefaultText1 = previewContainer1.querySelector(".image-preview__default-textimage_1"); 
+    // custom image previewer. referenced in readme docs under content 
+    const previewContainer1 = document.getElementById("imagePreview-image_1");
+    const previewImage1 = previewContainer1.querySelector(".image-preview__image-image_1");
+    const previewDefaultText1 = previewContainer1.querySelector(".image-preview__default-textimage_1");
 
-        const previewContainer2 = document.getElementById("imagePreview-image_2");
-        const previewImage2 = previewContainer2.querySelector(".image-preview__image-image_2"); 
-        const previewDefaultText2 = previewContainer2.querySelector(".image-preview__default-textimage_2"); 
+    const previewContainer2 = document.getElementById("imagePreview-image_2");
+    const previewImage2 = previewContainer2.querySelector(".image-preview__image-image_2");
+    const previewDefaultText2 = previewContainer2.querySelector(".image-preview__default-textimage_2");
 
-        const previewContainer3 = document.getElementById("imagePreview-image_3");
-        const previewImage3 = previewContainer3.querySelector(".image-preview__image-image_3"); 
-        const previewDefaultText3 = previewContainer3.querySelector(".image-preview__default-textimage_3"); 
+    const previewContainer3 = document.getElementById("imagePreview-image_3");
+    const previewImage3 = previewContainer3.querySelector(".image-preview__image-image_3");
+    const previewDefaultText3 = previewContainer3.querySelector(".image-preview__default-textimage_3");
 
-        const previewContainer4 = document.getElementById("imagePreview-image_4");
-        const previewImage4 = previewContainer4.querySelector(".image-preview__image-image_4"); 
-        const previewDefaultText4 = previewContainer4.querySelector(".image-preview__default-textimage_4"); 
+    const previewContainer4 = document.getElementById("imagePreview-image_4");
+    const previewImage4 = previewContainer4.querySelector(".image-preview__image-image_4");
+    const previewDefaultText4 = previewContainer4.querySelector(".image-preview__default-textimage_4");
 
-        $('#id_image_1').change(function() {
+    $('#id_image_1').change(function () {
         const file = this.files[0];
 
         if (file) {
-        const reader = new FileReader();
+            const reader = new FileReader();
 
-        previewDefaultText1.style.display = "none";
-        previewImage1.style.display = "block";
+            previewDefaultText1.style.display = "none";
+            previewImage1.style.display = "block";
 
-        reader.addEventListener("load", function() {
-        console.log(this);
-        previewImage1.setAttribute("src", this.result);
-        });
+            reader.addEventListener("load", function () {
+                console.log(this);
+                previewImage1.setAttribute("src", this.result);
+            });
 
-        reader.readAsDataURL(file);
+            reader.readAsDataURL(file);
         } else {
-        previewDefaultText1.style.display = null;
-        previewImage1.style.display = null;
-        previewImage1.setAttribute("src", "");
+            previewDefaultText1.style.display = null;
+            previewImage1.style.display = null;
+            previewImage1.setAttribute("src", "");
         }
-        });
+    });
 
-        $('#id_image_2').change(function() {
+    $('#id_image_2').change(function () {
         const file = this.files[0];
 
         if (file) {
-        const reader = new FileReader();
+            const reader = new FileReader();
 
-        previewDefaultText2.style.display = "none";
-        previewImage2.style.display = "block";
+            previewDefaultText2.style.display = "none";
+            previewImage2.style.display = "block";
 
-        reader.addEventListener("load", function() {
-        console.log(this);
-        previewImage2.setAttribute("src", this.result);
-        });
+            reader.addEventListener("load", function () {
+                console.log(this);
+                previewImage2.setAttribute("src", this.result);
+            });
 
-        reader.readAsDataURL(file);
+            reader.readAsDataURL(file);
         } else {
-        previewDefaultText2.style.display = null;
-        previewImage2.style.display = null;
-        previewImage2.setAttribute("src", "");
+            previewDefaultText2.style.display = null;
+            previewImage2.style.display = null;
+            previewImage2.setAttribute("src", "");
         }
-        });
+    });
 
-        $('#id_image_3').change(function() {
+    $('#id_image_3').change(function () {
         const file = this.files[0];
 
         if (file) {
-        const reader = new FileReader();
+            const reader = new FileReader();
 
-        previewDefaultText3.style.display = "none";
-        previewImage3.style.display = "block";
+            previewDefaultText3.style.display = "none";
+            previewImage3.style.display = "block";
 
-        reader.addEventListener("load", function() {
-        console.log(this);
-        previewImage3.setAttribute("src", this.result);
-        });
+            reader.addEventListener("load", function () {
+                console.log(this);
+                previewImage3.setAttribute("src", this.result);
+            });
 
-        reader.readAsDataURL(file);
+            reader.readAsDataURL(file);
         } else {
-        previewDefaultText3.style.display = null;
-        previewImage3.style.display = null;
-        previewImage3.setAttribute("src", "");
+            previewDefaultText3.style.display = null;
+            previewImage3.style.display = null;
+            previewImage3.setAttribute("src", "");
         }
-        });
+    });
 
-        $('#id_image_4').change(function() {
+    $('#id_image_4').change(function () {
         const file = this.files[0];
 
         if (file) {
-        const reader = new FileReader();
+            const reader = new FileReader();
 
-        previewDefaultText4.style.display = "none";
-        previewImage4.style.display = "block";
+            previewDefaultText4.style.display = "none";
+            previewImage4.style.display = "block";
 
-        reader.addEventListener("load", function() {
-        console.log(this);
-        previewImage4.setAttribute("src", this.result);
-        });
+            reader.addEventListener("load", function () {
+                console.log(this);
+                previewImage4.setAttribute("src", this.result);
+            });
 
-        reader.readAsDataURL(file);
+            reader.readAsDataURL(file);
         } else {
-        previewDefaultText4.style.display = null;
-        previewImage4.style.display = null;
-        previewImage4.setAttribute("src", "");
+            previewDefaultText4.style.display = null;
+            previewImage4.style.display = null;
+            previewImage4.setAttribute("src", "");
         }
-        });
-
-    </script>
-    </script>
+    });
+</script>
+</script>
 {% endblock %}

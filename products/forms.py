@@ -1,19 +1,28 @@
 from django import forms
+from elements.models import Element
 from .widgets import CustomClearableFileInput
 from .models import Product, Category
-from elements.models import Element
 
 
 class ProductForm(forms.ModelForm):
+    """
+    Class for prod form
+    """
 
     class Meta:
+        """meta class"""
         model = Product
         fields = '__all__'
 
-    image_1 = forms.ImageField(label='Image 1 (required)', required=True, widget=CustomClearableFileInput)
-    image_2 = forms.ImageField(label='Image 2', required=False, widget=CustomClearableFileInput)
-    image_3 = forms.ImageField(label='Image 3', required=False, widget=CustomClearableFileInput)
-    image_4 = forms.ImageField(label='Image 4', required=False, widget=CustomClearableFileInput)
+    image_1 = forms.ImageField(
+        label='Image 1 (required)',
+        required=True, widget=CustomClearableFileInput)
+    image_2 = forms.ImageField(
+        label='Image 2', required=False, widget=CustomClearableFileInput)
+    image_3 = forms.ImageField(
+        label='Image 3', required=False, widget=CustomClearableFileInput)
+    image_4 = forms.ImageField(
+        label='Image 4', required=False, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

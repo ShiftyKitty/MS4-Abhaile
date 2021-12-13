@@ -1,14 +1,15 @@
 {% load humanize %}
 
+<!-- nav element for homepage and element pages -->
 <nav class="nav-extended fire_nav water_nav air_nav earth_nav">
     <a href="{% url 'home' %}">
         <h2 class="logo">Abhaile</h2>
     </a>
-    
+
     <ul>
         <li class="list-inline-item dropdown">
-            <a class="text-black nav-link d-block" href="#" id="menu-drop" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+            <a class="text-black nav-link d-block" href="#" id="menu-drop" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
                 <div class="text-center">
                     <div><i class="fas fa-bars"></i></div>
                     <p class="my-0"></p>
@@ -31,11 +32,9 @@
             <div class="dropdown-menu w-100 p-3 my-0" aria-labelledby="mobile-search">
                 <form class="form" method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
-                        <input class="form-control border border-black" type="text" name="q"
-                            placeholder="Search...">
+                        <input class="form-control border border-black" type="text" name="q" placeholder="Search...">
                         <div class="input-group-append">
-                            <button class="form-control form-control btn btn-black border border-black"
-                                type="submit">
+                            <button class="form-control form-control btn btn-black border border-black" type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -83,52 +82,3 @@
         </li>
     </ul>
 </nav>
-
-
-<!-- <nav class="nav-extended text-shadow">
-    <div class="nav-wrapper">
-        <ul class="navbar-nav w-auto mx-auto">
-            <li class="nav-item dropdown">
-                <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="elements-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Elements
-                </a>
-                <div class="dropdown-menu border-0" aria-labelledby="elements-link">
-                        <a href="{% url 'elements' %}?element=fire" class="dropdown-item">Fire</a>
-                        <a href="{% url 'elements' %}?element=water" class="dropdown-item">Water</a>
-                        <a href="{% url 'elements' %}?element=air" class="dropdown-item">Air</a>
-                        <a href="{% url 'elements' %}?element=earth" class="dropdown-item">Earth</a>
-                        <a href="{% url 'elements' %}" class="dropdown-item">All Elements</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="exercises-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Exercises
-                </a>
-                <div class="dropdown-menu border-0" aria-labelledby="exercises-link">
-                    <a href="{% url 'exercises' %}?element=fire" class="dropdown-item">Fire for Energy</a>
-                    <a href="{% url 'exercises' %}?element=water" class="dropdown-item">Water for Focus and Creativity</a>
-                    <a href="{% url 'exercises' %}?element=air" class="dropdown-item">Air for Mental Health & Wellbeing</a>
-                    <a href="{% url 'exercises' %}?element=earth" class="dropdown-item">Earth for Physical Wellbeing</a>
-                    <a href="{% url 'exercises' %}" class="dropdown-item">All Exercises</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Products
-                </a>
-                <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                    <a href="{% url 'products' %}?element=fire" class="dropdown-item">Fire Products</a>
-                    <a href="{% url 'products' %}?element=water" class="dropdown-item">Water Products</a>
-                    <a href="{% url 'products' %}?element=air" class="dropdown-item">Air Products</a>
-                    <a href="{% url 'products' %}?element=earth" class="dropdown-item">Earth Products</a>
-                    <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-</nav> -->
-
-
-<!-- <div class="collapse navbar-collapse" id="main-nav">
-    
-</div> -->

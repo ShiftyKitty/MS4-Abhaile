@@ -11,7 +11,7 @@
     {% if product.element %}
     <div class="row">
         <div class="col-12 col-lg-4 offset-lg-2" id="content-wrapper">
-
+            <!-- prod image slider/selector  -->
             <div class="column">
                 <img id=featured src="{{ product.image_1.url }}">
 
@@ -44,11 +44,13 @@
                 {{ product.element }}
                 {% endif %}
                 {% if product.rating %}
+                <!-- prod rating  -->
                 <small class="text-muted"><i
                         class="fas fa-star mr-1 text-{{ product.element.name }}"></i>{{ product.rating }} / 5</small>
                 {% else %}
                 <small class="text-muted">No Rating</small>
                 {% endif %}
+                <!-- edit or delete prod -->
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
                     <a href="{% url 'edit_product' product.id %}">Edit</a> |
@@ -62,6 +64,7 @@
                         {% with product.has_sizes as s %}
                         {% if s %}
                         <div class="col-12">
+                            <!-- size selector  -->
                             <p><strong>Size:</strong></p>
                             <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
                                 <option value="xs">XS</option>
@@ -72,12 +75,14 @@
                             </select>
                         </div>
                         {% endif %}
+                        <!-- quantity selector -->
                         <div class="col-12">
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <button class="decrement-qty btn btn-{{ product.element }} decrement-qty_{{ product.id }}"
+                                        <button
+                                            class="decrement-qty btn btn-{{ product.element }} decrement-qty_{{ product.id }}"
                                             data-item_id="{{ product.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
@@ -87,7 +92,8 @@
                                     <input class="form-control qty_input" type="number" name="quantity" value="1"
                                         min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                     <div class="input-group-append">
-                                        <button class="increment-qty btn btn-{{ product.element }} increment-qty_{{ product.id }}"
+                                        <button
+                                            class="increment-qty btn btn-{{ product.element }} increment-qty_{{ product.id }}"
                                             data-item_id="{{ product.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-plus"></i>
@@ -118,6 +124,8 @@
     </div>
 </div>
 <script type="text/javascript">
+
+    // prod image slider feature. Referenced in Readme Doc under Credits 
     let thumbnails = document.getElementsByClassName('thumbnail')
 
     let activeImages = document.getElementsByClassName('active')
@@ -137,7 +145,7 @@
         })
     }
 
-
+    // image slider feature.  
     let buttonRight = document.getElementById('slideRight');
     let buttonLeft = document.getElementById('slideLeft');
 
