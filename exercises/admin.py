@@ -1,7 +1,6 @@
 from django.contrib import admin
 from .models import Breathwork
 
-# Register your models here.
 
 class BreathworkAdmin(admin.ModelAdmin):
     list_display = (
@@ -12,5 +11,6 @@ class BreathworkAdmin(admin.ModelAdmin):
     )
 
     ordering = ('name',)
+
 
 admin.site.register(Breathwork, BreathworkAdmin)

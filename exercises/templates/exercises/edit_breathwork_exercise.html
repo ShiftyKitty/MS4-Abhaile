@@ -8,71 +8,73 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <hr>
-                <h2 class="logo-font mb-4">Breathwork Exercise Management</h2>
-                <h5 class="text-{{ exercise.element.name }}">You are editing {{ exercise.name }}</h5>
-                <hr>
-            </div>
-        </div>
-
-        <div class="row card">
-            <div class="col-12">
-                <form method="POST" action="{% url 'edit_breathwork_exercise' exercise.id %}" class="form mb-2" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {% for field in form %}
-                        {% if field.name != 'image' %}
-                            {{ field | as_crispy_field }}
-                        {% else %}
-                            {{ field }}
-                        {% endif %}
-                    {% endfor %}
-                    <div class="text-right">
-                        <a class="btn btn-outline-{{ exercise.element.name }}" href="{% url 'exercises' %}">Cancel</a>
-                        <button class="btn btn-{{ exercise.element.name }}" type="submit">Update Exercise</button>
-                    </div>
-                </form>
-            </div>            
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <hr>
+            <h2 class="logo-font mb-4">Breathwork Exercise Management</h2>
+            <h5 class="text-{{ exercise.element.name }}">You are editing {{ exercise.name }}</h5>
+            <hr>
         </div>
     </div>
+
+    <div class="row card">
+        <div class="col-12">
+            <!-- image on form selector  -->
+            <form method="POST" action="{% url 'edit_breathwork_exercise' exercise.id %}" class="form mb-2"
+                enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                {% if field.name != 'image' %}
+                {{ field | as_crispy_field }}
+                {% else %}
+                {{ field }}
+                {% endif %}
+                {% endfor %}
+                <div class="text-right">
+                    <a class="btn btn-outline-{{ exercise.element.name }}" href="{% url 'exercises' %}">Cancel</a>
+                    <button class="btn btn-{{ exercise.element.name }}" type="submit">Update Exercise</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-        $('#id_image').change(function() {
-            var file = $('#id_image')[0].files[0];
-            $('#filename_image').text(`Image will be set to: ${file.name}`);
-        });
+{{ block.super }}
+<script type="text/javascript">
+    // image preview viewer. Ref in readme under content
+    $('#id_image').change(function () {
+        var file = $('#id_image')[0].files[0];
+        $('#filename_image').text(`Image will be set to: ${file.name}`);
+    });
 
-        const previewContainer = document.getElementById("imagePreview-image");
-        const previewImage = previewContainer.querySelector(".image-preview__image-image"); 
-        const previewDefaultText = previewContainer.querySelector(".image-preview__default-textimage"); 
+    const previewContainer = document.getElementById("imagePreview-image");
+    const previewImage = previewContainer.querySelector(".image-preview__image-image");
+    const previewDefaultText = previewContainer.querySelector(".image-preview__default-textimage");
 
-        $('#id_image').change(function() {
+    $('#id_image').change(function () {
         const file = this.files[0];
 
         if (file) {
-        const reader = new FileReader();
+            const reader = new FileReader();
 
-        previewDefaultText.style.display = "none";
-        previewImage.style.display = "block";
+            previewDefaultText.style.display = "none";
+            previewImage.style.display = "block";
 
-        reader.addEventListener("load", function() {
-        console.log(this);
-        previewImage.setAttribute("src", this.result);
-        });
+            reader.addEventListener("load", function () {
+                console.log(this);
+                previewImage.setAttribute("src", this.result);
+            });
 
-        reader.readAsDataURL(file);
+            reader.readAsDataURL(file);
         } else {
-        previewDefaultText.style.display = null;
-        previewImage.style.display = null;
-        previewImage.setAttribute("src", "");
+            previewDefaultText.style.display = null;
+            previewImage.style.display = null;
+            previewImage.setAttribute("src", "");
         }
-        });
-
-    </script>
+    });
+</script>
 {% endblock %}

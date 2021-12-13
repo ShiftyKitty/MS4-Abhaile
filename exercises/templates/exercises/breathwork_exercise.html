@@ -28,7 +28,8 @@
                 <h4 class="mb-0 text-{{ exercise.element.name }}">{{ exercise.name }}</h4>
                 {% if exercise.element %}
                 <p class="small mt-1 mb-0 text-{{ exercise.element.name }}">
-                    <i class="fas fa-lungs mr-1 text-{{ exercise.element.name }}"></i><a class="text-muted" href="{% url 'exercises' %}?element={{ exercise.element.name }}">
+                    <i class="fas fa-lungs mr-1 text-{{ exercise.element.name }}"></i><a class="text-muted"
+                        href="{% url 'exercises' %}?element={{ exercise.element.name }}">
                         {{ exercise.element.friendly_name }}
                     </a>
                     {% if request.user.is_superuser %}
@@ -43,6 +44,7 @@
                 <div class="accordion" id="accordionExample">
                     <div class="card {{ exercise.element.name }}">
                         <div class="card-header " id="headingOne">
+                            <!-- exercise how to  -->
                             <h5 class="mb-0">
                                 <button class="btn btn-link" type="button" data-toggle="collapse"
                                     data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -59,6 +61,7 @@
                     </div>
                     <div class="card {{ exercise.element.name }}">
                         <div class="card-header" id="headingTwo">
+                            <!-- exercise benefits  -->
                             <h5 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                     data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -75,6 +78,7 @@
                     </div>
                     <div class="card {{ exercise.element.name }}">
                         <div class="card-header" id="headingThree">
+                            <!-- follow along youtube link. ref in readme  -->
                             <h5 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
                                     data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -98,6 +102,7 @@
         <div class="breath_bubble_container">
             <strong>Focused Breathing</strong>
             <br>
+            <!-- bubble container. js in breath_sync.js  -->
             <div class="bubble-container">
                 <div class="breath_bubble">
                     <main>
@@ -105,6 +110,7 @@
                     </main>
                 </div>
             </div>
+            <!-- rounds and breaths counters  -->
             <div class="rounds-container">
                 <strong>Rounds left: <span class="round_counter">0</span></strong>
                 <select class="form-control round-selector col-12 col-md-4 col-lg-2" name="rounds" id='rounds'>
@@ -124,6 +130,7 @@
             </div>
         </div>
     </div>
+    <!-- hidden input fields used to contain key information regarding individual exercises  -->
     <input type="hidden" id="primary_color" value="{{ exercise.primary_color }}">
     <input type="hidden" id="secondary_color" value="{{ exercise.secondary_color }}">
     <input type="hidden" id="inhale_1" value="{{ exercise.inhale_1 }}">
@@ -145,16 +152,17 @@
     <input type="hidden" id="breath_reps" value="{{ exercise.breath_reps }}">
     <input type="hidden" id="breath_counter_trigger">
     {% else %}
+    <!-- statement to stop non sign ups from accessing the exercises -->
     <div class="col text-center mt-3">
-    <h2>I'm sorry. You do not have access to these exercises.</h2>
-    <div class="card-body"></div>
-    <div class="card mb-4">
-        <h4>Sign up to Abhaile today to access all breathing exercises for entire
-            year for free. Already a
-            User?</h4><a href="{% url 'account_login' %}">Login here</a>
-        <a href="{% url 'account_signup' %}" class="dropdown-item element-button btn btn-black">Sign Up
-            to Abhaile</a>
-    </div>
+        <h2>I'm sorry. You do not have access to these exercises.</h2>
+        <div class="card-body"></div>
+        <div class="card mb-4">
+            <h4>Sign up to Abhaile today to access all breathing exercises for entire
+                year for free. Already a
+                User?</h4><a href="{% url 'account_login' %}">Login here</a>
+            <a href="{% url 'account_signup' %}" class="dropdown-item element-button btn btn-black">Sign Up
+                to Abhaile</a>
+        </div>
     </div>
     {% endif %}
 </div>

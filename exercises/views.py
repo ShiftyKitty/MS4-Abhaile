@@ -1,9 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from django.db.models import Q
-from .models import Breathwork, Element
 from django.contrib.auth.decorators import login_required
-
+from .models import Breathwork, Element
 from .forms import BreathworkForm
 
 
@@ -14,13 +12,11 @@ def all_exercises(request):
 
     exercises = Breathwork.objects.all()
     elements = None
-    sort = None
-    direction = None
 
     if 'element' in request.GET:
-            elements = request.GET['element'].split(',')
-            exercises = exercises.filter(element__name__in=elements)
-            elements = Element.objects.filter(name__in=elements)
+        elements = request.GET['element'].split(',')
+        exercises = exercises.filter(element__name__in=elements)
+        elements = Element.objects.filter(name__in=elements)
 
     context = {
         'exercises': exercises,
@@ -56,10 +52,12 @@ def add_breathwork_exercise(request):
             messages.success(request, 'Successfully added exercise!')
             return redirect(reverse('breathwork_exercise', args=[exercise.id]))
         else:
-            messages.error(request, 'Failed to add exercise. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add exercise. Please ensure the form is valid.')
     else:
         form = BreathworkForm()
-        
+
     template = 'exercises/add_breathwork_exercise.html'
     context = {
         'form': form,
@@ -83,7 +81,9 @@ def edit_breathwork_exercise(request, exercise_id):
             messages.success(request, 'Successfully updated exercise!')
             return redirect(reverse('breathwork_exercise', args=[exercise.id]))
         else:
-            messages.error(request, 'Failed to update exercise. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update exercise. Please ensure the form is valid.')
     else:
         form = BreathworkForm(instance=exercise)
         messages.info(request, f'You are editing {exercise.name}')

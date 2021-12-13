@@ -12,6 +12,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
+            <!-- exercise name by element  -->
             <h2 class="logo-font">
                 {% for e in current_elements %}
                 <span>{{ e.friendly_name }}</span>
@@ -26,6 +27,7 @@
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-md-end">
+                    <!-- element selector  -->
                     <div class="sort-select-wrapper w-50">
                         <select id="element-selector"
                             class="custom-select rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
@@ -47,6 +49,7 @@
                 </div>
             </div>
             <div class="row">
+                <!-- exercise display  -->
                 {% for exercise in exercises %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0 snow">
@@ -70,6 +73,7 @@
                                     {% endif %}
                                 </div>
                                 <div class="col-sm-6">
+                                    <!-- add and edit exercise functionality  -->
                                     {% if request.user.is_superuser %}
                                     <small class="ml-3">
                                         <a href="{% url 'edit_breathwork_exercise' exercise.id %}">Edit</a> | <a
@@ -82,6 +86,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- grid structure  -->
                 {% if forloop.counter|divisibleby:1 %}
                 <div class="col-12 d-sm-none mb-5">
                     <hr>
@@ -108,6 +113,7 @@
     </div>
     {% else %}
     <div class="col text-center mt-3">
+        <!-- info telling user to sign up to access exercises -->
         <h2>I'm sorry. You do not have access to these exercises.</h2>
         <div class="card-body"></div>
         <div class="card mb-4">
@@ -131,6 +137,7 @@
 </script>
 
 <script type="text/javascript">
+    // exercise filter by element 
     $('#element-selector').change(function () {
         var selector = $(this);
         var currentUrl = new URL(window.location);

@@ -1,15 +1,18 @@
+// breathbubble
 let BreathBubble = document.querySelector(".breath_bubble")
 
+// start and reset 
 let start = document.querySelector(".start")
 let reset = document.querySelector(".reset")
 
+// color capture 
 let primary_color = document.querySelector("#primary_color").value;
 document.documentElement.style.setProperty('--primary-color', primary_color);
 
 let secondary_color = document.querySelector("#secondary_color").value;
 document.documentElement.style.setProperty('--secondary-color', secondary_color);
 
-
+// breath times 
 let inhale_1 = document.querySelector("#inhale_1").value * 1000;
 document.documentElement.style.setProperty('--inhale_1-time', (inhale_1/1000) + "s");
 
@@ -122,7 +125,6 @@ function animate(elem, animation) {
     return new Promise((resolve, reject) => {
       // Animation end handler
       function handleAnimationEnd() {
-        console.log("animation ended...");
         resolve(elem);
       }
       elem.addEventListener("animationend", handleAnimationEnd, { once: true });
@@ -131,31 +133,19 @@ function animate(elem, animation) {
   }
 
 let roundSelector = document.querySelector(".round-selector");
-  console.log(roundSelector.value)
 
 function roundChanger () {
     roundSelector.addEventListener('change', (event) => {
         var roundAmount = roundSelector.value;
         document.querySelector(".round_counter").innerHTML = `${roundAmount}`;
-        console.log(roundAmount)
     })
 }
 roundChanger();
 
 var roundAmount = roundSelector.value;
 
-console.log(breath_reps)
-console.log(post_reps_breath_hold)
-console.log(roundAmount)
-
-
-
 let holdTimer = post_reps_breath_hold / 1000;
-console.log(holdTimer)
 document.querySelector(".post_round_hold_timer").innerHTML = holdTimer;
-
-
-
 
 async function chainAnimations() {
 
@@ -165,8 +155,6 @@ async function chainAnimations() {
     roundChanger();
     var roundAmount = roundSelector.value;
     document.querySelector(".round_counter").innerHTML = `${roundAmount}`;
-    console.log(roundAmount)
-
 
     for (let j = 0; j < roundAmount; j++) {
         for (let i = 1; i < (breath_reps + 1); i++) {
@@ -179,9 +167,7 @@ async function chainAnimations() {
             // apply exhale HT animation
             await animate(BreathBubble, Exhale_HT());
 
-
             document.querySelector(".breath_counter").innerHTML = i;
-            console.log(i);
             if (i == (breath_reps-1)) {
                 let roundStartIn = holdTimer;
                 let countDown = setInterval(roundStartTimer, 1000);
@@ -190,7 +176,6 @@ async function chainAnimations() {
 
                     roundStartIn--;
                     //condition in place to stop countdown going passed 0
-                    //once 0 is hit, "GO" shows up indicating start of game
                     if (roundStartIn <= 0) {
                         clearInterval(countDown);
                         document.querySelector(".post_round_hold_timer").innerHTML = `${holdTimer}`;
@@ -212,41 +197,14 @@ async function chainAnimations() {
     }
 }
 
-//   await animate(BreathBubble, Inhale_2());
-
-//   await animate(BreathBubble, Inhale_HT());
-
-//   await animate(BreathBubble, Exhale_2());
-
-//   await animate(BreathBubble, Exhale_HT());
-
-//   await animate(BreathBubble, Inhale_3());
-
-//   await animate(BreathBubble, Inhale_HT());
-
-//   await animate(BreathBubble, Exhale_3());
-
-//   await animate(BreathBubble, Exhale_HT());
-
-
-
-
+// to start breath work 
 start.addEventListener('click', () => {
     chainAnimations();
-    console.log("i am working")
 })
 
-
+// to reset breath work 
 reset.addEventListener('click', () => {
     window.setTimeout(() => {
         window.location.reload(true);
     }, 200); 
 });
-
-
-
-const input = document.querySelector("input[type='number']")
-
-document.querySelector("input[type='number']").addEventListener('change', (event) => {
-    document.documentElement.style.setProperty('--inhale-1-time', input.value + "s");
-})
