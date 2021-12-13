@@ -25,7 +25,7 @@
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-md-end">
-                        <div class="sort-select-wrapper w-50">
+                        <div class="sort-select-wrapper w-50 selector-sizer">
                             <select id="sort-selector" class="custom-select rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
@@ -34,11 +34,9 @@
                                 <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
                                 <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
                                 <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
                             </select>
                         </div>
-                        <div class="sort-select-wrapper w-50">
+                        <div class="sort-select-wrapper w-50 selector-sizer">
                             <select id="element-selector" class="custom-select rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort Element...</option>
                                 <option value="fire" {% if current_sorting == 'fire' %}selected{% endif %}>Fire</option>
@@ -50,9 +48,10 @@
                         <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="right" title="Clear Filters"><a class="white" href="{% url 'products' %}"><i class="fas fa-redo-alt"></i></a></button>
                     </div>
                 </div>
+                <hr>
                 <div class="row">
                     {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 product-container-size">
                             <div class="card h-100 border-0">
                                 <a href="{% url 'product_detail' product.id %}" class="element-container-image-prod">
                                     <img class="card-img-top img-fluid " src="{{ product.image_1.url }}" alt="{{ product.name }}">
@@ -62,9 +61,11 @@
                                 {% if product.element %}
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
-                                        <div class="col">
+                                        <div class="col col-sm-6">
                                             <p class="lead mb-0"><a href="{% url 'product_detail' product.id %}" class="text-{{ product.element.name }}">{{ product.name }}</a></p>
                                             <p class="mb-0 text-left font-weight-bold text-{{ product.element.name }}">€{{ product.price }}</p>
+                                        </div>
+                                        <div class="col col-sm-6">
                                             {% if product.category %}
                                             <p class="small mt-1 mb-0">
                                                 <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -78,13 +79,14 @@
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
                                             {% if request.user.is_superuser %}
-                                            <small class="ml-3">
-                                                <a href="{% url 'edit_product' product.id %}">Edit</a> | <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                            </small>
+                                            <div class="row">
+                                                <small class="ml-3">
+                                                    <a href="{% url 'edit_product' product.id %}">Edit</a> | <a
+                                                        class="text-danger"
+                                                        href="{% url 'delete_product' product.id %}">Delete</a>
+                                                </small>
+                                            </div>
                                             {% endif %}
-                                        </div>
-                                        <div class="col">
-                                            
                                         </div>
                                     </div>
                                 </div>

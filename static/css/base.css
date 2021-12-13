@@ -282,6 +282,10 @@ p {
     transform: translateY(0);
 }
 
+.selector-sizer select {
+    font-size: 90%;
+}
+
 
 .card {
     min-height: 100%;
@@ -290,7 +294,7 @@ p {
 
 .element-container-image-prod {
     min-width: 100%;
-    min-height: 80%;
+    height: 50vh;
 }
 
 .element-container-image-prod img {

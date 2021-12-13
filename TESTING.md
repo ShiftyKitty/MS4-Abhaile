@@ -29,7 +29,7 @@ All codes used will be put through the relevant code validators once all user te
 
 New User:
 - As a new user I want to be able to:
-    -   know the exactly with this website is about
+    -   know the exactly with this app/website is about
     ![N_User_abhaile](testing_img_docs/user_stories/signup.png) 
 
     -   know the layout of the app easily so that I can navigate the app with ease and avoid frustration
@@ -103,14 +103,15 @@ Project Abhaile was deployed today and sent out to friends and family to test an
 
 This is what has comeback:
 
-#### Element Page issue (mobile)
+### Element Page issue (mobile)
 ![overlap_issue](testing_media/testing/overlap.jpg)
 
 - Element product and exercise buttons going over text on mobile.
 - After testing further the issue is that when user is not Abhaile member, request for user to sign up is bigger than buttons involved, pushing container into above div. 
 - Fix: Have introduced more marginning to help space out affected divs.
 
-#### Breath Sync not starting. 
+
+### Breath Sync not starting. 
 ![breath_sync_not_working](testing_media/testing/breathe_rd_issue_nostart.png)
 
 - Since round dropdown inclusion, breath focus on exercise pages not working
@@ -118,7 +119,7 @@ This is what has comeback:
 - Fix: Have now set default value to "1" so that when user doesnt select round, the exercise still starts. 
 
 
-#### Hold timer/Postround timer on Breath Sync not initiating at end of round
+### Hold timer/Postround timer on Breath Sync not initiating at end of round
 ![timer_no_start](testing_media/testing/timernostart.png)
 
 - Hold countdown timer not initiating post end of round. 
@@ -126,44 +127,37 @@ This is what has comeback:
 - Fix: Have remvoved this Sleep function and instead added a new animation to mimic end round functionality. In addition, hold timer starts one rep before this hold animation starts allowing holdtimer to initiate at same time of end round pause. 
 
 
-#### Sort Box Issue (Element)- Not showing selected element 
-![sort_box_element_issue](testing_media/testing/sortboxissue_exer.png)
-
-- When user selects element to sort, sort box doesnt show to selected element 
-- Fix: Above issues have been fixed through better grid management and centering a div
-
-
-#### Sort Box Issue (Resize)- Mobile display issue 
+### Sort Box Issue (Resize)- Mobile display issue 
 ![sort_box_resize_issue](testing_media/testing/sort_resize.jpg)
 ![sort_box_resize_issue_prod](testing_media/testing/sortboxissue.png)
 
 - On mobile, sort boxes not scaled down correctly. 
-- Fix: Above issues have been fixed through better grid management and centering a div
+- Fix: Fixed by targetting select elements and bringing down font size
 
 
-#### Prod Image Scale - Mobile display issue
+### Prod Image Scale - Mobile display issue
 ![prod_img_selector_mob](testing_media/testing/prod_img_off_screen.jpg)
 
 - Image container on product pages overflowing on mobile. 
 - Fix: Now fixed. Introduced media queries and vh and vw sizes to better adapt to all devices
 
 
-#### Admin Issue - Edit/Add buttons for Products not scaling down properly
+### Admin Issue - Edit/Add buttons for Products not scaling down properly
 ![admin_issue_edit_add_mob](testing_media/testing/editadd_mob.jpg)
 
 - On mobile, edit and add buttons not showing properly and overlapping down to items below
-- Fix: Now fixed. Have introduced image preview window so user can see image they have selected
+- Fix: Now fixed. Have introduced better grid structure. Edit & Delete now appearing on own row
 
 
-#### Cart Page Issue - Cart items appearing messy on mobile
-![admin_issue_edit_add_mob](testing_media/testing/editadd_mob.jpg)
+### Cart Page Issue - Cart items appearing messy on mobile
+![cart_issue_mob](testing_media/testing/cart_pg_messy.png)
 
 - On mobile, items in cart not scaling down correctly on mobile. 
-- Fix: Now fixed. Have introduced image preview window so user can see image they have selected
+- Fix: Now fixed. Have introduced better media queries to account for adjusting sizes
 
+<br>
 
-## Outstanding Bugs:
-- Unfortunately could not find a way to allow files with gap in name to be uploaded to the app. Have included if statement that if this occurs the user will be prompted to rename file.
+## Outstanding Bugs and Encountered problems with no fix:
+- The focused breath system was fully developed by me and through the use of keyframe animations, await/async and getProperty functionality was able to get this working for the most part. Unfortunately I was unable to integrate staggered breathing functions ie, one inhale leads to 10 exhales, or,inhale for 2 sec, inhale for 3 sec, inhale 2 sec, exhale for 2, exhale for 3, exhale for 2 etc. This will be looked into more post MS4 and try find a pattern that I can replicate in Javascript
 
-- Initial plans was to have both Business users and Consumer users login through the same portal however was unable to crack this. System (and me most likely) were unable to distinguish between the different users. To counteract this I made 2 seperate login portals for each user to login through (see below)
-![login_portal_issue](testing_img_docs/user_stories/login.png)
+- Have attempted to introduce a subscription system, spending over a week and countless hours trying to implement, but was unable to blend a sub system into the existing product system and checkout due to stripe restrictions. In hindsight, the better solution to implement both might have been to introduce the subscription system first and then blend the ecom store into it that way. Due to time and knowledge constraints I have been regretfully forced to abandon this but am eager post MS4 to get this going. 
