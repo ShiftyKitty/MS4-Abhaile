@@ -31,6 +31,7 @@
                 <h4>What does {{element.friendly_name}} breathing do?</h4>
                 <p>{{ element.sub_benefits}}</p>
                 <hr>
+                <div class="card-body"></div>
             </div>
             <hr>
             <br>
@@ -41,13 +42,6 @@
                         {{element.friendly_name}} Products</a>
 
                     <div class="card-body"></div>
-                    <!-- <div class="marquee">
-                    <ul class="marquee-content">
-                        <li><i class="fab fa-github"></i></li>
-                        <li><i class="fab fa-codepen"></i></li>
-                        <li><i class="fab fa-free-code-camp"></i></li>
-                    </ul>
-                </div> -->
                     {% if request.user.is_authenticated %}
                     <a href="{% url 'exercises' %}?element={{ element.name }}"
                         class="dropdown-item element-button btn btn-{{ element.name }}">View all
@@ -56,26 +50,13 @@
                     <div class="card mb-4">
                         <h4>Sign up to Abhaile today to access {{element.friendly_name}} Breathing for entire
                             year for free.</h4>
-                        <p>Already a User? <a href="{% url 'account_login' %}">Login here</a></p>
+                        <span class="already-user-text"><p>Already a User? <a href="{% url 'account_login' %}">Login here</a></p></span>
                         <a href="{% url 'account_signup' %}" class="dropdown-item element-button btn btn-black">Sign Up
                             to Abhaile</a>
                     </div>
                     {% endif %}
-
                 </div>
                 <br>
-                <!-- <div class="marquee2">
-                    <ul class="marquee-content2">
-                        <li><i class="fab fa-github"></i></li>
-                        <li><i class="fab fa-codepen"></i></li>
-                        <li><i class="fab fa-free-code-camp"></i></li>
-                        <li><i class="fab fa-node"></i></li>
-                        <li><i class="fab fa-wordpress"></i></li>
-                        <li><i class="fab fa-aws"></i></li>
-                        <li><i class="fab fa-docker"></i></li>
-                        <li><i class="fab fa-android"></i></li>
-                    </ul>
-                </div> -->
             </div>
         </div>
     </div>

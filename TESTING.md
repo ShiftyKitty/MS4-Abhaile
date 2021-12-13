@@ -103,47 +103,64 @@ Project Abhaile was deployed today and sent out to friends and family to test an
 
 This is what has comeback:
 
-#### Profile Image Issue
-![Willy-prof_img_issue](testing_img_docs/willy-profimg_issue.png)
+#### Element Page issue (mobile)
+![overlap_issue](testing_media/testing/overlap.jpg)
 
-- Logo saved not appearing on business profile.
+- Element product and exercise buttons going over text on mobile.
 - After testing further the issue is that image uploaded had spaces in filename which has caused an issue materializng from DB. 
 - Fix: Have introduced new if statement that initiates flash message telling user that filenames must not include any gaps. Tested and working.
 
-#### Offer Image Extension not allowed
-![Willy-offer_img_issue](testing_img_docs/willy-offerimg_extensionnotallowed.png)
+#### Breath Sync not starting after round inclusion
+![breath_sync_not_working](testing_media/testing/breathe_rd_issue_nostart.png)
 
-- Offer image extension not permitted. Meaning that attempted upload extension was not a recognised extension from the ALLOWED_IMAGE_EXTENSIONS in app.py. 
+- Since round dropdown inclusion, breath focus on exercise pages not working
 - After testing further the issue is that extension was .webp
 - Fix: Have added .webp extension to ALLOWED_IMAGE_EXTENSIONS in app.py. 
 
 
-#### Business Sign Up - No Filename
-![Colm-no_filename_issue](testing_img_docs/colm-no_filename_issue.jpg)
+#### Hold timer/Postround timer on Breath Sync not initiating at end of round
+![timer_no_start](testing_media/testing/timernostart.png)
 
-- User attempted to sign up without uploading image. 
+- Hold countdown timer not initiating post end of round. 
 - Fix: Have made flash message easier to understand requesting that user must add logo for sign up. 
 - Have also introduced h6 heading above image upload to inform user that logo upload is required for sign up
 
 
-#### Text Align Issue - Business Profile
-![Colm-text_align_issue](testing_img_docs/colm-text_align_issue.jpg)
+#### Sort Box Issue (Element)- Not showing selected element 
+![sort_box_element_issue](testing_media/testing/sortboxissue_exer.png)
 
-- Text has not scaled down properly for mobile and circles surrounding social media icons have gone wonky.  
+- When user selects element to sort, sort box doesnt show to selected element 
 - Fix: Above issues have been fixed through better grid management and centering a div
 
 
-#### Text Overlap Issue - Offer Profile
-![Colm-text_overlap_issue](testing_img_docs/colm-text_overlap.jpg)
+#### Sort Box Issue (Resize)- Mobile display issue 
+![sort_box_resize_issue](testing_media/testing/sort_resize.jpg)
+![sort_box_resize_issue_prod](testing_media/testing/sortboxissue.png)
 
-- Text has not scaled down properly for mobile and causing overlap. 
+- On mobile, sort boxes not scaled down correctly. 
+- Fix: Above issues have been fixed through better grid management and centering a div
+
+
+#### Prod Image Scale - Mobile display issue
+![prod_img_selector_mob](testing_media/testing/prod_img_off_screen.jpg)
+
+- Image container on product pages overflowing on mobile. 
 - Fix: Now fixed. Better implemented the grid system for materialize to fix
 
-#### File Upload Nothing Appearing - Business/Consumer/Offer Create
-![file_upload_no_appear](testing_img_docs/imgfilename_notappearing.png)
 
-- Nothing showing to user when they upload image
+#### Admin Issue - Edit/Add buttons for Products not scaling down properly
+![admin_issue_edit_add_mob](testing_media/testing/editadd_mob.jpg)
+
+- On mobile, edit and add buttons not showing properly and overlapping down to items below
 - Fix: Now fixed. Have introduced image preview window so user can see image they have selected
+
+
+#### Cart Page Issue - Cart items appearing messy on mobile
+![admin_issue_edit_add_mob](testing_media/testing/editadd_mob.jpg)
+
+- On mobile, items in cart not scaling down correctly on mobile. 
+- Fix: Now fixed. Have introduced image preview window so user can see image they have selected
+
 
 ## Outstanding Bugs:
 - Unfortunately could not find a way to allow files with gap in name to be uploaded to the app. Have included if statement that if this occurs the user will be prompted to rename file.

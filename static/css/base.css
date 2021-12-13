@@ -1148,7 +1148,13 @@ body {
 }
 
 .text-container {
-    margin-bottom: 10%;
+    position: relative;
+    margin-bottom: 15%;
+    display: block;
+}
+
+.text-container p {
+    font-size: 90%;
 }
 
 .button-container {
@@ -1157,7 +1163,8 @@ body {
 }
 
 .element-buttons {
-    margin-bottom: 5vh;
+    display: block;
+    margin-bottom: 10vh;
     position: absolute;
     width: 90%;
     top: 50%;
@@ -1168,4 +1175,12 @@ body {
 
 .element-buttons a {
     font-size: 7%;
+}
+
+.already-user-text {
+    font-size: 6%;
+}
+
+.already-user-text a {
+    font-size: 100%;
 }
