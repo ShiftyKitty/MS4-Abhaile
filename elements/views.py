@@ -1,16 +1,8 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
-from django.contrib import messages
-from django.db.models import Q
-
-from .models import Element
-from products.models import Product
+from django.shortcuts import render, get_object_or_404
 from exercises.models import Breathwork
+from products.models import Product
+from .models import Element
 
-from products.views import product_detail
-from exercises.views import breathwork_exercise
-
-
-# Create your views here.
 
 def all_elements(request):
     """ A view to show all exercises """

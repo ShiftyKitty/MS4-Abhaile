@@ -1,26 +1,25 @@
+import stripe
+import json
+import time
 from django.shortcuts import (
     render, redirect, reverse, get_object_or_404, HttpResponse
 )
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
-
-from .forms import OrderForm
-from .models import Order, OrderLineItem
 from products.models import Product
-from elements.models import Element
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
-
 from cart.contexts import cart_contents
-
-import stripe
-import json
-import time
+from .forms import OrderForm
+from .models import Order, OrderLineItem
 
 
 @require_POST
 def cache_checkout_data(request):
+    """
+    checkout cache data
+    """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -37,6 +36,9 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """
+    checkout function
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -91,16 +93,17 @@ def checkout(request):
                     return redirect(reverse('view_cart'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(
+                reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
         cart = request.session.get('cart', {})
         if not cart:
-            messages.error(request, "There's nothing in your cart at the moment")
+            messages.error(
+                request, "There's nothing in your cart at the moment")
             return redirect(reverse('products'))
-
 
         current_cart = cart_contents(request)
         total = current_cart['grand_total']
@@ -186,4 +189,3 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
-

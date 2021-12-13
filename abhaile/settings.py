@@ -43,11 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'allauth',
     'allauth.account',
-    'allauth.socialaccount',#
+    'allauth.socialaccount',
     'abhaile',
     'home',
     'products',
-    'elements', 
+    'elements',
     'exercises',
     'cart',
     'checkout',
@@ -144,7 +144,8 @@ else:
     }
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://prjeamxoqgvnjs:b8bbe5d0be96c2e3ef2280fdef92140f74bd7957316bbcbe3f66c6ecd45705d4@ec2-52-19-164-214.eu-west-1.compute.amazonaws.com:5432/d8qrk2cuq3nno2')
+    'default': dj_database_url.parse(
+        'postgres://prjeamxoqgvnjs:b8bbe5d0be96c2e3ef2280fdef92140f74bd7957316bbcbe3f66c6ecd45705d4@ec2-52-19-164-214.eu-west-1.compute.amazonaws.com:5432/d8qrk2cuq3nno2')
 }
 
 
@@ -192,7 +193,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 if 'USE_AWS' in os.environ:
 
-    # cache control 
+    # cache control
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
@@ -239,7 +240,6 @@ FIRE_SUBSCRIPTION = os.getenv('FIRE_SUBSCRIPTION', '')
 WATER_SUBSCRIPTION = os.getenv('WATER_SUBSCRIPTION', '')
 AIR_SUBSCRIPTION = os.getenv('AIR_SUBSCRIPTION', '')
 EARTH_SUBSCRIPTION = os.getenv('EARTH_SUBSCRIPTION', '')
-
 
 
 if 'DEVELOPMENT' in os.environ:

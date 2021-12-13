@@ -17,6 +17,7 @@
 </header>
 <section class="mb-4">
     <div class="text-center">
+        <!-- element text  -->
         <div class="row">
             <div class="col-sm-12 col-lg-6 text-container">
                 <h2>{{ element.friendly_name }}</h2>
@@ -35,6 +36,7 @@
             </div>
             <hr>
             <br>
+            <!-- product, exercise and sign in buttons  -->
             <div class="col-sm-12 col-lg-6 button-container">
                 <div class="element-buttons">
                     <a href="{% url 'products' %}?element={{ element.name }}"
@@ -50,7 +52,9 @@
                     <div class="card mb-4">
                         <h4>Sign up to Abhaile today to access {{element.friendly_name}} Breathing for entire
                             year for free.</h4>
-                        <span class="already-user-text"><p>Already a User? <a href="{% url 'account_login' %}">Login here</a></p></span>
+                        <span class="already-user-text">
+                            <p>Already a User? <a href="{% url 'account_login' %}">Login here</a></p>
+                        </span>
                         <a href="{% url 'account_signup' %}" class="dropdown-item element-button btn btn-black">Sign Up
                             to Abhaile</a>
                     </div>
@@ -63,6 +67,7 @@
 
 </section>
 <script>
+    // element pages header and nav 
     var $headline = $('.{{ element.name }}_headline'),
         $inner = $('.{{ element.name }}_inner'),
         $nav = $('.{{ element.name }}_nav'),

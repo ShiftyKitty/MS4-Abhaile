@@ -10,34 +10,33 @@
 
 {% block content %}
 
-
-    <div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h2 class="logo-font">Elements</h2>
-                <hr class="w-50 mb-1">
-            </div>
-        </div>
-        <div class="text-center element-container">
-            <h2>Choose your Element to get started...</h2>
-            <br>
-            <div class="row">
-                {% for element in elements %}
-                <div class="card col-lg-3 col-sm-6 img-wrap">
-                    <a class="element-pg-container-image" href="{% url 'element' element.id %}">
-                        <img src="{{ element.vertical_image.url }}" class="card-img-top" alt="{{ element.name }}">
-                        <div class="img-text-{{ element.name }}">
-                            <div class="img-description">
-                                <h4>{{ element.friendly_name }}</h4>
-                                <p class="card-text">{{element.element_description}}</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
+<!-- list of all elements  -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Elements</h2>
+            <hr class="w-50 mb-1">
         </div>
     </div>
+    <div class="text-center element-container">
+        <h2>Choose your Element to get started...</h2>
+        <br>
+        <div class="row">
+            {% for element in elements %}
+            <div class="card col-lg-3 col-sm-6 img-wrap">
+                <a class="element-pg-container-image" href="{% url 'element' element.id %}">
+                    <img src="{{ element.vertical_image.url }}" class="card-img-top" alt="{{ element.name }}">
+                    <div class="img-text-{{ element.name }}">
+                        <div class="img-description">
+                            <h4>{{ element.friendly_name }}</h4>
+                            <p class="card-text">{{element.element_description}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</div>
 {% endblock %}

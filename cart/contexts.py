@@ -4,8 +4,11 @@ from django.shortcuts import get_object_or_404
 from products.models import Product
 from elements.models import Element
 
-def cart_contents(request):
 
+def cart_contents(request):
+    """
+    cart contents
+    """
     cart_items = []
     total = 0
     product_count = 0
@@ -39,9 +42,9 @@ def cart_contents(request):
     else:
         delivery = 0
         free_delivery_delta = 0
-    
+
     grand_total = delivery + total
-    
+
     context = {
         'cart_items': cart_items,
         'total': total,
@@ -55,9 +58,10 @@ def cart_contents(request):
     return context
 
 
-
-def subscribe_element(request): 
-
+def subscribe_element(request):
+    """
+    subscribe element
+    """
     element_items = []
     subs_total = 0
     element_select = request.session.get('element_select', {})
@@ -71,10 +75,9 @@ def subscribe_element(request):
                     'element': element,
                 })
 
-
     context = {
         "element_items": element_items,
         "subs_total": subs_total
     }
 
-    return context 
+    return context

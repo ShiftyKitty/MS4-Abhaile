@@ -2,9 +2,7 @@ from django.shortcuts import (
     render, redirect, reverse, HttpResponse, get_object_or_404
 )
 from django.contrib import messages
-
 from products.models import Product
-from elements.models import Element
 
 
 def view_cart(request):
@@ -125,5 +123,3 @@ def remove_from_cart(request, item_id):
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
-
-
