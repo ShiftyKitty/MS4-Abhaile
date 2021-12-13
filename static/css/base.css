@@ -701,13 +701,20 @@ body {
 }
 
 #featured{
-	width: 500px;
-	height: 600px;
+	height: 60vh;
+    width: 25vw;
 	object-fit: fill;
 	cursor: pointer;
 	border: 2px solid black;
     margin-right: 6%;
 
+}
+
+@media (max-width: 769px){
+    #featured {
+        height: 58vh;
+        width: 72vw;
+    }
 }
 
 .thumbnail{

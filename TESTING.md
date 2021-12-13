@@ -107,23 +107,23 @@ This is what has comeback:
 ![overlap_issue](testing_media/testing/overlap.jpg)
 
 - Element product and exercise buttons going over text on mobile.
-- After testing further the issue is that image uploaded had spaces in filename which has caused an issue materializng from DB. 
-- Fix: Have introduced new if statement that initiates flash message telling user that filenames must not include any gaps. Tested and working.
+- After testing further the issue is that when user is not Abhaile member, request for user to sign up is bigger than buttons involved, pushing container into above div. 
+- Fix: Have introduced more marginning to help space out affected divs.
 
-#### Breath Sync not starting after round inclusion
+#### Breath Sync not starting. 
 ![breath_sync_not_working](testing_media/testing/breathe_rd_issue_nostart.png)
 
 - Since round dropdown inclusion, breath focus on exercise pages not working
-- After testing further the issue is that extension was .webp
-- Fix: Have added .webp extension to ALLOWED_IMAGE_EXTENSIONS in app.py. 
+- After testing further the issue is that the default value on "Choose Your Rounds" selection was set to 0 so when user attempted to start exercise, round was 0 so couldnt start
+- Fix: Have now set default value to "1" so that when user doesnt select round, the exercise still starts. 
 
 
 #### Hold timer/Postround timer on Breath Sync not initiating at end of round
 ![timer_no_start](testing_media/testing/timernostart.png)
 
 - Hold countdown timer not initiating post end of round. 
-- Fix: Have made flash message easier to understand requesting that user must add logo for sign up. 
-- Have also introduced h6 heading above image upload to inform user that logo upload is required for sign up
+- After testing further the issue is that the Sleep JS function used at round end to pause exercise stopped entire app and so hold timer start event couldnt start.
+- Fix: Have remvoved this Sleep function and instead added a new animation to mimic end round functionality. In addition, hold timer starts one rep before this hold animation starts allowing holdtimer to initiate at same time of end round pause. 
 
 
 #### Sort Box Issue (Element)- Not showing selected element 
@@ -145,7 +145,7 @@ This is what has comeback:
 ![prod_img_selector_mob](testing_media/testing/prod_img_off_screen.jpg)
 
 - Image container on product pages overflowing on mobile. 
-- Fix: Now fixed. Better implemented the grid system for materialize to fix
+- Fix: Now fixed. Introduced media queries and vh and vw sizes to better adapt to all devices
 
 
 #### Admin Issue - Edit/Add buttons for Products not scaling down properly
