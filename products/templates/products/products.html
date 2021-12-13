@@ -56,10 +56,10 @@
                                 <a href="{% url 'product_detail' product.id %}" class="element-container-image-prod">
                                     <img class="card-img-top img-fluid " src="{{ product.image_1.url }}" alt="{{ product.name }}">
                                 </a>
-                                <div class="card-body pb-0">
+                                <div class="card-body pb-0 snow">
                                 </div>
                                 {% if product.element %}
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                <div class="card-footer snow pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col col-sm-6">
                                             <p class="lead mb-0"><a href="{% url 'product_detail' product.id %}" class="text-{{ product.element.name }}">{{ product.name }}</a></p>

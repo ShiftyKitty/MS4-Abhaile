@@ -155,6 +155,12 @@ This is what has comeback:
 - On mobile, items in cart not scaling down correctly on mobile. 
 - Fix: Now fixed. Have introduced better media queries to account for adjusting sizes
 
+
+
+- Common complaint that has come back is that yellow color for air pages is hard to distinguish against the white. Have added a snow color instead throughout site to combat this. 
+
+
+
 <br>
 
 ## Outstanding Bugs and Encountered problems with no fix:

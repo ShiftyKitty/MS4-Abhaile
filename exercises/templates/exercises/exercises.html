@@ -49,12 +49,12 @@
             <div class="row">
                 {% for exercise in exercises %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 border-0">
-                        <a href="{% url 'breathwork_exercise' exercise.id %}" class="element-container-image-exer">
+                    <div class="card h-100 border-0 snow">
+                        <a href="{% url 'breathwork_exercise' exercise.id %}" class="element-container-image-exer snow">
                             <img class="card-img-top img-fluid " src="{{ exercise.image.url }}"
                                 alt="{{ exercise.name }}">
                         </a>
-                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                        <div class="card-footer snow pt-0 border-0 text-left">
                             <div class="row">
                                 <p class="lead mb-0"><a href="{% url 'breathwork_exercise' exercise.id %}"
                                         class="text-{{ exercise.element.name }}">{{ exercise.name }}</a></p>
