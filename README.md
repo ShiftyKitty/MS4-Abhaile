@@ -141,17 +141,27 @@ Whats on the table?
 
 User Stories:
 -	As a new user, I want to be able to know the layout of the app easily so that I can navigate the app with ease and avoid frustration
--	As a new user, I want to be able to know what the different elements mean so that I can make an informed decision on what element I want to subscribe to
+-	As a new user, I want to be able to know what the different elements mean so that I can make an informed decision on what element I want to go with
 -	As a new user, I want to be able to know why I should join and decide whether this is the app for me
+-	As a new user, I want to be able to easily sign up
+-	As a new user, I want to be able to follow along to video of exercise in case I do not understand
 -	As a new user, I want to be able to browse the online store easily so that I can purchase something I like. 
+-	As a new user, I want to be able to better view the product on offer through multiple images so I know what I am buying.
+-	As a new user, I want to be able to better view cart prior to checking out
 -	As a new user, I want to be able to know how I can join so that I can make a better purchasing decision
 -	As a new user, I want to be advised of the health risks involved so that I don’t die 
 
+<br>
 
--	As an existing user, I want to be able to see how long each exercise takes so that I can fit the exercise into my schedule 
--	As an existing user, I want to be able my card info saved so that I can purchase items from site without needing to fill out my info again
+-	As an existing user, I want to have my info saved so that I can purchase items from site without needing to fill out my info again
+-	As an existing user, I want to know about the different breathworks and the benefits associated with them
 -	As an existing/new user, I want to be guided through my breathwork so that I can better understand and learn the different breathing techniques in an engaging environment. 
 -	As an existing/new user, I want to be able to search appropriately so that I can better navigate and find the items I need. 
+-	As an existing/new user, I want to be able to filter appropriately so that I can better navigate and find what I need. 
+-	As an existing/new user, I want to be able to access my own profile and update my information as I see fit. 
+-	As an existing/new user, I want to be able to access my own profile and and see my previous order history 
+
+<br>
 
 - As an admin user, I want to be able to add products to the site
 - As an admin user, I want to be able to edit products on the site
@@ -159,8 +169,7 @@ User Stories:
 - As an admin user, I want to be able to add exercises to the site
 - As an admin user, I want to be able to edit exercises on the site
 - As an admin user, I want to be able to see preview images of exercises I am adding before submitting on edit/add exercises forms
-
-
+- As an admin user, I want to be able to restrict access to certain parts of site to incentivise new sign ups 
 
 <br>
 

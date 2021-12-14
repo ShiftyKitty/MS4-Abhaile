@@ -29,67 +29,86 @@ All codes used will be put through the relevant code validators once all user te
 
 New User:
 - As a new user I want to be able to:
-    -   know the exactly with this app/website is about
-    ![N_User_abhaile](testing_img_docs/user_stories/signup.png) 
-
     -   know the layout of the app easily so that I can navigate the app with ease and avoid frustration
-    ![N_User_navigate_app](testing_img_docs/user_stories/signup.png) 
+    ![N_User_navigate_app](testing_media/user_stories/homepage_nav.png) 
+
+    -   know the exactly with this app/website is about
+    ![N_User_abhaile](testing_media/user_stories/homepage.png) 
 
     -   know what the different elements mean so that I can make an informed decision on what element I want to subscribe to
-    ![N_User_elements](testing_img_docs/user_stories/signup.png) 
+    ![N_User_elements](testing_media/user_stories/element_hover.png) 
 
     -   know why I should sign up and decide whether this is the app for me
-    ![N_User_element](testing_img_docs/user_stories/signup.png) 
+    ![N_User_element](testing_media/user_stories/water_el_pg_full.png) 
+
+    -   easily sign up
+    ![N_User_signup](testing_media/user_stories/sign_up.png) 
+
+    -   follow along to video of exercise in case I do not understand
+    ![N_User_video](testing_media/user_stories/yt_link.png) 
 
     -   browse the online store easily so that I can purchase something I like. 
-    ![N_User_online_store](testing_img_docs/user_stories/signup.png) 
+    ![N_User_online_store](testing_media/user_stories/water_prods_pg_full.png) 
 
-    -   of the health risks involved so that I don’t die 
-    ![N_User_disclaimer](testing_img_docs/user_stories/signup.png) 
+    -   better view the product on offer through multiple images so I know what I am buying. 
+    ![N_User_prod_deetz](testing_media/user_stories/water_prod_page_full.png) 
 
+    -   view cart prior to checking out
+    ![N_view_cart](testing_media/user_stories/cart_pg_full.png) 
+
+    -   of the health risks involved in exercises so that I don’t die 
+    ![N_User_disclaimer](testing_media/user_stories/safety_warning.png) 
+
+<br>
 
 Existing User:
 - As an existing user I want to:
     - have my info saved so that I can purchase items from site without needing to fill out my info again
-    ![E_User_info](testing_img_docs/user_stories/signup.png)
+    ![E_User_info](testing_media/user_stories/checkout_pg_full.png)
 
     - know about the different breathworks and the benefits associated with them
-    ![E_diff_bws_bens](testing_img_docs/user_stories/signup.png)
+    ![E_diff_bws_bens](testing_media/user_stories/fire_exercise_full_page.png)
 
     - be guided through my breathwork so that I can better understand and learn the different breathing techniques in an engaging environment. 
-    ![E_user_focused_breath](testing_img_docs/user_stories/signup.png) 
+    ![E_user_focused_breath](testing_media/user_stories/earth_bubble_in_motion_cropped.png) 
 
     - be able to search appropriately so that I can better navigate and find the items I need. 
-    ![E_user_search](testing_img_docs/user_stories/signup.png) 
+    ![E_user_search](testing_media/user_stories/search.png) 
+
+    - be able to filter appropriately so that I can better navigate and find what I need. 
+    ![E_user_filter](testing_media/user_stories/prod_filter.png)
 
     - be able to access my own profile and update my information as I see fit. 
-    ![E_User_update_info](testing_img_docs/user_stories/signup.png) 
+    ![E_User_update_info](testing_media/user_stories/profile_page_full.png) 
 
     - be able to access my own profile and see my previous order history 
-    ![E_user_order_hist](testing_img_docs/user_stories/signup.png) 
+    ![E_user_order_hist](testing_media/user_stories/order_hist.png) 
 
-
+<br>
 
 Admin User:
 - As an Admin user I want to:
     - be able to add products to the site
-    ![A_User_add_prod](testing_img_docs/user_stories/signup.png) 
+    ![A_User_add_prod](testing_media/user_stories/add_prod_full.png) 
 
     - be able to edit products on the site
-    ![A_User_edit_prod](testing_img_docs/user_stories/signup.png) 
+    ![A_User_edit_prod](testing_media/user_stories/edit_prod_full_pg.png) 
 
     - be able to see preview images of products I am adding before submitting on edit/add products forms
-    ![A_User_pre_image_prod](testing_img_docs/user_stories/signup.png) 
+    ![A_User_pre_image_prod](testing_media/user_stories/add_prod_in_action_img.png) 
+    ![A_User_pre_image_prod2](testing_media/user_stories/edit_prod_full_img.png) 
 
     - be able to add exercises to the site
-    ![A_User_add_exer](testing_img_docs/user_stories/signup.png) 
+    ![A_User_add_exer](testing_media/user_stories/add_exer_in_action.png) 
 
     - be able to edit exercises on the site
-    ![A_User_edit_exer](testing_img_docs/user_stories/signup.png) 
+    ![A_User_edit_exer](testing_media/user_stories/edit_exer_full.png) 
 
     - be able to see preview images of exercises I am adding before submitting on edit/add exercises forms
-    ![A_User_pre_image_exer](testing_img_docs/user_stories/signup.png) 
+    ![A_User_pre_image_exer](testing_media/user_stories/edit_exer_pg.png) 
 
+    - be able to restrict access to certain parts of site to incentivise new sign ups 
+    ![A_User_restrict](testing_media/user_stories/exer_page_not_avail.png) 
 
 ## Manual Testing
 - App has been tested extensively by friends and I and no reported or noticable issues or faults present. 

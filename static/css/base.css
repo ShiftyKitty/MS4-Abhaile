@@ -805,6 +805,10 @@ section {
     white-space: pre-line;
 }
 
+.no-new-line {
+    white-space: normal;
+}
+
 
 /* element pages  */
 

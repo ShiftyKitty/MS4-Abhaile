@@ -41,6 +41,10 @@
                 </p>
                 {% endif %}
                 <p class="mt-3">{{ exercise.description }}</p>
+                <small class="mt-3 text-muted">(Always practice breathing methods in a safe environment, with other people (spotter)
+                    who can assist you if required. Do only what feels comfortable, don't push yourself and stop if you
+                    feel unwell. Make sure you are sitting or lying down, NEVER driving or operating machinery.)</small>
+                
                 <div class="accordion" id="accordionExample">
                     <div class="card {{ exercise.element.name }}">
                         <div class="card-header " id="headingOne">
@@ -56,6 +60,17 @@
                             data-parent="#accordionExample">
                             <div class="card-body new-line">
                                 <p>{{ exercise.how_to }}</p>
+                                <small class="mt-3 text-muted no-new-line">Safety Information:
+                                    Do not practice this breathwork during pregnancy, or if you are epileptic. People with
+                                    cardiovascular issues, or any other serious health conditions, should always consult a medical
+                                    professional before starting breathwork. These breathing exercises are a guide only, you should
+                                    always listen to your own body and not push yourself, if you feel unwell STOP. Never practice
+                                    breathing exercises before or during diving, driving, swimming, taking a bath, or in any other
+                                    circumstance where the loss of consciousness could result in bodily harm. Deep breathing may cause
+                                    tingling sensations, a ringing in the ears, and/or light-headedness. These are normal responses and
+                                    are no cause for alarm. If you faint, however, you have gone too far and should take it more slowly
+                                    next time.
+                                </small>
                             </div>
                         </div>
                     </div>
@@ -101,6 +116,7 @@
     <div class="container text-centre">
         <div class="breath_bubble_container">
             <strong>Focused Breathing</strong>
+            <p>Time your breath with the animation below</p>
             <br>
             <!-- bubble container. js in breath_sync.js  -->
             <div class="bubble-container">
