@@ -59,9 +59,8 @@
                         </select>
                     </div>
                     <!-- clear filters -->
-                    <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="right"
-                        title="Clear Filters"><a class="white" href="{% url 'products' %}"><i
-                                class="fas fa-redo-alt"></i></a></button>
+                    <a class="white btn btn-success" data-toggle="tooltip" title="Clear Filters"
+                        href="{% url 'products' %}"><i class="fas fa-redo-alt"></i></a>
                 </div>
             </div>
             <hr>
@@ -174,7 +173,7 @@
 
             window.location.replace(currentUrl);
         }
-    })
+    });
 
     // sorts prods by element 
     $('#element-selector').change(function () {
@@ -190,6 +189,6 @@
             currentUrl.searchParams.delete("element");
             window.location.replace(currentUrl);
         }
-    })
+    });
 </script>
 {% endblock %}

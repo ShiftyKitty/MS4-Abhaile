@@ -64,8 +64,6 @@ document.documentElement.style.setProperty('--exhale_reps', (exhale_reps/1000) +
 let breath_reps = document.querySelector("#breath_reps").value;
 document.documentElement.style.setProperty('--breath_reps', (breath_reps/1000) + "s");
 
-let breathCounterTally = document.querySelector(".breath_counter").innerText
-
 
 // what do i need to do
 
@@ -73,52 +71,51 @@ let breathCounterTally = document.querySelector(".breath_counter").innerText
 // all inhales
 function Inhale_1() {
     BreathBubble.style.animation = "inhale_1 var(--inhale_1-time) linear forwards";
-    };
+    }
 
 function Inhale_2() {
     BreathBubble.style.animation = "inhale_2 var(--inhale_2-time) linear forwards";
-    };
+    }
 
 function Inhale_3() {
     BreathBubble.style.animation = "inhale_3 var(--inhale_3-time) linear forwards";
-    };
+    }
 
 function Inhale_4() {
     BreathBubble.style.animation = "inhale_4 var(--inhale_4-time) linear forwards";
-    };
+    }
 
 
 // all exhales
 function Exhale_1() {
     BreathBubble.style.animation = "exhale_1 var(--exhale_1-time) linear forwards";
-    };
+    }
 
 function Exhale_2() {        
     BreathBubble.style.animation = "exhale_2 var(--exhale_2-time) linear forwards";
-    };
+    }
 
 function Exhale_3() {
     BreathBubble.style.animation = "exhale_3 var(--exhale_3-time) linear forwards";
-    };
+    }
 
 function Exhale_4() {
     BreathBubble.style.animation = "exhale_4 var(--exhale_4-time) linear forwards";
-    };
+    }
 
     
 // hold times
 function Inhale_HT() {
     BreathBubble.style.animation = "inhale_ht var(--post_inhale_ht) linear none";
-};
+}
 
 function Exhale_HT() {
     BreathBubble.style.animation = "exhale_ht var(--post_exhale_ht) linear none";
-};
+}
 
 function Post_Round_HT() {
     BreathBubble.style.animation = "exhale_ht var(--post_reps_breath_hold) linear none";
-};
-
+}
 
 //2. Link them together
 function animate(elem, animation) {
@@ -138,7 +135,7 @@ function roundChanger () {
     roundSelector.addEventListener('change', (event) => {
         var roundAmount = roundSelector.value;
         document.querySelector(".round_counter").innerHTML = `${roundAmount}`;
-    })
+    });
 }
 roundChanger();
 
@@ -148,10 +145,6 @@ let holdTimer = post_reps_breath_hold / 1000;
 document.querySelector(".post_round_hold_timer").innerHTML = holdTimer;
 
 async function chainAnimations() {
-
-    let roundCounter = document.querySelector(".round_counter").innerHTML;
-    let PostRoundHoldTimer = document.querySelector(".post_round_hold_timer");
-
     roundChanger();
     var roundAmount = roundSelector.value;
     document.querySelector(".round_counter").innerHTML = `${roundAmount}`;
@@ -182,16 +175,16 @@ async function chainAnimations() {
                         return;
                     }
                     // to show countdown within timer
-                    document.querySelector(".post_round_hold_timer").innerHTML = `${roundStartIn}`
-                };
+                    document.querySelector(".post_round_hold_timer").innerHTML = `${roundStartIn}`;
+                }
             }
 
             if (i == breath_reps) {
-                await animate(BreathBubble, Post_Round_HT())
+                await animate(BreathBubble, Post_Round_HT());
             }
             
         }
-        let roundCounter = document.querySelector(".round_counter").innerHTML
+        let roundCounter = document.querySelector(".round_counter").innerHTML;
         roundCounter--;
         document.querySelector(".round_counter").innerHTML = roundCounter;
     }
@@ -200,7 +193,7 @@ async function chainAnimations() {
 // to start breath work 
 start.addEventListener('click', () => {
     chainAnimations();
-})
+});
 
 // to reset breath work 
 reset.addEventListener('click', () => {

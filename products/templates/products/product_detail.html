@@ -13,19 +13,19 @@
         <div class="col-12 col-lg-4 offset-lg-2" id="content-wrapper">
             <!-- prod image slider/selector  -->
             <div class="column">
-                <img id=featured src="{{ product.image_1.url }}">
+                <img id=featured src="{{ product.image_1.url }}" >
 
                 <div id="slide-wrapper">
                     <div id="slider">
-                        <img class="thumbnail active" src="{{ product.image_1.url }}">
+                        <img class="thumbnail active" src="{{ product.image_1.url }}" alt="{{ product.name }}">
                         {% if product.image_2 %}
-                        <img class="thumbnail" src="{{ product.image_2.url }}">
+                        <img class="thumbnail" src="{{ product.image_2.url }}" alt="{{ product.name }}">
                         {% endif %}
                         {% if product.image_3 %}
-                        <img class="thumbnail" src="{{ product.image_3.url }}">
+                        <img class="thumbnail" src="{{ product.image_3.url }}" alt="{{ product.name }}">
                         {% endif %}
                         {% if product.image_4 %}
-                        <img class="thumbnail" src="{{ product.image_4.url }}">
+                        <img class="thumbnail" src="{{ product.image_4.url }}" alt="{{ product.name }}">
                         {% endif %}
                     </div>
                 </div>
@@ -126,24 +126,24 @@
 <script type="text/javascript">
 
     // prod image slider feature. Referenced in Readme Doc under Credits 
-    let thumbnails = document.getElementsByClassName('thumbnail')
+    let thumbnails = document.getElementsByClassName('thumbnail');
 
-    let activeImages = document.getElementsByClassName('active')
+    let activeImages = document.getElementsByClassName('active');
 
     for (var i = 0; i < thumbnails.length; i++) {
 
         thumbnails[i].addEventListener('mouseover', function () {
-            console.log(activeImages)
+            console.log(activeImages);
 
             if (activeImages.length > 0) {
                 activeImages[0].classList.remove('active')
-            }
+            };
 
 
             this.classList.add('active')
             document.getElementById('featured').src = this.src
-        })
-    }
+        });
+    };
 
     // image slider feature.  
     let buttonRight = document.getElementById('slideRight');
@@ -151,11 +151,11 @@
 
     buttonLeft.addEventListener('click', function () {
         document.getElementById('slider').scrollLeft -= 180
-    })
+    });
 
     buttonRight.addEventListener('click', function () {
         document.getElementById('slider').scrollLeft += 180
-    })
+    });
 </script>
 {% endblock %}
 
