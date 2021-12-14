@@ -22,7 +22,7 @@ All codes used will be put through the relevant code validators once all user te
 
 - Javascript passed through [JS Hint](https://jshint.com/). All errors presented have now been fixed. 
 
-- Python passed through [PEP8 Validator](http://pep8online.com/checkresult). All python code is now PEP8 compliant
+- Python code passed through [PEP8 Validator](http://pep8online.com/checkresult) and Flake8 validator. Some errors cannot be fixed like "Avoid using null=True on string-based fields such CharField" and similar. Also brought up issues with migration lengths that cannot be fixed either. 
 
 
 ## User Stories
