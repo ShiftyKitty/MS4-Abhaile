@@ -17,8 +17,7 @@ All codes used will be put through the relevant code validators once all user te
 
 - CSS passed through [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator) with no Errors found
 
-- HTML passed through [W3C HTML Validator](https://validator.w3.org/) with all errors being fixed. Checker brought back warnings due to jinja but cant do anything to resolve this. 
-![Src_blank_issue](testing_img_docs/business_signup_src_error.png) 
+- HTML passed through [W3C HTML Validator](https://validator.w3.org/) with all errors being fixed. Checker brought back warnings due to jinja but cant do anything to resolve this.
 
 - Javascript passed through [JS Hint](https://jshint.com/). All errors presented have now been fixed. 
 

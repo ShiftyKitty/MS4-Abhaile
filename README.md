@@ -448,8 +448,8 @@ USE_AWS | TRUE
 
 - Would like to thank all friends and family who helped test this app and report back usability issues and technical bugs. 
 
-- The name "Abhaile" is the Irish for "Home". Each project so far done with Code Institute secretly followed the 4 elements. MS1-Earth, MS2-Water, MS3-Air/Wind and MS4 was based off Fire. "Nil Aon Tin Tan Mar Do Thin Tan Fein", which translates to "There is no fire like your own fire". "There is no home like your own home". This is the origins of this project. 
+- The name "Abhaile" is the Irish for "Home". Each project done so far with Code Institute secretly followed the 4 elements. MS1-Earth, MS2-Water, MS3-Air/Wind and MS4 was based off Fire. "Nil Aon Tin Tan Mar Do Thin Tan Fein", which translates to "There is no fire like your own fire". "There is no home like your own home". This is the origins of this project. 
 
-- Continuing on with anime theme throughout, a main inspiration of the different elemental breaths came from the series [Kimetsu no Yaiba](https://www.google.com/search?q=kimetsu+no+yaiba&rlz=1C1CHBF_en-GBIE980IE980&oq=kimet&aqs=chrome.0.0i131i355i433i512j46i131i433i512j69i57j0i131i433i512j0i512j46i512j69i60l2.3129j0j7&sourceid=chrome&ie=UTF-8)
+- Continuing on with anime theme throughout, a big inspiration of the different elemental breaths came from the series [Kimetsu no Yaiba](https://www.google.com/search?q=kimetsu+no+yaiba&rlz=1C1CHBF_en-GBIE980IE980&oq=kimet&aqs=chrome.0.0i131i355i433i512j46i131i433i512j69i57j0i131i433i512j0i512j46i512j69i60l2.3129j0j7&sourceid=chrome&ie=UTF-8)
 
-- Many features were left out due to time constraints and lack of skill/knowledge however I will be building upon what is here in this project over time. 
+- Many desired features were left out due to time constraints and lack of skill/knowledge however I will be building upon what is here in this project over time. 
