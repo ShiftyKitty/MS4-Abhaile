@@ -33,6 +33,26 @@ Eventually I would like to add more exercises that will improve wellbeing across
 - [Credits](#credits) <br>
 
 
+## Message to Examiner
+
+Hello.
+
+This app takes 2 different users. Admin User and Regular User. 
+
+Below are the admin login details:
+
+Username: admin4000 <br>
+Password: Test123!"£
+
+With admin user you can add, edit and delete various products and exercises to and from the site. 
+
+Sign up regularly to become user and get access to exercises on site. 
+
+If you are wanting to try any/all of the exercises, feel free. However please view disclaimer on exercise pages to see if you are able. 
+
+All the Best <br>
+Cathal
+
 
 ## UX
 
@@ -261,7 +281,7 @@ Project Abhaile made use of the following technologies, languages and frameworks
 
 - Stripe: Used as payment processor for app
 
-- Django: Used to create the various apps in Project Abhaile
+- Django: Framework used to create the various apps in Project Abhaile
 
 - AWS: To remotely store all static and media files. 
 
