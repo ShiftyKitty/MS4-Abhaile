@@ -62,7 +62,7 @@ let exhale_reps = document.querySelector("#exhale_reps").value;
 document.documentElement.style.setProperty('--exhale_reps', (exhale_reps/1000) + "s");
 
 let breath_reps = document.querySelector("#breath_reps").value;
-document.documentElement.style.setProperty('--breath_reps', Math.round(breath_reps/1000) + "s");
+document.documentElement.style.setProperty('--breath_reps', Math.round((breath_reps/1000)) + "s");
 
 
 // what do i need to do
