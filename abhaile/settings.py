@@ -139,7 +139,7 @@ else:
 DATABASES = {
     'default': dj_database_url.parse(
         'postgres://xsyvujvrzelytc:b3a1c07b3e23e8a328fbe962af79c8a4dab74f1ceed7c45afc70bfecc265a24c@ec2-34-246-155-237.eu-west-1.compute.amazonaws.com:5432/ddhp0e6ueufbu')
-}
+    }
 
 
 # Password validation
